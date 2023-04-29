@@ -36,7 +36,46 @@ namespace menuavanzado.Datos.Pantallas
 		
 		void Btn_RegistroCliente(object sender, EventArgs e)
 		{
-			string nombre = InputNombre.Text;
+			
+			if(string.IsNullOrEmpty(InputNombre.Text)||string.IsNullOrEmpty(inputApellido.Text)||string.IsNullOrEmpty(inputCedula.Text)||string.IsNullOrEmpty(InputTelefonoCelular.Text)||string.IsNullOrEmpty(InputTelefonoResidencial.Text)||string.IsNullOrEmpty(inputCorreo.Text)||string.IsNullOrEmpty(InputDireccion.Text))
+			{
+				if(string.IsNullOrEmpty(InputNombre.Text))
+				{
+						MessageBox.Show("El campo Nombre no puede estar vacio");
+				}
+				if(string.IsNullOrEmpty(inputApellido.Text))
+				{
+						MessageBox.Show("El campo Apellido no puede estar vacio");
+				}
+				
+				if(string.IsNullOrEmpty(inputCedula.Text))
+				{
+						MessageBox.Show("El campo de Cedula no puede estar vacio");
+				}
+				
+				if(string.IsNullOrEmpty(InputTelefonoCelular.Text))
+				{
+						MessageBox.Show("El campo de Telefono Celular no puede estar vacio");
+				}
+				
+				if(string.IsNullOrEmpty(InputTelefonoResidencial.Text))
+				{
+						MessageBox.Show("El campo de Telefono Residencial no puede estar vacio");
+				}
+				
+				if(string.IsNullOrEmpty(inputCorreo.Text))
+				{
+						MessageBox.Show("El campo de Correo electronico no puede estar vacio");
+				}
+				
+				if(string.IsNullOrEmpty(InputDireccion.Text))
+				{
+						MessageBox.Show("El campo de direccion no puede estar vacio");
+				}
+	
+						
+					}else{
+							string nombre = InputNombre.Text;
 			string apellido = inputApellido.Text;
 			int cedula;
 			cedula = int.Parse(inputCedula.Text);
@@ -53,8 +92,12 @@ namespace menuavanzado.Datos.Pantallas
 			string correo = inputCorreo.Text;
 			string direccion = InputDireccion.Text;
 			DateTime fechaR = new DateTime(2022, 10,31);
+	
+
 			x.Agregar(nombre,apellido,cedula,sexo,fechaN,telefonoC,telefonoR,correo,direccion,fechaR);
 				MessageBox.Show("Funciona el boton");
+					
+					}
 		}
 		
 		void InputCorreoTextChanged(object sender, EventArgs e)
