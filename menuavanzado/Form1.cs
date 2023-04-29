@@ -13,8 +13,7 @@ namespace menuavanzado
 {
     public partial class Form1 : Form
     {
-    	PantallaCliente x = new PantallaCliente();
-    	PantallaDatosClientes a = new PantallaDatosClientes();
+  
     
         public Form1()
         {
@@ -48,14 +47,31 @@ namespace menuavanzado
         
         void Btn_ClienteClick(object sender, EventArgs e)
         {
-        	x.Show();
+
         	
-        	
+        	AbrirFormDescrip(new PantallaCliente());
         }
         
         void BtnDatosClienteClick(object sender, EventArgs e)
         {
-        	a.Show();
+        	AbrirFormDescrip(new PantallaDatosClientes());
         }
+        
+        
+        private Form AbrirDescripcion = null;
+        private void AbrirFormDescrip(Form descripcion1)
+        {
+            if (AbrirDescripcion != null)
+                AbrirDescripcion.Close();
+            AbrirDescripcion = descripcion1;
+            descripcion1.TopLevel = false;
+            descripcion1.FormBorderStyle = FormBorderStyle.None;
+            descripcion1.Dock = DockStyle.Fill;
+            PanelContenidoPrincipal.Controls.Add(descripcion1);
+            PanelContenidoPrincipal.Tag = descripcion1;
+            descripcion1.BringToFront();
+            descripcion1.Show();
+        }
+        
     }
 }
