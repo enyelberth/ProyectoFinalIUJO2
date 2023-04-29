@@ -80,7 +80,7 @@ namespace menuavanzado.Datos.Pantallas
 			int cedula;
 			cedula = int.Parse(inputCedula.Text);
 			bool sexo;
-			if(radioButton1.Checked=true)
+			if(radioButton1.Checked==true)
 			{
 				sexo= true;
 			}else{
