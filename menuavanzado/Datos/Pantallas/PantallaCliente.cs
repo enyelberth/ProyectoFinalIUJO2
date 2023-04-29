@@ -61,5 +61,75 @@ namespace menuavanzado.Datos.Pantallas
 		{
 			
 		}
+		private void txtCaracter_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+			{
+    	  		MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+    	  		e.Handled = true;
+    	  		return;
+			}
+		}
+		
+		void InputCedulaValidated(object sender, EventArgs e)
+		{
+	
+		}
+		
+		void InputCedulaKeyPress(object sender, KeyPressEventArgs e)
+		{
+		if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+		{
+    	  MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+   		   e.Handled = true;
+    	  return;
+		}
+		
+			
+		}
+		
+		void InputNombreKeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+				{
+      				MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+      				e.Handled = true;
+      				return;
+				}
+		}
+		
+		void InputApellidoKeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+				{
+      				MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+      				e.Handled = true;
+      				return;
+				}
+			
+		}
+		
+		void InputTelefonoCelularKeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+			{
+    	  		MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+   		  		 e.Handled = true;
+    	  		return;
+			}
+			
+		}
+		
+
+		
+		void InputTelefonoResidencialKeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+			{
+    	  		MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+   		  		 e.Handled = true;
+    	  		return;
+			}
+		}
 	}
 }

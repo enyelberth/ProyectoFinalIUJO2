@@ -65,6 +65,7 @@ namespace menuavanzado.Datos.Pantallas
 			this.InputTelefonoCelular.Name = "InputTelefonoCelular";
 			this.InputTelefonoCelular.Size = new System.Drawing.Size(140, 20);
 			this.InputTelefonoCelular.TabIndex = 19;
+			this.InputTelefonoCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputTelefonoCelularKeyPress);
 			// 
 			// inputCedula
 			// 
@@ -72,6 +73,8 @@ namespace menuavanzado.Datos.Pantallas
 			this.inputCedula.Name = "inputCedula";
 			this.inputCedula.Size = new System.Drawing.Size(192, 20);
 			this.inputCedula.TabIndex = 18;
+			this.inputCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputCedulaKeyPress);
+			this.inputCedula.Validated += new System.EventHandler(this.InputCedulaValidated);
 			// 
 			// inputApellido
 			// 
@@ -79,6 +82,7 @@ namespace menuavanzado.Datos.Pantallas
 			this.inputApellido.Name = "inputApellido";
 			this.inputApellido.Size = new System.Drawing.Size(192, 20);
 			this.inputApellido.TabIndex = 17;
+			this.inputApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputApellidoKeyPress);
 			// 
 			// InputNombre
 			// 
@@ -86,6 +90,7 @@ namespace menuavanzado.Datos.Pantallas
 			this.InputNombre.Name = "InputNombre";
 			this.InputNombre.Size = new System.Drawing.Size(192, 20);
 			this.InputNombre.TabIndex = 16;
+			this.InputNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputNombreKeyPress);
 			// 
 			// label2
 			// 
@@ -113,6 +118,8 @@ namespace menuavanzado.Datos.Pantallas
 			this.InputTelefonoResidencial.Name = "InputTelefonoResidencial";
 			this.InputTelefonoResidencial.Size = new System.Drawing.Size(106, 20);
 			this.InputTelefonoResidencial.TabIndex = 26;
+
+			this.InputTelefonoResidencial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputTelefonoResidencialKeyPress);
 			// 
 			// inputCorreo
 			// 
