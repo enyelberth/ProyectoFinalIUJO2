@@ -25,6 +25,7 @@ namespace menuavanzado.Datos.Pantallas
 			InitializeComponent();
 			
 			//Pruebas de commit
+			//preuavs 
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
