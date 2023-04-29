@@ -49,34 +49,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Datos\Cliente.cs" />
-    <Compile Include="Datos\Colecciones.cs" />
-    <Compile Include="Datos\Pantallas\PantallaCliente.cs" />
-    <Compile Include="Datos\Pantallas\PantallaCliente.Designer.cs">
-      <DependentUpon>PantallaCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Datos\Pantallas\PantallaDatosClientes.cs" />
-    <Compile Include="Datos\Pantallas\PantallaDatosClientes.Designer.cs">
-      <DependentUpon>PantallaDatosClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Registros\RegistroClientes\Cliente.cs" />
+    <Compile Include="Registros\RegistroClientes\Coleccion_clientes.cs" />
+    <Compile Include="Registros\RegistroClientes\PantallaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Registros\RegistroClientes\PantallaCliente.Designer.cs">
+      <DependentUpon>PantallaCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuColor.cs" />
-    <Compile Include="MenuRenderizado.cs" />
+    <Compile Include="Registros\RegistroClientes\PantallaDatosClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\RegistroClientes\PantallaDatosClientes.Designer.cs">
+      <DependentUpon>PantallaDatosClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Principal\MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu Principal\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu Principal\MenuColor.cs" />
+    <Compile Include="Menu Principal\MenuRenderizado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Datos\Pantallas\PantallaCliente.resx">
+    <EmbeddedResource Include="Registros\RegistroClientes\PantallaCliente.resx">
       <DependentUpon>PantallaCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Datos\Pantallas\PantallaDatosClientes.resx">
+    <EmbeddedResource Include="Registros\RegistroClientes\PantallaDatosClientes.resx">
       <DependentUpon>PantallaDatosClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Menu Principal\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
