@@ -38,11 +38,18 @@ namespace menuavanzado.Datos.Pantallas
 		{
 			string nombre = InputNombre.Text;
 			string apellido = inputApellido.Text;
-			int cedula = Convert.ToInt32(inputCedula.Text);
-			bool sexo = true;
+			int cedula;
+			cedula = int.Parse(inputCedula.Text);
+			bool sexo;
+			if(radioButton1.Checked=true)
+			{
+				sexo= true;
+			}else{
+				sexo=false;
+			}
 			DateTime fechaN = new DateTime(2015, 10,31); 
-			int telefonoC = Convert.ToInt32(InputTelefonoCelular.Text);
-			int telefonoR = Convert.ToInt32(InputTelefonoResidencial.Text);
+			int telefonoC = int.Parse(InputTelefonoCelular.Text);
+			int telefonoR = int.Parse(InputTelefonoResidencial.Text);
 			string correo = inputCorreo.Text;
 			string direccion = InputDireccion.Text;
 			DateTime fechaR = new DateTime(2022, 10,31);
