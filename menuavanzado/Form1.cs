@@ -73,5 +73,10 @@ namespace menuavanzado
             descripcion1.Show();
         }
         
+        
+        void PanelContenidoPrincipalPaint(object sender, PaintEventArgs e)
+        {
+        	
+        }
     }
 }

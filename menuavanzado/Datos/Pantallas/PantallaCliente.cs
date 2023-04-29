@@ -49,5 +49,10 @@ namespace menuavanzado.Datos.Pantallas
 			x.Agregar(nombre,apellido,cedula,sexo,fechaN,telefonoC,telefonoR,correo,direccion,fechaR);
 				MessageBox.Show("Funciona el boton");
 		}
+		
+		void InputCorreoTextChanged(object sender, EventArgs e)
+		{
+			
+		}
 	}
 }

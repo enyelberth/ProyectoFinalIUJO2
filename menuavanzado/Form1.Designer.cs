@@ -199,12 +199,13 @@
         	// 
         	// PanelContenidoPrincipal
         	// 
-        	this.PanelContenidoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(197)))));
+        	this.PanelContenidoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(107)))), ((int)(((byte)(134)))));
         	this.PanelContenidoPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
         	this.PanelContenidoPrincipal.Location = new System.Drawing.Point(169, 35);
         	this.PanelContenidoPrincipal.Name = "PanelContenidoPrincipal";
         	this.PanelContenidoPrincipal.Size = new System.Drawing.Size(855, 685);
         	this.PanelContenidoPrincipal.TabIndex = 2;
+        	this.PanelContenidoPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenidoPrincipalPaint);
         	// 
         	// Form1
         	// 
