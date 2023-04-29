@@ -11,11 +11,11 @@ using menuavanzado.Datos.Pantallas;
 
 namespace menuavanzado
 {
-    public partial class Form1 : Form
+    public partial class MenuPrincipal : Form
     {
   
     
-        public Form1()
+        public MenuPrincipal()
         {
             InitializeComponent();
             Btn_Cliente.Click += new EventHandler(Btn_ClienteClick);

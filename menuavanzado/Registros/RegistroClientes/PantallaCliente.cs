@@ -17,7 +17,7 @@ namespace menuavanzado.Datos.Pantallas
 	/// </summary>
 	public partial class PantallaCliente : Form
 	{
-		Colecciones x;
+		Coleccion_clientes x;
     	
 		public PantallaCliente()
 		{
@@ -25,7 +25,7 @@ namespace menuavanzado.Datos.Pantallas
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
-			x = new Colecciones();
+			x = new Coleccion_clientes();
 			
 			Btn_Registro.Click += new EventHandler(Btn_RegistroCliente);
 			

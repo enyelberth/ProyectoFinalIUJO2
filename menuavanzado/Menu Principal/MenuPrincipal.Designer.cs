@@ -1,6 +1,6 @@
 ﻿namespace menuavanzado
 {
-    partial class Form1
+    partial class MenuPrincipal
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-        	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+        	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
         	this.BarraTitulo = new System.Windows.Forms.Panel();
         	this.BTNMaximizarTamaño = new System.Windows.Forms.PictureBox();
         	this.BTNRestaurarTamaño = new System.Windows.Forms.PictureBox();

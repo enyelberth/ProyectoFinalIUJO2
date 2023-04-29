@@ -4,10 +4,10 @@ using menuavanzado.Datos;
 namespace menuavanzado.Datos
 {
 
-	public class Colecciones
+	public class Coleccion_clientes
 	{
 		public List<Cliente> ListaClientes;
-		public Colecciones()
+		public Coleccion_clientes()
 		{
 			ListaClientes = new List<Cliente>();
 		}
