@@ -28,79 +28,173 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxprestamo = new System.Windows.Forms.TextBox();
+            this.textBoxAñoemision = new System.Windows.Forms.TextBox();
+            this.textBoxDiaingreso = new System.Windows.Forms.TextBox();
+            this.textBoxcodigo = new System.Windows.Forms.TextBox();
+            this.textBoxTitulo = new System.Windows.Forms.TextBox();
+            this.textBoxdescripcion = new System.Windows.Forms.TextBox();
+            this.textBoxCantidad = new System.Windows.Forms.TextBox();
+            this.comboBoxtipoDVD = new System.Windows.Forms.ComboBox();
+            this.textBoxmesingreso = new System.Windows.Forms.TextBox();
+            this.textBoxañoingreso = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.buttonregistro = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButtonSI = new System.Windows.Forms.RadioButton();
+            this.radioButtonNO = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxprestamo
             // 
-            this.textBox1.Location = new System.Drawing.Point(108, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxprestamo.Location = new System.Drawing.Point(324, 141);
+            this.textBoxprestamo.Name = "textBoxprestamo";
+            this.textBoxprestamo.Size = new System.Drawing.Size(100, 20);
+            this.textBoxprestamo.TabIndex = 0;
             // 
-            // textBox2
+            // textBoxAñoemision
             // 
-            this.textBox2.Location = new System.Drawing.Point(108, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.textBoxAñoemision.Location = new System.Drawing.Point(108, 141);
+            this.textBoxAñoemision.Name = "textBoxAñoemision";
+            this.textBoxAñoemision.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAñoemision.TabIndex = 1;
+            this.textBoxAñoemision.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAñoemision_KeyPress);
             // 
-            // textBox3
+            // textBoxDiaingreso
             // 
-            this.textBox3.Location = new System.Drawing.Point(108, 216);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.textBoxDiaingreso.Location = new System.Drawing.Point(109, 213);
+            this.textBoxDiaingreso.Name = "textBoxDiaingreso";
+            this.textBoxDiaingreso.Size = new System.Drawing.Size(49, 20);
+            this.textBoxDiaingreso.TabIndex = 2;
+            this.textBoxDiaingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDiaingreso_KeyPress);
             // 
-            // textBox4
+            // textBoxcodigo
             // 
-            this.textBox4.Location = new System.Drawing.Point(324, 84);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBoxcodigo.Location = new System.Drawing.Point(324, 84);
+            this.textBoxcodigo.Name = "textBoxcodigo";
+            this.textBoxcodigo.Size = new System.Drawing.Size(100, 20);
+            this.textBoxcodigo.TabIndex = 3;
             // 
-            // textBox5
+            // textBoxTitulo
             // 
-            this.textBox5.Location = new System.Drawing.Point(534, 84);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 4;
+            this.textBoxTitulo.Location = new System.Drawing.Point(108, 84);
+            this.textBoxTitulo.Name = "textBoxTitulo";
+            this.textBoxTitulo.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTitulo.TabIndex = 4;
             // 
-            // textBox6
+            // textBoxdescripcion
             // 
-            this.textBox6.Location = new System.Drawing.Point(324, 152);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 5;
+            this.textBoxdescripcion.Location = new System.Drawing.Point(262, 297);
+            this.textBoxdescripcion.Name = "textBoxdescripcion";
+            this.textBoxdescripcion.Size = new System.Drawing.Size(280, 20);
+            this.textBoxdescripcion.TabIndex = 5;
             // 
-            // textBox7
+            // textBoxCantidad
             // 
-            this.textBox7.Location = new System.Drawing.Point(534, 152);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 6;
+            this.textBoxCantidad.Location = new System.Drawing.Point(534, 152);
+            this.textBoxCantidad.Name = "textBoxCantidad";
+            this.textBoxCantidad.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCantidad.TabIndex = 6;
+            this.textBoxCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCantidad_KeyPress);
+            // 
+            // comboBoxtipoDVD
+            // 
+            this.comboBoxtipoDVD.FormattingEnabled = true;
+            this.comboBoxtipoDVD.Items.AddRange(new object[] {
+            "Mp3",
+            "Pelicula",
+            "Videojuego"});
+            this.comboBoxtipoDVD.Location = new System.Drawing.Point(534, 83);
+            this.comboBoxtipoDVD.Name = "comboBoxtipoDVD";
+            this.comboBoxtipoDVD.Size = new System.Drawing.Size(94, 21);
+            this.comboBoxtipoDVD.TabIndex = 7;
+            this.comboBoxtipoDVD.Text = "Mp3";
+            // 
+            // textBoxmesingreso
+            // 
+            this.textBoxmesingreso.Location = new System.Drawing.Point(180, 213);
+            this.textBoxmesingreso.Name = "textBoxmesingreso";
+            this.textBoxmesingreso.Size = new System.Drawing.Size(49, 20);
+            this.textBoxmesingreso.TabIndex = 8;
+            this.textBoxmesingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxmesingreso_KeyPress);
+            // 
+            // textBoxañoingreso
+            // 
+            this.textBoxañoingreso.Location = new System.Drawing.Point(253, 213);
+            this.textBoxañoingreso.Name = "textBoxañoingreso";
+            this.textBoxañoingreso.Size = new System.Drawing.Size(49, 20);
+            this.textBoxañoingreso.TabIndex = 9;
+            this.textBoxañoingreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxañoingreso_KeyPress);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // buttonregistro
+            // 
+            this.buttonregistro.Location = new System.Drawing.Point(315, 376);
+            this.buttonregistro.Name = "buttonregistro";
+            this.buttonregistro.Size = new System.Drawing.Size(75, 23);
+            this.buttonregistro.TabIndex = 10;
+            this.buttonregistro.Text = "Registrar";
+            this.buttonregistro.UseVisualStyleBackColor = true;
+            this.buttonregistro.Click += new System.EventHandler(this.buttonregistro_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButtonNO);
+            this.groupBox1.Controls.Add(this.radioButtonSI);
+            this.groupBox1.Location = new System.Drawing.Point(411, 198);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(173, 79);
+            this.groupBox1.TabIndex = 11;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // radioButtonSI
+            // 
+            this.radioButtonSI.AutoSize = true;
+            this.radioButtonSI.Checked = true;
+            this.radioButtonSI.Location = new System.Drawing.Point(3, 16);
+            this.radioButtonSI.Name = "radioButtonSI";
+            this.radioButtonSI.Size = new System.Drawing.Size(35, 17);
+            this.radioButtonSI.TabIndex = 0;
+            this.radioButtonSI.TabStop = true;
+            this.radioButtonSI.Text = "SI";
+            this.radioButtonSI.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonNO
+            // 
+            this.radioButtonNO.AutoSize = true;
+            this.radioButtonNO.Location = new System.Drawing.Point(3, 39);
+            this.radioButtonNO.Name = "radioButtonNO";
+            this.radioButtonNO.Size = new System.Drawing.Size(41, 17);
+            this.radioButtonNO.TabIndex = 1;
+            this.radioButtonNO.Text = "NO";
+            this.radioButtonNO.UseVisualStyleBackColor = true;
             // 
             // RegistroDVD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.buttonregistro);
+            this.Controls.Add(this.textBoxañoingreso);
+            this.Controls.Add(this.textBoxmesingreso);
+            this.Controls.Add(this.comboBoxtipoDVD);
+            this.Controls.Add(this.textBoxCantidad);
+            this.Controls.Add(this.textBoxdescripcion);
+            this.Controls.Add(this.textBoxTitulo);
+            this.Controls.Add(this.textBoxcodigo);
+            this.Controls.Add(this.textBoxDiaingreso);
+            this.Controls.Add(this.textBoxAñoemision);
+            this.Controls.Add(this.textBoxprestamo);
             this.Name = "RegistroDVD";
             this.Text = "RegistroDVD";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,12 +202,20 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxprestamo;
+        private System.Windows.Forms.TextBox textBoxAñoemision;
+        private System.Windows.Forms.TextBox textBoxDiaingreso;
+        private System.Windows.Forms.TextBox textBoxcodigo;
+        private System.Windows.Forms.TextBox textBoxTitulo;
+        private System.Windows.Forms.TextBox textBoxdescripcion;
+        private System.Windows.Forms.TextBox textBoxCantidad;
+        private System.Windows.Forms.ComboBox comboBoxtipoDVD;
+        private System.Windows.Forms.TextBox textBoxmesingreso;
+        private System.Windows.Forms.TextBox textBoxañoingreso;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button buttonregistro;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButtonNO;
+        private System.Windows.Forms.RadioButton radioButtonSI;
     }
 }

@@ -16,3 +16,17 @@ C:\Users\enyelberth\Documents\MenuAvanzado\menuavanzado\bin\Debug\menuavanzado.p
 C:\Users\enyelberth\Documents\MenuAvanzado\menuavanzado\obj\x86\Debug\menuavanzado.pdb
 C:\Users\enyelberth\Documents\MenuAvanzado\menuavanzado\obj\x86\Debug\menuavanzado.Datos.Pantallas.PantallaCliente.resources
 C:\Users\enyelberth\Documents\MenuAvanzado\menuavanzado\obj\x86\Debug\menuavanzado.Datos.Pantallas.PantallaDatosClientes.resources
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.csproj.AssemblyReference.cache
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.Datos.Pantallas.PantallaCliente.resources
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.Datos.Pantallas.PantallaDatosClientes.resources
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.MenuPrincipal.resources
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.Properties.Resources.resources
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.Registros.RegistroDVDs.RegistroDVD.resources
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.csproj.GenerateResource.cache
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.exe
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.pdb
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\bin\Debug\menuavanzado.exe.config
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\bin\Debug\menuavanzado.exe
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\bin\Debug\menuavanzado.pdb

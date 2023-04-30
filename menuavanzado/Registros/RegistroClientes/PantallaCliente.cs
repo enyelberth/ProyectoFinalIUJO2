@@ -74,30 +74,34 @@ namespace menuavanzado.Datos.Pantallas
 				}
 	
 						
-					}else{
-							string nombre = InputNombre.Text;
-			string apellido = inputApellido.Text;
-			int cedula;
-			cedula = int.Parse(inputCedula.Text);
-			bool sexo;
-			if(radioButton1.Checked=true)
-			{
-				sexo= true;
-			}else{
-				sexo=false;
-			}
-			DateTime fechaN = new DateTime(2015, 10,31); 
-			int telefonoC = int.Parse(InputTelefonoCelular.Text);
-			int telefonoR = int.Parse(InputTelefonoResidencial.Text);
-			string correo = inputCorreo.Text;
-			string direccion = InputDireccion.Text;
-			DateTime fechaR = new DateTime(2022, 10,31);
+				}
+				else
+				{
+					string nombre = InputNombre.Text;
+					string apellido = inputApellido.Text;
+					int cedula;
+					cedula = int.Parse(inputCedula.Text);
+					bool sexo;
+				if(radioButton1.Checked==true)
+				{
+					sexo= true;
+				}
+				else
+				{
+					sexo=false;
+				}
+					DateTime fechaN = new DateTime(2015, 10,31); 
+					int telefonoC = int.Parse(InputTelefonoCelular.Text);
+					int telefonoR = int.Parse(InputTelefonoResidencial.Text);
+					string correo = inputCorreo.Text;
+					string direccion = InputDireccion.Text;
+					DateTime fechaR = new DateTime(2022, 10,31);
 	
 
-			x.Agregar(nombre,apellido,cedula,sexo,fechaN,telefonoC,telefonoR,correo,direccion,fechaR);
-				MessageBox.Show("Funciona el boton");
+					x.Agregar(nombre,apellido,cedula,sexo,fechaN,telefonoC,telefonoR,correo,direccion,fechaR);
+					MessageBox.Show("Funciona el boton");
 					
-					}
+				}
 		}
 		
 		void InputCorreoTextChanged(object sender, EventArgs e)
