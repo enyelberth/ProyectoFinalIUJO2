@@ -13,7 +13,9 @@ namespace menuavanzado.Registros.RegistroDVDs
         private string Tipo_DVD;
         private int Cantidad;
         private int Año_emision;
-        private string Fecha_ingreso;
+        private int Dia_ingreso;
+        private int Mes_ingreso;
+        private int Año_ingreso;
         private bool Prestamo;
         private string Descripcion;
 
@@ -24,21 +26,23 @@ namespace menuavanzado.Registros.RegistroDVDs
         public int año_emision { get => Año_emision; set => Año_emision = value; }
         public bool prestamo { get => Prestamo; set => Prestamo = value; }
         public string descripcion { get => Descripcion; set => Descripcion = value; }
-        public string fecha_ingreso { get => Fecha_ingreso; set => Fecha_ingreso = value; }
+        public int dia_ingreso { get => Dia_ingreso; set => Dia_ingreso = value; }
+        public int mes_ingreso { get => Mes_ingreso; set => Mes_ingreso = value; }
+        public int año_ingreso { get => Año_ingreso; set => Año_ingreso = value; }
 
-        public DVD(string _producto, string _codigo, string _tipoDVD, int _cantidad, int _añoemision, string _añoingreso, string _mesingreso, string _diaingreso, bool _prestamo, string _descripcion  ) 
+        public DVD(string _producto, string _codigo, string _tipoDVD, int _cantidad, int _añoemision, string _añoingreso, string _mesingreso, string _diaingreso, bool _prestamo, string _descripcion)
         {
             producto = _producto;
-            codigo = _codigo;   
             tipo_DVD = _tipoDVD;
             codigo = _codigo;
             cantidad = _cantidad;
             año_emision = _añoemision;
-            fecha_ingreso = ("" +_diaingreso + "/" + _mesingreso + "/" + _añoingreso);
+            dia_ingreso = Convert.ToInt32(_diaingreso);
+            mes_ingreso = Convert.ToInt32(_mesingreso);
+            año_ingreso = Convert.ToInt32(_añoingreso);
             prestamo = _prestamo;
             descripcion = _descripcion;
-        
-        }
 
+        }
     }
 }
