@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="encriptar.cs" />
     <Compile Include="Registros\RegistroClientes\Cliente.cs" />
     <Compile Include="Registros\RegistroClientes\Coleccion_clientes.cs" />
     <Compile Include="Registros\RegistroClientes\PantallaCliente.cs">
