@@ -30,3 +30,4 @@ C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\men
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\bin\Debug\menuavanzado.exe.config
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\bin\Debug\menuavanzado.exe
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\bin\Debug\menuavanzado.pdb
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.Registros.RegistroDVDs.DatosDVDs.resources

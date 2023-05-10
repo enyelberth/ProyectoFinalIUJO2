@@ -18,6 +18,7 @@ namespace menuavanzado.Registros.RegistroDVDs
         private int Año_ingreso;
         private bool Prestamo;
         private string Descripcion;
+        private string Ubicacionimagen;
 
         public string producto { get => Producto; set => Producto = value; }
         public string codigo { get => Codigo; set => Codigo = value; }
@@ -29,8 +30,25 @@ namespace menuavanzado.Registros.RegistroDVDs
         public int dia_ingreso { get => Dia_ingreso; set => Dia_ingreso = value; }
         public int mes_ingreso { get => Mes_ingreso; set => Mes_ingreso = value; }
         public int año_ingreso { get => Año_ingreso; set => Año_ingreso = value; }
+        public string ubicacionimagen { get => Ubicacionimagen; set => Ubicacionimagen = value; }
 
-        public DVD(string _producto, string _codigo, string _tipoDVD, int _cantidad, int _añoemision, string _añoingreso, string _mesingreso, string _diaingreso, bool _prestamo, string _descripcion)
+        public DVD(string _producto, string _tipoDVD, int _cantidad, int _añoemision, string _añoingreso, string _mesingreso, string _diaingreso, bool _prestamo, string _descripcion)
+        {
+            producto = _producto;
+            tipo_DVD = _tipoDVD;
+            codigo = generarcodigo();
+            cantidad = _cantidad;
+            año_emision = _añoemision;
+            dia_ingreso = Convert.ToInt32(_diaingreso);
+            mes_ingreso = Convert.ToInt32(_mesingreso);
+            año_ingreso = Convert.ToInt32(_añoingreso);
+            prestamo = _prestamo;
+            descripcion = _descripcion;
+
+
+        }
+
+        public DVD(string _producto, string _tipoDVD, string _codigo, int _cantidad, int _añoemision, string _añoingreso, string _mesingreso, string _diaingreso, bool _prestamo, string _descripcion, string _ubicacionimagen)
         {
             producto = _producto;
             tipo_DVD = _tipoDVD;
@@ -42,7 +60,25 @@ namespace menuavanzado.Registros.RegistroDVDs
             año_ingreso = Convert.ToInt32(_añoingreso);
             prestamo = _prestamo;
             descripcion = _descripcion;
+            ubicacionimagen = _ubicacionimagen;
+        }
 
+
+        string generarcodigo()
+        {
+            string resultado;
+            bool continuar = false;
+            ColeccionDVD revisar = new ColeccionDVD();
+
+            do
+            {
+                Random codigo = new Random();
+                resultado = Convert.ToString(codigo.Next(10000, 99999));
+                continuar = revisar.confirmarcodigo(resultado);
+
+            } while (continuar != true);
+
+            return resultado;
         }
     }
 }

@@ -16,5 +16,15 @@ namespace menuavanzado.Registros.RegistroDVDs
         {
             InitializeComponent();
         }
+
+        private void DatosDVDs_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

@@ -54,9 +54,9 @@ namespace menuavanzado.Registros.RegistroDVDs
                                                 bool Prestamo = (radioButtonNO.Checked == true) ? false : true;
                                                 string Descripcion = textBoxdescripcion.Text;
 
-                                                DVD index = new DVD(Producto, Codigo, Tipo_DVD, Cantidad, Año_emision, año_ingreso, mes_ingreso, dia_ingreso, Prestamo, Descripcion);
+                                                //DVD index = new DVD(Producto, Codigo, Tipo_DVD, Cantidad, Año_emision, año_ingreso, mes_ingreso, dia_ingreso, Prestamo, Descripcion);
 
-                                                x.agregar(index);
+                                                //x.agregar(index);
                                             }
                                         }
                                     }
