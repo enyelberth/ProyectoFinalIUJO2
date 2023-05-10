@@ -19,18 +19,18 @@ namespace menuavanzado.Registros.RegistroDVDs
         private bool Prestamo;
         private string Descripcion;
         private string Ubicacionimagen;
-
-        public string producto { get => Producto; set => Producto = value; }
-        public string codigo { get => Codigo; set => Codigo = value; }
-        public string tipo_DVD { get => Tipo_DVD; set => Tipo_DVD = value; }
-        public int cantidad { get => Cantidad; set => Cantidad = value; }
-        public int año_emision { get => Año_emision; set => Año_emision = value; }
-        public bool prestamo { get => Prestamo; set => Prestamo = value; }
-        public string descripcion { get => Descripcion; set => Descripcion = value; }
-        public int dia_ingreso { get => Dia_ingreso; set => Dia_ingreso = value; }
-        public int mes_ingreso { get => Mes_ingreso; set => Mes_ingreso = value; }
-        public int año_ingreso { get => Año_ingreso; set => Año_ingreso = value; }
-        public string ubicacionimagen { get => Ubicacionimagen; set => Ubicacionimagen = value; }
+                 
+        public string producto { get { return Producto; } set { Producto = value; } }
+        public string codigo { get { return Codigo; } set { Codigo = value; } }
+        public string tipo_DVD { get {return Tipo_DVD; } set { Tipo_DVD = value; } }
+        public int cantidad { get { return Cantidad; } set { Cantidad = value; }}
+        public int año_emision { get { return Año_emision; } set { Año_emision = value; }}
+        public bool prestamo { get { return Prestamo; } set { Prestamo = value; }}
+        public string descripcion { get { return Descripcion; } set { Descripcion = value; }}
+        public int dia_ingreso { get { return Dia_ingreso; } set { Dia_ingreso = value; } }
+        public int mes_ingreso { get { return Mes_ingreso; } set { Mes_ingreso = value; } }
+        public int año_ingreso { get { return Año_ingreso; } set { Año_ingreso = value; } }
+        public string ubicacionimagen { get { return Ubicacionimagen; } set { Ubicacionimagen = value; }}
 
         public DVD(string _producto, string _tipoDVD, int _cantidad, int _añoemision, string _añoingreso, string _mesingreso, string _diaingreso, bool _prestamo, string _descripcion)
         {

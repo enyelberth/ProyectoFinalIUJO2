@@ -1,12 +1,4 @@
-﻿/*
- * Creado por SharpDevelop.
- * Usuario: enyelberth
- * Fecha: 28/4/2023
- * Hora: 6:32 p. m.
- * 
- * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
- */
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 

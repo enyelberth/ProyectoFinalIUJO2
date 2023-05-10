@@ -31,3 +31,16 @@ C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\bin\Debug\menuava
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\bin\Debug\menuavanzado.exe
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\bin\Debug\menuavanzado.pdb
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.Registros.RegistroDVDs.DatosDVDs.resources
+C:\Users\enyelberth\Desktop\Proyectos\Proyecto_12.0\ProyectoFinalIUJO2\menuavanzado\bin\Debug\menuavanzado.exe.config
+C:\Users\enyelberth\Desktop\Proyectos\Proyecto_12.0\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.exe
+C:\Users\enyelberth\Desktop\Proyectos\Proyecto_12.0\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.pdb
+C:\Users\enyelberth\Desktop\Proyectos\Proyecto_12.0\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.csprojResolveAssemblyReference.cache
+C:\Users\enyelberth\Desktop\Proyectos\Proyecto_12.0\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.Datos.Pantallas.PantallaCliente.resources
+C:\Users\enyelberth\Desktop\Proyectos\Proyecto_12.0\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.Datos.Pantallas.PantallaDatosClientes.resources
+C:\Users\enyelberth\Desktop\Proyectos\Proyecto_12.0\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.MenuPrincipal.resources
+C:\Users\enyelberth\Desktop\Proyectos\Proyecto_12.0\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.Properties.Resources.resources
+C:\Users\enyelberth\Desktop\Proyectos\Proyecto_12.0\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.Registros.RegistroDVDs.DatosDVDs.resources
+C:\Users\enyelberth\Desktop\Proyectos\Proyecto_12.0\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.Registros.RegistroDVDs.RegistroDVD.resources
+C:\Users\enyelberth\Desktop\Proyectos\Proyecto_12.0\ProyectoFinalIUJO2\menuavanzado\obj\x86\Debug\menuavanzado.csproj.GenerateResource.Cache
+C:\Users\enyelberth\Desktop\Proyectos\Proyecto_12.0\ProyectoFinalIUJO2\menuavanzado\bin\Debug\menuavanzado.exe
+C:\Users\enyelberth\Desktop\Proyectos\Proyecto_12.0\ProyectoFinalIUJO2\menuavanzado\bin\Debug\menuavanzado.pdb
