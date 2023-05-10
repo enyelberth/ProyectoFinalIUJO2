@@ -33,6 +33,7 @@ namespace menuavanzado
         {
             if (File.Exists(Path.GetFullPath("Datos.xml"))) // nuevo codigo para encriptar lo escrito en la base de datos y borra el archivo remanente
             {
+                BasededatosDVD.escribirenbase();
                 metodoecryp.encriptar();
 
                 File.Delete(Path.GetFullPath("Datos.xml"));
@@ -96,7 +97,7 @@ namespace menuavanzado
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirFormDescrip(new Registros.RegistroDVDs.RegistroDVD());
+            AbrirFormDescrip(new Registros.RegistroDVDs.DatosDVDs());
 
 
 
@@ -142,6 +143,7 @@ namespace menuavanzado
             }
             metodoecryp.desencriptar();
             string ruta = Path.GetFullPath("Datos.xml");
+
 
             //esta linea oculta la base de datos cuando se desencripta esta oculta para que la podamos ver mientras trabajamos
             //File.SetAttributes(ruta, File.GetAttributes(ruta) | FileAttributes.Hidden);

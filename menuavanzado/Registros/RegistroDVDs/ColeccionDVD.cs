@@ -27,7 +27,9 @@ namespace menuavanzado.Registros.RegistroDVDs
         }
 
         //esta funcion escribe un objeto en la base de datos
-        public void escribirenbase(DVD dvd)
+
+
+        public void escribirenbase()
         {
 
             XmlDocument DVDdatos = new XmlDocument();
@@ -36,57 +38,67 @@ namespace menuavanzado.Registros.RegistroDVDs
 
             XmlNode peliculas = DVDdatos.SelectSingleNode("/registros/DVDs/Peliculas");
 
-            XmlElement pelicula = DVDdatos.CreateElement("pelicula");
+            peliculas.RemoveAll();
 
-            XmlAttribute attribute = DVDdatos.CreateAttribute("nombre");
-            attribute.Value = dvd.producto;
-            pelicula.Attributes.Append(attribute);
 
-            attribute = DVDdatos.CreateAttribute("codigo");
-            attribute.Value = dvd.codigo;
-            pelicula.Attributes.Append(attribute);
+            foreach (DVD dvd in DVDsRegistrados)
+            {
 
-            attribute = DVDdatos.CreateAttribute("Tipo");
-            attribute.Value = dvd.tipo_DVD;
-            pelicula.Attributes.Append(attribute);
+                XmlElement pelicula = DVDdatos.CreateElement("pelicula");
 
-            attribute = DVDdatos.CreateAttribute("cantidad");
-            attribute.Value = Convert.ToString(dvd.cantidad);
-            pelicula.Attributes.Append(attribute);
+                XmlAttribute attribute = DVDdatos.CreateAttribute("nombre");
+                attribute.Value = dvd.producto;
+                pelicula.Attributes.Append(attribute);
 
-            attribute = DVDdatos.CreateAttribute("AEmision");
-            attribute.Value = Convert.ToString(dvd.año_emision);
-            pelicula.Attributes.Append(attribute);
+                attribute = DVDdatos.CreateAttribute("codigo");
+                attribute.Value = dvd.codigo;
+                pelicula.Attributes.Append(attribute);
 
-            attribute = DVDdatos.CreateAttribute("diaingreso");
-            attribute.Value = Convert.ToString(dvd.dia_ingreso);
-            pelicula.Attributes.Append(attribute);
+                attribute = DVDdatos.CreateAttribute("Tipo");
+                attribute.Value = dvd.tipo_DVD;
+                pelicula.Attributes.Append(attribute);
 
-            attribute = DVDdatos.CreateAttribute("Mesingreso");
-            attribute.Value = Convert.ToString(dvd.mes_ingreso);
-            pelicula.Attributes.Append(attribute);
+                attribute = DVDdatos.CreateAttribute("cantidad");
+                attribute.Value = Convert.ToString(dvd.cantidad);
+                pelicula.Attributes.Append(attribute);
 
-            attribute = DVDdatos.CreateAttribute("Aingreso");
-            attribute.Value = Convert.ToString(dvd.año_emision);
-            pelicula.Attributes.Append(attribute);
+                attribute = DVDdatos.CreateAttribute("AEmision");
+                attribute.Value = Convert.ToString(dvd.año_emision);
+                pelicula.Attributes.Append(attribute);
 
-            attribute = DVDdatos.CreateAttribute("Prestamo");
-            string presta = (dvd.prestamo == true) ? "y" : "n";
-            attribute.Value = presta;
-            pelicula.Attributes.Append(attribute);
+                attribute = DVDdatos.CreateAttribute("diaingreso");
+                attribute.Value = Convert.ToString(dvd.dia_ingreso);
+                pelicula.Attributes.Append(attribute);
 
-            attribute = DVDdatos.CreateAttribute("Descripcion");
-            attribute.Value = dvd.descripcion;
-            pelicula.Attributes.Append(attribute);
+                attribute = DVDdatos.CreateAttribute("Mesingreso");
+                attribute.Value = Convert.ToString(dvd.mes_ingreso);
+                pelicula.Attributes.Append(attribute);
 
-            peliculas.AppendChild(pelicula);
+                attribute = DVDdatos.CreateAttribute("Aingreso");
+                attribute.Value = Convert.ToString(dvd.año_emision);
+                pelicula.Attributes.Append(attribute);
 
-            n = n + 1;
+                attribute = DVDdatos.CreateAttribute("Prestamo");
+                string presta = (dvd.prestamo == true) ? "y" : "n";
+                attribute.Value = presta;
+                pelicula.Attributes.Append(attribute);
 
-            agregar(dvd);
+                attribute = DVDdatos.CreateAttribute("Descripcion");
+                attribute.Value = dvd.descripcion;
+                pelicula.Attributes.Append(attribute);
+
+                attribute = DVDdatos.CreateAttribute("Imagen");
+                attribute.Value = dvd.ubicacionimagen;
+                pelicula.Attributes.Append(attribute);
+
+                peliculas.AppendChild(pelicula);
+
+
+            }
 
             DVDdatos.Save("Datos.xml");
         }
+
 
         //esta funcion lee lo escrito en la base de datos y lo transforma en objetos de una lista
         public void leerbase()
@@ -110,8 +122,9 @@ namespace menuavanzado.Registros.RegistroDVDs
                 string Añoingreso = pelicula.Attributes["Aingreso"].Value;
                 bool prestamo = (pelicula.Attributes["Prestamo"].Value == "y") ? true : false;
                 string descripcion = pelicula.Attributes["Descripcion"].Value;
+                string imagen = pelicula.Attributes["Imagen"].Value;
 
-                DVD index = new DVD(nombre, codigo, Tipo, cantidad, añoemision, Añoingreso, Mesingreso, diaingreso, prestamo, descripcion);
+                DVD index = new DVD(nombre, codigo, Tipo, cantidad, añoemision, Añoingreso, Mesingreso, diaingreso, prestamo, descripcion, imagen);
                 DVDsRegistrados.Add(index);
 
 
@@ -120,6 +133,81 @@ namespace menuavanzado.Registros.RegistroDVDs
 
 
 
+        }
+
+        
+
+        public void modificar(DVD index)
+        {
+
+            foreach (DVD dvd in DVDsRegistrados)
+            {
+                if (dvd.codigo == index.codigo)
+                {
+                    dvd.producto = index.producto;
+                    dvd.tipo_DVD = index.tipo_DVD;
+                    dvd.codigo = index.codigo;
+                    dvd.cantidad = index.cantidad;
+                    dvd.descripcion = index.descripcion;
+                    dvd.año_emision = index.año_emision;
+                    dvd.año_ingreso = index.año_ingreso;
+                    dvd.mes_ingreso = index.mes_ingreso;
+                    dvd.dia_ingreso = index.dia_ingreso;
+                    dvd.prestamo = index.prestamo;
+
+
+
+
+                }
+
+
+
+            }
+
+        }
+
+        public void eliminar(DVD index)
+        {
+            foreach (DVD dvd in DVDsRegistrados)
+            {
+
+                if (dvd == index)
+                    DVDsRegistrados.Remove(dvd);
+
+            }
+
+
+        }
+
+
+
+        public bool confirmarcodigo(string codigoindex)
+        {
+            bool confirmacion = true;
+
+            foreach (DVD dvd in DVDsRegistrados)
+            {
+
+                if (dvd.codigo == codigoindex)
+                {
+                    confirmacion = false;
+
+                }
+
+            }
+
+
+            return confirmacion;
+        }
+
+        public string obtenerimagen()
+        {
+            string rutaimagen = "lol";
+
+
+
+
+            return rutaimagen;
         }
     }
 }
