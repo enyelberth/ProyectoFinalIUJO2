@@ -97,7 +97,7 @@ namespace menuavanzado
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirFormDescrip(new Registros.RegistroDVDs.DatosDVDs());
+            AbrirFormDescrip(new Registros.RegistroDVDs.RegistroDVD());
 
 
 

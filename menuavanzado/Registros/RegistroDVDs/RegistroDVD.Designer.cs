@@ -41,8 +41,10 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.buttonregistro = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonSI = new System.Windows.Forms.RadioButton();
             this.radioButtonNO = new System.Windows.Forms.RadioButton();
+            this.radioButtonSI = new System.Windows.Forms.RadioButton();
+            this.textBoximagen = new System.Windows.Forms.TextBox();
+            this.buttonarchivo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +87,7 @@
             // 
             // textBoxdescripcion
             // 
-            this.textBoxdescripcion.Location = new System.Drawing.Point(262, 297);
+            this.textBoxdescripcion.Location = new System.Drawing.Point(108, 291);
             this.textBoxdescripcion.Name = "textBoxdescripcion";
             this.textBoxdescripcion.Size = new System.Drawing.Size(280, 20);
             this.textBoxdescripcion.TabIndex = 5;
@@ -145,12 +147,22 @@
             // 
             this.groupBox1.Controls.Add(this.radioButtonNO);
             this.groupBox1.Controls.Add(this.radioButtonSI);
-            this.groupBox1.Location = new System.Drawing.Point(411, 198);
+            this.groupBox1.Location = new System.Drawing.Point(343, 188);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(173, 79);
+            this.groupBox1.Size = new System.Drawing.Size(71, 67);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // radioButtonNO
+            // 
+            this.radioButtonNO.AutoSize = true;
+            this.radioButtonNO.Location = new System.Drawing.Point(3, 39);
+            this.radioButtonNO.Name = "radioButtonNO";
+            this.radioButtonNO.Size = new System.Drawing.Size(41, 17);
+            this.radioButtonNO.TabIndex = 1;
+            this.radioButtonNO.Text = "NO";
+            this.radioButtonNO.UseVisualStyleBackColor = true;
             // 
             // radioButtonSI
             // 
@@ -164,21 +176,30 @@
             this.radioButtonSI.Text = "SI";
             this.radioButtonSI.UseVisualStyleBackColor = true;
             // 
-            // radioButtonNO
+            // textBoximagen
             // 
-            this.radioButtonNO.AutoSize = true;
-            this.radioButtonNO.Location = new System.Drawing.Point(3, 39);
-            this.radioButtonNO.Name = "radioButtonNO";
-            this.radioButtonNO.Size = new System.Drawing.Size(41, 17);
-            this.radioButtonNO.TabIndex = 1;
-            this.radioButtonNO.Text = "NO";
-            this.radioButtonNO.UseVisualStyleBackColor = true;
+            this.textBoximagen.Location = new System.Drawing.Point(444, 291);
+            this.textBoximagen.Name = "textBoximagen";
+            this.textBoximagen.Size = new System.Drawing.Size(167, 20);
+            this.textBoximagen.TabIndex = 12;
+            // 
+            // buttonarchivo
+            // 
+            this.buttonarchivo.Location = new System.Drawing.Point(487, 249);
+            this.buttonarchivo.Name = "buttonarchivo";
+            this.buttonarchivo.Size = new System.Drawing.Size(75, 23);
+            this.buttonarchivo.TabIndex = 13;
+            this.buttonarchivo.Text = "Registrar";
+            this.buttonarchivo.UseVisualStyleBackColor = true;
+            this.buttonarchivo.Click += new System.EventHandler(this.buttonarchivo_Click_1);
             // 
             // RegistroDVD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonarchivo);
+            this.Controls.Add(this.textBoximagen);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonregistro);
             this.Controls.Add(this.textBoxañoingreso);
@@ -217,5 +238,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButtonNO;
         private System.Windows.Forms.RadioButton radioButtonSI;
+        private System.Windows.Forms.TextBox textBoximagen;
+        private System.Windows.Forms.Button buttonarchivo;
     }
 }
