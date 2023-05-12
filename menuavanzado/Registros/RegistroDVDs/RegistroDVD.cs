@@ -243,7 +243,7 @@ namespace menuavanzado.Registros.RegistroDVDs
                         continuar = true;
 
                         textBoxarchivo.Text = Path.GetFileName(nuevoarchivo.FileName);
-                        ubicacionimagen = nuevoarchivo;
+                        ubicacionarchivo = nuevoarchivo;
 
                     }
 
@@ -269,7 +269,7 @@ namespace menuavanzado.Registros.RegistroDVDs
 
         public string obtenerimagen()
         {
-            OpenFileDialog nuevo = ubicacionarchivo;
+            OpenFileDialog nuevo = ubicacionimagen;
             string caminocarpeta = "";
             string caminofinal = "";
             string caminoarchivo = nuevo.FileName;
@@ -308,7 +308,7 @@ namespace menuavanzado.Registros.RegistroDVDs
 
         public string obtenerarchivo()
         {
-            OpenFileDialog nuevo = ubicacionimagen;
+            OpenFileDialog nuevo = ubicacionarchivo;
             string caminocarpeta;
             string caminofinal;
             string caminoarchivo = nuevo.FileName;
@@ -317,7 +317,7 @@ namespace menuavanzado.Registros.RegistroDVDs
             {
 
                 caminocarpeta = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                caminofinal = Path.Combine(caminocarpeta, "imagenesdvds\\" + Path.GetFileName(nuevo.FileName));
+                caminofinal = Path.Combine(caminocarpeta, "archivosmp3\\" + Path.GetFileName(nuevo.FileName));
 
                 MessageBox.Show(caminofinal);
 

@@ -43,7 +43,7 @@ namespace menuavanzado.Registros.RegistroDVDs
             ubicacionimagen = _ubicacionimagen;
         }
 
-        public DVD(string _producto, string _tipoDVD, string _codigo, int _cantidad, int _añoemision, DateTime _fechaingreso, bool _prestamo, string _descripcion, string _ubicacionimagen, string ubicacionarchivo)
+        public DVD(string _producto, string _tipoDVD, string _codigo, int _cantidad, int _añoemision, DateTime _fechaingreso, bool _prestamo, string _descripcion, string _ubicacionimagen, string _ubicacionarchivo)
         {
             producto = _producto;
             tipo_DVD = _tipoDVD;
@@ -54,6 +54,7 @@ namespace menuavanzado.Registros.RegistroDVDs
             prestamo = _prestamo;
             descripcion = _descripcion;
             ubicacionimagen = _ubicacionimagen;
+            ubicacionArchivo = _ubicacionarchivo;
 
 
         }
