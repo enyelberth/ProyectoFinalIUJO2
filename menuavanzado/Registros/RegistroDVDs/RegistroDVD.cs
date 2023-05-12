@@ -10,7 +10,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace menuavanzado.Registros.RegistroDVDs
 {
@@ -62,14 +64,22 @@ namespace menuavanzado.Registros.RegistroDVDs
                                         string archivo = obtenerarchivo();
                                         DVD index1 = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen, archivo);
 
+                                        limpiartextboxes();
+
                                         x.agregar(index1);
+
+                                        MessageBox.Show("" + Producto + " agregado a " + Tipo_DVD + "s" );
 
                                     }
                                     else
                                     {
                                         DVD index = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen);
 
+                                        limpiartextboxes();
+
                                         x.agregar(index);
+
+                                        MessageBox.Show("" + Producto + " agregado a " + Tipo_DVD + "s");
                                     }
                                 }
                             }
@@ -192,6 +202,20 @@ namespace menuavanzado.Registros.RegistroDVDs
 
         }
 
+        public void limpiartextboxes()
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox)
+                {
+                    control.Text = "";
+                }
+
+            }
+
+            textBoxcodigo.Text = generarcodigo();
+
+        }
         private void comboBoxtipoDVD_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -278,7 +302,7 @@ namespace menuavanzado.Registros.RegistroDVDs
             {
 
                 caminocarpeta = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                caminofinal = Path.Combine(caminocarpeta, "archivosmp3\\" + Path.GetFileName(nuevo.FileName));
+                caminofinal = Path.Combine(caminocarpeta, "imagenesdvds\\" + Path.GetFileName(nuevo.FileName));
 
                 MessageBox.Show(caminofinal);
 
@@ -337,7 +361,7 @@ namespace menuavanzado.Registros.RegistroDVDs
             catch (ArgumentException e)
             {
 
-                MessageBox.Show("Se ha producido un error al seleccionar el archivo, seleccione un archivo caliso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Se ha producido un error al seleccionar el archivo, seleccione un archivo valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
 
