@@ -21,6 +21,7 @@ namespace menuavanzado.Registros.RegistroDVDs
         public RegistroDVD()
         {
             InitializeComponent();
+            textBoxcodigo.Text = generarcodigo();
         }
 
         private void buttonregistro_Click(object sender, EventArgs e)
@@ -30,51 +31,46 @@ namespace menuavanzado.Registros.RegistroDVDs
 
             if (textBoxAñoemision.Text != "")
             {
-                if (textBoxañoingreso.Text != "")
+                if (textBoxCantidad.Text != "")
                 {
-                    if (textBoxCantidad.Text != "")
+                    if (textBoxcodigo.Text != "")
                     {
-                        if (textBoxcodigo.Text != "")
+                        if (textBoxdescripcion.Text != "")
                         {
-                            if (textBoxdescripcion.Text != "")
+                            if (textBoxTitulo.Text != "")
                             {
-                                if (textBoxDiaingreso.Text != "")
+                                if (textBoximagen.Text != "")
                                 {
-                                    if (textBoxmesingreso.Text != "")
-                                    {
-                                        if (textBoxprestamo.Text != "")
-                                        {
-                                            if (textBoxTitulo.Text != "")
-                                            {
-                                                if (textBoximagen.Text != "")
-                                                {
-                                                    confirmacion = true;
-                                                    string Producto = textBoxTitulo.Text;
-                                                    string Codigo = textBoxcodigo.Text;
-                                                    string Tipo_DVD = comboBoxtipoDVD.Text;
-                                                    int Cantidad = Convert.ToInt32(textBoxCantidad.Text);
-                                                    int Año_emision = Convert.ToInt32(textBoxAñoemision.Text);
-                                                    string dia_ingreso = textBoxDiaingreso.Text;
-                                                    string mes_ingreso = textBoxmesingreso.Text;
-                                                    string año_ingreso = textBoxañoingreso.Text;
-                                                    bool Prestamo = (radioButtonNO.Checked == true) ? false : true;
-                                                    string Descripcion = textBoxdescripcion.Text;
-                                                    string imagen = obtenerimagen();
 
-                                                    DVD index = new DVD(Producto, Codigo, Tipo_DVD, Cantidad, Año_emision, año_ingreso, mes_ingreso, dia_ingreso, Prestamo, Descripcion, imagen);
-                                                    MessageBox.Show(index.ubicacionimagen); 
+                                    confirmacion = true;
 
-                                                    //x.agregar(index);
-                                                }
+                                    DateTime fechaingreso = dateTimeFechaingreso.Value.Date.ToLocalTime();
 
-                                            }
-                                        }
-                                    }
+
+                                    string Producto = textBoxTitulo.Text;
+                                    string Tipo_DVD = comboBoxtipoDVD.Text;
+                                    int Cantidad = Convert.ToInt32(textBoxCantidad.Text);
+                                    string Codigo = textBoxcodigo.Text;
+                                    int Año_emision = Convert.ToInt32(textBoxAñoemision.Text);
+                                    bool Prestamo = (radioButtonNO.Checked == true) ? false : true;
+                                    string Descripcion = textBoxdescripcion.Text;
+                                    string imagen = obtenerimagen();
+
+                                    DVD index = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen);
+                                    MessageBox.Show(index.ubicacionimagen);
+                                    MessageBox.Show(Convert.ToString(fechaingreso));
+
+                                    x.agregar(index);
                                 }
+
                             }
+                                        
+                                    
+                                
                         }
                     }
                 }
+                
             }
 
             if (confirmacion == false)
@@ -188,7 +184,7 @@ namespace menuavanzado.Registros.RegistroDVDs
             OpenFileDialog nuevo = ubicacionimagen;
             string caminocarpeta = "";
             string caminofinal = "";
-
+            string caminoarchivo = nuevo.FileName;
 
             try
             {
@@ -198,7 +194,7 @@ namespace menuavanzado.Registros.RegistroDVDs
 
                 MessageBox.Show(caminofinal);
 
-                //File.Copy(caminoarchivo, caminofinal);
+                File.Copy(caminoarchivo, caminofinal);
 
 
 
@@ -220,6 +216,23 @@ namespace menuavanzado.Registros.RegistroDVDs
 
             return Path.GetFileName(nuevo.FileName);
 
+        }
+
+        string generarcodigo()
+        {
+            string resultado;
+            bool continuar = false;
+            ColeccionDVD revisar = new ColeccionDVD();
+
+            do
+            {
+                Random codigo = new Random();
+                resultado = Convert.ToString(codigo.Next(10000, 99999));
+                continuar = revisar.confirmarcodigo(resultado);
+
+            } while (continuar != true);
+
+            return resultado;
         }
     }
 }

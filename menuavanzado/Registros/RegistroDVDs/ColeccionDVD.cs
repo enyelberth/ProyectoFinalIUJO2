@@ -13,7 +13,7 @@ namespace menuavanzado.Registros.RegistroDVDs
 
     internal class ColeccionDVD
     {
-        public List<DVD> DVDsRegistrados = new List<DVD>();
+        public static List<DVD> DVDsRegistrados = new List<DVD>();
 
 
         int n = 0;
@@ -66,16 +66,10 @@ namespace menuavanzado.Registros.RegistroDVDs
                 attribute.Value = Convert.ToString(dvd.año_emision);
                 pelicula.Attributes.Append(attribute);
 
-                attribute = DVDdatos.CreateAttribute("diaingreso");
-                attribute.Value = Convert.ToString(dvd.dia_ingreso);
-                pelicula.Attributes.Append(attribute);
-
-                attribute = DVDdatos.CreateAttribute("Mesingreso");
-                attribute.Value = Convert.ToString(dvd.mes_ingreso);
-                pelicula.Attributes.Append(attribute);
-
-                attribute = DVDdatos.CreateAttribute("Aingreso");
-                attribute.Value = Convert.ToString(dvd.año_emision);
+                attribute = DVDdatos.CreateAttribute("Fechaingreso");
+                DateTime fecha = dvd.fechaingreso.Date;
+                string stringfecha = fecha.ToString();
+                attribute.Value = stringfecha;
                 pelicula.Attributes.Append(attribute);
 
                 attribute = DVDdatos.CreateAttribute("Prestamo");
@@ -117,14 +111,13 @@ namespace menuavanzado.Registros.RegistroDVDs
                 string Tipo = pelicula.Attributes["Tipo"].Value;
                 int cantidad = Convert.ToInt32(pelicula.Attributes["cantidad"].Value);
                 int añoemision = Convert.ToInt32(pelicula.Attributes["AEmision"].Value);
-                string diaingreso = pelicula.Attributes["diaingreso"].Value;
-                string Mesingreso = pelicula.Attributes["Mesingreso"].Value;
-                string Añoingreso = pelicula.Attributes["Aingreso"].Value;
+                string convertirfecha = pelicula.Attributes["Fechaingreso"].Value;
+                DateTime fechaingreso = DateTime.Parse(convertirfecha);
                 bool prestamo = (pelicula.Attributes["Prestamo"].Value == "y") ? true : false;
                 string descripcion = pelicula.Attributes["Descripcion"].Value;
                 string imagen = pelicula.Attributes["Imagen"].Value;
 
-                DVD index = new DVD(nombre, codigo, Tipo, cantidad, añoemision, Añoingreso, Mesingreso, diaingreso, prestamo, descripcion, imagen);
+                DVD index = new DVD(nombre, codigo, Tipo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
                 DVDsRegistrados.Add(index);
 
 
@@ -150,9 +143,7 @@ namespace menuavanzado.Registros.RegistroDVDs
                     dvd.cantidad = index.cantidad;
                     dvd.descripcion = index.descripcion;
                     dvd.año_emision = index.año_emision;
-                    dvd.año_ingreso = index.año_ingreso;
-                    dvd.mes_ingreso = index.mes_ingreso;
-                    dvd.dia_ingreso = index.dia_ingreso;
+                    dvd.fechaingreso = index.fechaingreso;
                     dvd.prestamo = index.prestamo;
 
 
