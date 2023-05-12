@@ -124,15 +124,18 @@ namespace menuavanzado.Registros.RegistroDVDs
                 bool prestamo = (pelicula.Attributes["Prestamo"].Value == "y") ? true : false;
                 string descripcion = pelicula.Attributes["Descripcion"].Value;
                 string imagen = pelicula.Attributes["Imagen"].Value;
+
+                MessageBox.Show(Tipo);
+                
                 if (Tipo == "Mp3")
                 {
                     string archivo = pelicula.Attributes["Archivo"].Value;
-                    DVD index1 = new DVD(nombre, codigo, Tipo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen, archivo);
+                    DVD index1 = new DVD(nombre, Tipo, codigo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen, archivo);
                     DVDsRegistrados.Add(index1);
                 }
-                else
+                else if (Tipo != "Mp3")
                 {
-                    DVD index2 = new DVD(nombre, codigo, Tipo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
+                    DVD index2 = new DVD(nombre, Tipo, codigo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
                     DVDsRegistrados.Add(index2);
                 }
 
