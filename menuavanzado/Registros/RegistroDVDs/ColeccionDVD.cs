@@ -37,63 +37,79 @@ namespace menuavanzado.Registros.RegistroDVDs
             DVDdatos.Load("Datos.xml");
 
             XmlNode peliculas = DVDdatos.SelectSingleNode("/registros/DVDs/Peliculas");
+            XmlNode MP3s = DVDdatos.SelectSingleNode("/registros/DVDs/MP3");
+            XmlNode Juegos = DVDdatos.SelectSingleNode("/registros/DVDs/Juegos");
 
             peliculas.RemoveAll();
+            MP3s.RemoveAll();
+            Juegos.RemoveAll();
 
 
             foreach (DVD dvd in DVDsRegistrados)
             {
 
-                XmlElement pelicula = DVDdatos.CreateElement("pelicula");
+                XmlElement producto = DVDdatos.CreateElement("producto");
 
                 XmlAttribute attribute = DVDdatos.CreateAttribute("nombre");
                 attribute.Value = dvd.producto;
-                pelicula.Attributes.Append(attribute);
+                producto.Attributes.Append(attribute);
 
                 attribute = DVDdatos.CreateAttribute("codigo");
                 attribute.Value = dvd.codigo;
-                pelicula.Attributes.Append(attribute);
+                producto.Attributes.Append(attribute);
 
                 attribute = DVDdatos.CreateAttribute("Tipo");
                 attribute.Value = dvd.tipo_DVD;
-                pelicula.Attributes.Append(attribute);
+                producto.Attributes.Append(attribute);
 
                 attribute = DVDdatos.CreateAttribute("cantidad");
                 attribute.Value = Convert.ToString(dvd.cantidad);
-                pelicula.Attributes.Append(attribute);
+                producto.Attributes.Append(attribute);
 
                 attribute = DVDdatos.CreateAttribute("AEmision");
                 attribute.Value = Convert.ToString(dvd.año_emision);
-                pelicula.Attributes.Append(attribute);
+                producto.Attributes.Append(attribute);
 
                 attribute = DVDdatos.CreateAttribute("Fechaingreso");
                 DateTime fecha = dvd.fechaingreso.Date;
                 string stringfecha = fecha.ToString();
                 attribute.Value = stringfecha;
-                pelicula.Attributes.Append(attribute);
+                producto.Attributes.Append(attribute);
 
                 attribute = DVDdatos.CreateAttribute("Prestamo");
                 string presta = (dvd.prestamo == true) ? "y" : "n";
                 attribute.Value = presta;
-                pelicula.Attributes.Append(attribute);
+                producto.Attributes.Append(attribute);
 
                 attribute = DVDdatos.CreateAttribute("Descripcion");
                 attribute.Value = dvd.descripcion;
-                pelicula.Attributes.Append(attribute);
+                producto.Attributes.Append(attribute);
 
                 attribute = DVDdatos.CreateAttribute("Imagen");
                 attribute.Value = dvd.ubicacionimagen;
-                pelicula.Attributes.Append(attribute);
+                producto.Attributes.Append(attribute);
 
                 if(dvd.tipo_DVD == "Mp3")
                 {
                     attribute = DVDdatos.CreateAttribute("Archivo");
                     attribute.Value = dvd.ubicacionArchivo;
-                    pelicula.Attributes.Append(attribute);
+                    producto.Attributes.Append(attribute);
+
+                    MP3s.AppendChild(producto);
 
                 }
+                else if (dvd.tipo_DVD == "Videojuego")
+                {
 
-                peliculas.AppendChild(pelicula);
+                    Juegos.AppendChild(producto);
+
+                }
+                else if (dvd.tipo_DVD == "Pelicula")
+                {
+
+                    peliculas.AppendChild(producto);
+
+                }
 
 
             }
@@ -111,6 +127,9 @@ namespace menuavanzado.Registros.RegistroDVDs
             leer.Load(camino);
 
             XmlNode peliculas = leer.SelectSingleNode("/registros/DVDs/Peliculas");
+            XmlNode MP3s = leer.SelectSingleNode("/registros/DVDs/MP3");
+            XmlNode Juegos = leer.SelectSingleNode("/registros/DVDs/Juegos");
+
 
             foreach (XmlNode pelicula in peliculas.ChildNodes)
             {
@@ -127,26 +146,62 @@ namespace menuavanzado.Registros.RegistroDVDs
 
                 MessageBox.Show(Tipo);
                 
-                if (Tipo == "Mp3")
-                {
-                    string archivo = pelicula.Attributes["Archivo"].Value;
-                    DVD index1 = new DVD(nombre, Tipo, codigo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen, archivo);
-                    DVDsRegistrados.Add(index1);
-                }
-                else if (Tipo != "Mp3")
-                {
-                    DVD index2 = new DVD(nombre, Tipo, codigo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
-                    DVDsRegistrados.Add(index2);
-                }
+                DVD index1 = new DVD(nombre, Tipo, codigo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
+                DVDsRegistrados.Add(index1);
+
+            }
+
+            foreach (XmlNode MP3 in MP3s.ChildNodes)
+            {
+                string nombre = MP3.Attributes["nombre"].Value;
+                string codigo = MP3.Attributes["codigo"].Value;
+                string Tipo = MP3.Attributes["Tipo"].Value;
+                int cantidad = Convert.ToInt32(MP3.Attributes["cantidad"].Value);
+                int añoemision = Convert.ToInt32(MP3.Attributes["AEmision"].Value);
+                string convertirfecha = MP3.Attributes["Fechaingreso"].Value;
+                DateTime fechaingreso = DateTime.Parse(convertirfecha);
+                bool prestamo = (MP3.Attributes["Prestamo"].Value == "y") ? true : false;
+                string descripcion = MP3.Attributes["Descripcion"].Value;
+                string imagen = MP3.Attributes["Imagen"].Value;
+
+                MessageBox.Show(Tipo);
+
+
+                DVD index2 = new DVD(nombre, Tipo, codigo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
+                DVDsRegistrados.Add(index2);
+
+            }
+
+            foreach (XmlNode juego in Juegos.ChildNodes)
+            {
+                string nombre = juego.Attributes["nombre"].Value;
+                string codigo = juego.Attributes["codigo"].Value;
+                string Tipo = juego.Attributes["Tipo"].Value;
+                int cantidad = Convert.ToInt32(juego.Attributes["cantidad"].Value);
+                int añoemision = Convert.ToInt32(juego.Attributes["AEmision"].Value);
+                string convertirfecha = juego.Attributes["Fechaingreso"].Value;
+                DateTime fechaingreso = DateTime.Parse(convertirfecha);
+                bool prestamo = (juego.Attributes["Prestamo"].Value == "y") ? true : false;
+                string descripcion = juego.Attributes["Descripcion"].Value;
+                string imagen = juego.Attributes["Imagen"].Value;
+
+                MessageBox.Show(Tipo);
+
+
+                DVD index3 = new DVD(nombre, Tipo, codigo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
+                DVDsRegistrados.Add(index3);
 
             }
 
 
 
 
+
+
+
         }
 
-        
+
 
         public void modificar(DVD index)
         {
