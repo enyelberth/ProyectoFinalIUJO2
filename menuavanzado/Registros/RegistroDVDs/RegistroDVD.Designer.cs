@@ -39,15 +39,15 @@
             this.radioButtonNO = new System.Windows.Forms.RadioButton();
             this.radioButtonSI = new System.Windows.Forms.RadioButton();
             this.textBoximagen = new System.Windows.Forms.TextBox();
-            this.buttonarchivo = new System.Windows.Forms.Button();
+            this.buttonarchivoimagen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonexaminararchivo = new System.Windows.Forms.Button();
+            this.textBoxarchivo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -82,6 +82,7 @@
             this.textBoxTitulo.Name = "textBoxTitulo";
             this.textBoxTitulo.Size = new System.Drawing.Size(126, 21);
             this.textBoxTitulo.TabIndex = 4;
+            this.textBoxTitulo.TextChanged += new System.EventHandler(this.textBoxTitulo_TextChanged);
             // 
             // textBoxdescripcion
             // 
@@ -112,6 +113,7 @@
             this.comboBoxtipoDVD.Name = "comboBoxtipoDVD";
             this.comboBoxtipoDVD.Size = new System.Drawing.Size(94, 21);
             this.comboBoxtipoDVD.TabIndex = 7;
+            this.comboBoxtipoDVD.SelectedIndexChanged += new System.EventHandler(this.comboBoxtipoDVD_SelectedIndexChanged);
             // 
             // buttonregistro
             // 
@@ -167,15 +169,15 @@
             this.textBoximagen.Size = new System.Drawing.Size(236, 20);
             this.textBoximagen.TabIndex = 12;
             // 
-            // buttonarchivo
+            // buttonarchivoimagen
             // 
-            this.buttonarchivo.Location = new System.Drawing.Point(688, 472);
-            this.buttonarchivo.Name = "buttonarchivo";
-            this.buttonarchivo.Size = new System.Drawing.Size(75, 23);
-            this.buttonarchivo.TabIndex = 13;
-            this.buttonarchivo.Text = "Registrar";
-            this.buttonarchivo.UseVisualStyleBackColor = true;
-            this.buttonarchivo.Click += new System.EventHandler(this.buttonarchivo_Click_1);
+            this.buttonarchivoimagen.Location = new System.Drawing.Point(688, 472);
+            this.buttonarchivoimagen.Name = "buttonarchivoimagen";
+            this.buttonarchivoimagen.Size = new System.Drawing.Size(75, 23);
+            this.buttonarchivoimagen.TabIndex = 13;
+            this.buttonarchivoimagen.Text = "Buscar";
+            this.buttonarchivoimagen.UseVisualStyleBackColor = true;
+            this.buttonarchivoimagen.Click += new System.EventHandler(this.buttonarchivo_Click_1);
             // 
             // label1
             // 
@@ -183,9 +185,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(116, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 18);
+            this.label1.Size = new System.Drawing.Size(50, 18);
             this.label1.TabIndex = 14;
-            this.label1.Text = "TITULO";
+            this.label1.Text = "Titulo";
             // 
             // label2
             // 
@@ -237,23 +239,26 @@
             this.label11.TabIndex = 15;
             this.label11.Text = "Disponible a prestamo?";
             // 
-            // button1
+            // buttonexaminararchivo
             // 
-            this.button1.Location = new System.Drawing.Point(748, 178);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonexaminararchivo.Location = new System.Drawing.Point(748, 178);
+            this.buttonexaminararchivo.Name = "buttonexaminararchivo";
+            this.buttonexaminararchivo.Size = new System.Drawing.Size(75, 23);
+            this.buttonexaminararchivo.TabIndex = 25;
+            this.buttonexaminararchivo.Text = "Buscar";
+            this.buttonexaminararchivo.UseVisualStyleBackColor = true;
+            this.buttonexaminararchivo.Visible = false;
+            this.buttonexaminararchivo.Click += new System.EventHandler(this.buttonexaminararchivo_Click);
             // 
-            // textBox1
+            // textBoxarchivo
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(527, 181);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(206, 21);
-            this.textBox1.TabIndex = 24;
+            this.textBoxarchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxarchivo.Location = new System.Drawing.Point(527, 181);
+            this.textBoxarchivo.Name = "textBoxarchivo";
+            this.textBoxarchivo.ReadOnly = true;
+            this.textBoxarchivo.Size = new System.Drawing.Size(206, 21);
+            this.textBoxarchivo.TabIndex = 24;
+            this.textBoxarchivo.Visible = false;
             // 
             // label12
             // 
@@ -293,6 +298,7 @@
             this.labelArchivo.Size = new System.Drawing.Size(64, 18);
             this.labelArchivo.TabIndex = 29;
             this.labelArchivo.Text = "Archivo";
+            this.labelArchivo.Visible = false;
             // 
             // dateTimeFechaingreso
             // 
@@ -323,8 +329,8 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.buttonexaminararchivo);
+            this.Controls.Add(this.textBoxarchivo);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -332,7 +338,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonarchivo);
+            this.Controls.Add(this.buttonarchivoimagen);
             this.Controls.Add(this.textBoximagen);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonregistro);
@@ -363,15 +369,15 @@
         private System.Windows.Forms.RadioButton radioButtonNO;
         private System.Windows.Forms.RadioButton radioButtonSI;
         private System.Windows.Forms.TextBox textBoximagen;
-        private System.Windows.Forms.Button buttonarchivo;
+        private System.Windows.Forms.Button buttonarchivoimagen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonexaminararchivo;
+        private System.Windows.Forms.TextBox textBoxarchivo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;

@@ -85,6 +85,14 @@ namespace menuavanzado.Registros.RegistroDVDs
                 attribute.Value = dvd.ubicacionimagen;
                 pelicula.Attributes.Append(attribute);
 
+                if(dvd.tipo_DVD == "Mp3")
+                {
+                    attribute = DVDdatos.CreateAttribute("Archivo");
+                    attribute.Value = dvd.ubicacionArchivo;
+                    pelicula.Attributes.Append(attribute);
+
+                }
+
                 peliculas.AppendChild(pelicula);
 
 
@@ -116,10 +124,17 @@ namespace menuavanzado.Registros.RegistroDVDs
                 bool prestamo = (pelicula.Attributes["Prestamo"].Value == "y") ? true : false;
                 string descripcion = pelicula.Attributes["Descripcion"].Value;
                 string imagen = pelicula.Attributes["Imagen"].Value;
-
-                DVD index = new DVD(nombre, codigo, Tipo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
-                DVDsRegistrados.Add(index);
-
+                if (Tipo == "Mp3")
+                {
+                    string archivo = pelicula.Attributes["Archivo"].Value;
+                    DVD index1 = new DVD(nombre, codigo, Tipo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen, archivo);
+                    DVDsRegistrados.Add(index1);
+                }
+                else
+                {
+                    DVD index2 = new DVD(nombre, codigo, Tipo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
+                    DVDsRegistrados.Add(index2);
+                }
 
             }
 
@@ -145,8 +160,7 @@ namespace menuavanzado.Registros.RegistroDVDs
                     dvd.año_emision = index.año_emision;
                     dvd.fechaingreso = index.fechaingreso;
                     dvd.prestamo = index.prestamo;
-
-
+                    dvd.ubicacionArchivo = index.ubicacionArchivo;
 
 
                 }
@@ -191,14 +205,5 @@ namespace menuavanzado.Registros.RegistroDVDs
             return confirmacion;
         }
 
-        public string obtenerimagen()
-        {
-            string rutaimagen = "lol";
-
-
-
-
-            return rutaimagen;
-        }
     }
 }

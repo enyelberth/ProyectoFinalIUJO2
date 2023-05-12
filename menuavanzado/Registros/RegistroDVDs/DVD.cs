@@ -17,7 +17,8 @@ namespace menuavanzado.Registros.RegistroDVDs
         private bool Prestamo;
         private string Descripcion;
         private string Ubicacionimagen;
-                 
+        private string UbicacionArchivo;
+
         public string producto { get { return Producto; } set { Producto = value; } }
         public string codigo { get { return Codigo; } set { Codigo = value; } }
         public string tipo_DVD { get {return Tipo_DVD; } set { Tipo_DVD = value; } }
@@ -27,6 +28,7 @@ namespace menuavanzado.Registros.RegistroDVDs
         public string descripcion { get { return Descripcion; } set { Descripcion = value; }}
         public string ubicacionimagen { get { return Ubicacionimagen; } set { Ubicacionimagen = value; }}
         public DateTime fechaingreso { get => Fechaingreso; set => Fechaingreso = value; }
+        public string ubicacionArchivo { get => UbicacionArchivo; set => UbicacionArchivo = value; }
 
         public DVD(string _producto, string _tipoDVD, string _codigo, int _cantidad, int _añoemision, DateTime _fechaingreso, bool _prestamo, string _descripcion, string _ubicacionimagen)
         {
@@ -41,8 +43,18 @@ namespace menuavanzado.Registros.RegistroDVDs
             ubicacionimagen = _ubicacionimagen;
         }
 
-        public DVD()
+        public DVD(string _producto, string _tipoDVD, string _codigo, int _cantidad, int _añoemision, DateTime _fechaingreso, bool _prestamo, string _descripcion, string _ubicacionimagen, string ubicacionarchivo)
         {
+            producto = _producto;
+            tipo_DVD = _tipoDVD;
+            codigo = _codigo;
+            cantidad = _cantidad;
+            año_emision = _añoemision;
+            fechaingreso = _fechaingreso;
+            prestamo = _prestamo;
+            descripcion = _descripcion;
+            ubicacionimagen = _ubicacionimagen;
+
 
         }
 
