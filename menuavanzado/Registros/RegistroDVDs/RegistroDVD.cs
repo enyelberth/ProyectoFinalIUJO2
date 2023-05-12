@@ -17,6 +17,7 @@ namespace menuavanzado.Registros.RegistroDVDs
     public partial class RegistroDVD : Form
     {
         OpenFileDialog ubicacionimagen;
+        OpenFileDialog ubicacionarchivo;
 
         public RegistroDVD()
         {
@@ -56,21 +57,25 @@ namespace menuavanzado.Registros.RegistroDVDs
                                     string Descripcion = textBoxdescripcion.Text;
                                     string imagen = obtenerimagen();
 
-                                    DVD index = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen);
-                                    MessageBox.Show(index.ubicacionimagen);
-                                    MessageBox.Show(Convert.ToString(fechaingreso));
+                                    if (Tipo_DVD == "Mp3")
+                                    {
+                                        string archivo = obtenerarchivo();
+                                        DVD index1 = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen, archivo);
 
-                                    x.agregar(index);
+                                        x.agregar(index1);
+
+                                    }
+                                    else
+                                    {
+                                        DVD index = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen);
+
+                                        x.agregar(index);
+                                    }
                                 }
-
                             }
-                                        
-                                    
-                                
                         }
                     }
                 }
-                
             }
 
             if (confirmacion == false)
@@ -82,6 +87,17 @@ namespace menuavanzado.Registros.RegistroDVDs
 
 
         //validaciones
+
+        private void textBoxTitulo_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxTitulo.Text.Length > 0)
+            {
+                string texto = textBoxTitulo.Text;
+                textBoxTitulo.Text = texto.Substring(0, 1).ToUpper() + texto.Substring(1).ToLower();
+                textBoxTitulo.SelectionStart = textBoxTitulo.Text.Length; // Colocamos el cursor al final del texto
+                textBoxTitulo.SelectionLength = 0; 
+            }
+        }
 
         private void textBoxAñoemision_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -176,12 +192,84 @@ namespace menuavanzado.Registros.RegistroDVDs
 
         }
 
+        private void comboBoxtipoDVD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (comboBoxtipoDVD.SelectedItem.ToString() == "Mp3")
+            {
+                labelArchivo.Visible = true;
+                textBoxarchivo.Visible = true;
+                buttonexaminararchivo.Visible = true;
+            }
+            else
+            {
+
+
+                labelArchivo.Visible = false;
+                textBoxarchivo.Visible = false;
+                buttonexaminararchivo.Visible = false;
+            }
+
+
+        }
+
+        private void buttonexaminararchivo_Click(object sender, EventArgs e)
+        {
+            bool continuar = false;
+            OpenFileDialog nuevoarchivo = new OpenFileDialog();
+
+            do
+            {
+
+                try
+                {
+
+                    nuevoarchivo.ShowDialog();
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Se produjo un error al mostrar el diálogo de selección de archivo: " + ex.Message+ ", intente de nuevo", "Error");
+
+                }
+
+                try
+                {
+                    string archivo = Path.GetFileName(nuevoarchivo.FileName);
+                    FileInfo fileInfo = new FileInfo(archivo);
+                    if (fileInfo.Extension.Equals(".mp3", StringComparison.OrdinalIgnoreCase)) 
+                    {
+                        continuar = true;
+
+                        textBoxarchivo.Text = Path.GetFileName(nuevoarchivo.FileName);
+                        ubicacionimagen = nuevoarchivo;
+
+                    }
+
+                }
+                catch (IOException ex)
+                {
+
+
+                    MessageBox.Show("Se ha producido un error\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                catch (ArgumentException ex)
+                {
+
+                    MessageBox.Show("Se ha producido un error al seleccionar el Mp3, seleccione un Mp3 valido porfavor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
+
+            } while (continuar != true);
+
+        }
 
         //metodos
 
         public string obtenerimagen()
         {
-            OpenFileDialog nuevo = ubicacionimagen;
+            OpenFileDialog nuevo = ubicacionarchivo;
             string caminocarpeta = "";
             string caminofinal = "";
             string caminoarchivo = nuevo.FileName;
@@ -190,7 +278,7 @@ namespace menuavanzado.Registros.RegistroDVDs
             {
 
                 caminocarpeta = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                caminofinal = Path.Combine(caminocarpeta, "imagenesdvds\\" + Path.GetFileName(nuevo.FileName));
+                caminofinal = Path.Combine(caminocarpeta, "archivosmp3\\" + Path.GetFileName(nuevo.FileName));
 
                 MessageBox.Show(caminofinal);
 
@@ -218,6 +306,45 @@ namespace menuavanzado.Registros.RegistroDVDs
 
         }
 
+        public string obtenerarchivo()
+        {
+            OpenFileDialog nuevo = ubicacionimagen;
+            string caminocarpeta;
+            string caminofinal;
+            string caminoarchivo = nuevo.FileName;
+
+            try
+            {
+
+                caminocarpeta = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                caminofinal = Path.Combine(caminocarpeta, "imagenesdvds\\" + Path.GetFileName(nuevo.FileName));
+
+                MessageBox.Show(caminofinal);
+
+                File.Copy(caminoarchivo, caminofinal);
+
+
+
+                return Path.GetFileName(nuevo.FileName); ;
+            }
+
+            catch (IOException e)
+            {
+
+
+                MessageBox.Show("Se ha producido un error\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (ArgumentException e)
+            {
+
+                MessageBox.Show("Se ha producido un error al seleccionar el archivo, seleccione un archivo caliso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+
+            return Path.GetFileName(nuevo.FileName);
+
+        }
+
         string generarcodigo()
         {
             string resultado;
@@ -234,5 +361,6 @@ namespace menuavanzado.Registros.RegistroDVDs
 
             return resultado;
         }
+
     }
 }
