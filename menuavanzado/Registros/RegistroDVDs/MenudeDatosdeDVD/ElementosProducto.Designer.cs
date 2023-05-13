@@ -64,6 +64,7 @@
             this.pictureBoxproducto.Size = new System.Drawing.Size(105, 120);
             this.pictureBoxproducto.TabIndex = 2;
             this.pictureBoxproducto.TabStop = false;
+            this.pictureBoxproducto.Click += new System.EventHandler(this.pictureBoxproducto_Click);
             // 
             // labelcantidad
             // 
@@ -87,6 +88,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Name = "ElementosProducto";
             this.Size = new System.Drawing.Size(202, 234);
+            this.Click += new System.EventHandler(this.ElementosProducto_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxproducto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

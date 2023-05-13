@@ -83,6 +83,12 @@
       <DependentUpon>DatosDVDs.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\RegistroDVDs\DVD.cs" />
+    <Compile Include="Registros\RegistroDVDs\MenudeDatosdeDVD\detallesproducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\RegistroDVDs\MenudeDatosdeDVD\detallesproducto.Designer.cs">
+      <DependentUpon>detallesproducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\RegistroDVDs\MenudeDatosdeDVD\ElementosProducto.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="Registros\RegistroDVDs\MenudeDatosdeDVD\DatosDVDs.resx">
       <DependentUpon>DatosDVDs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\RegistroDVDs\MenudeDatosdeDVD\detallesproducto.resx">
+      <DependentUpon>detallesproducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\RegistroDVDs\MenudeDatosdeDVD\ElementosProducto.resx">
       <DependentUpon>ElementosProducto.cs</DependentUpon>

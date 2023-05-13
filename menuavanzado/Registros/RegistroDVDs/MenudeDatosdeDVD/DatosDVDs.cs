@@ -1,8 +1,10 @@
-﻿using System;
+﻿using menuavanzado.Registros.RegistroDVDs.Menu_de_Datos_de_DVD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +17,9 @@ namespace menuavanzado.Registros.RegistroDVDs
         ColeccionDVD coleccionDVD = new ColeccionDVD();
         List<DVD> listaDVDS = new List<DVD>();
         List<DVD> listaarticulos = new List<DVD>();
+
+        int filtraropcion;
+        int ordenaropcion;
 
 
         int serie = 0;
@@ -32,15 +37,20 @@ namespace menuavanzado.Registros.RegistroDVDs
             listaDVDS.AddRange(coleccionDVD.clonar());
 
 
+            labelposicion1.Text = (serie < 1) ? "1" : Convert.ToString(serie / 5 + 1);
+            filtrar(1);
+            filtraropcion = 1;
 
-            filtrar(4);
             ordenar(3);
+            ordenaropcion = 3;
             actualizar();
 
         }
 
         public void actualizar()
         {
+
+
             if (listaarticulos.Count > serie && listaarticulos[serie] != null)
             {
                 elementosProducto1.adquiririnformacion(listaarticulos[serie]);
@@ -63,12 +73,12 @@ namespace menuavanzado.Registros.RegistroDVDs
 
             if (listaarticulos.Count > serie+4 && listaarticulos[serie+4] != null)
             {
-                elementosProducto3.adquiririnformacion(listaarticulos[serie + 4]);
+                elementosProducto5.adquiririnformacion(listaarticulos[serie + 4]);
             }
 
             if (listaarticulos.Count > serie+5 && listaarticulos[serie+5] != null)
             {
-                elementosProducto3.adquiririnformacion(listaarticulos[serie + 5]);
+                elementosProducto6.adquiririnformacion(listaarticulos[serie + 5]);
             }
 
         }
@@ -83,13 +93,24 @@ namespace menuavanzado.Registros.RegistroDVDs
 
                     foreach (DVD d in listaDVDS)
                     {
-                        if (d.prestamo == true)
-                        {
+                        //if (d.prestamo == true)
+                        //{
                             listaarticulos.Add(d);
-                        }
+                        //}
 
                     }
-                break;
+                    int posicionfinal = listaarticulos.Count / 5;
+                    if (posicionfinal < 1)
+                    {
+
+                        posicionfinal = 1;
+
+                    }
+                    labelposicion2.Text = Convert.ToString(posicionfinal);
+
+                    filtraropcion = 1; 
+                    break;
+
 
                 case 2: //solo mp3s
 
@@ -104,7 +125,18 @@ namespace menuavanzado.Registros.RegistroDVDs
 
 
                     }
-                break;
+                    posicionfinal = listaarticulos.Count / 5;
+                    if (posicionfinal < 1)
+                    {
+
+                        posicionfinal = 1;
+
+                    }
+                    labelposicion2.Text = Convert.ToString(posicionfinal);
+
+                    filtraropcion = 2;
+                    break;
+
 
                 case 3: //solo peliculas
 
@@ -119,7 +151,18 @@ namespace menuavanzado.Registros.RegistroDVDs
 
 
                     }
-                break;
+                    posicionfinal = listaarticulos.Count / 5;
+                    if (posicionfinal < 1)
+                    {
+
+                        posicionfinal = 1;
+
+                    }
+                    labelposicion2.Text = Convert.ToString(posicionfinal);
+
+                    filtraropcion = 3;
+                    break;
+
 
                 case 4: // solo Videojuego
 
@@ -128,11 +171,21 @@ namespace menuavanzado.Registros.RegistroDVDs
                         if ((d.prestamo == true) && (d.tipo_DVD == "Videojuego"))
                         {
                             listaarticulos.Add(d);
-                            ;
+                            
                         }
                     }
-                break;
 
+                    posicionfinal = listaarticulos.Count / 5;
+                    if(posicionfinal < 1)
+                    {
+
+                        posicionfinal = 1;
+
+                    }
+                    labelposicion2.Text = Convert.ToString(posicionfinal);
+
+                    filtraropcion = 4;
+                    break;
 
             }
         }
@@ -187,6 +240,37 @@ namespace menuavanzado.Registros.RegistroDVDs
         }
 
 
+        public void limpiar()
+        {
+            foreach(Control control in this.Controls)
+            {
+                if (control is ElementosProducto elemento)
+                {
+
+
+                    elemento.reiniciar();
+                    elemento.cantidadproducto = "0";
+                    elemento.Nombreproducto = "";
+                    elemento.Codigoproducto = "000000";
+                    string rutaarchivo = Path.GetFullPath("mostrarnulo.png");
+                    Bitmap imagen = new Bitmap(rutaarchivo);
+                    elemento.Imagenproducto = imagen;
+
+
+
+                }
+
+               
+
+
+
+            }
+
+
+
+        }
+
+
         //eventos
 
         private void buttonatras_Click(object sender, EventArgs e)
@@ -194,16 +278,72 @@ namespace menuavanzado.Registros.RegistroDVDs
             if (serie != 0)
             {
 
-                //serie = serie - 5; 
+                serie = serie - 5; 
+                labelposicion1.Text = Convert.ToString(serie / 5 + 1);
+
+            if(serie == 0)
+            {
+                labelposicion1.Text = "1";
 
             }
+
+            }
+            limpiar();
+            filtrar(filtraropcion);
+            ordenar(ordenaropcion);
+            actualizar();
         }
 
         private void buttonadelante_Click(object sender, EventArgs e)
         {
 
-            //serie = serie + 5;
+            if (Convert.ToInt32(labelposicion1.Text) == Convert.ToInt32(labelposicion2.Text) )
+            {
 
+            }
+            else if(Convert.ToInt32(labelposicion1.Text) < Convert.ToInt32(labelposicion2.Text))
+            {
+                serie = serie + 5;
+                labelposicion1.Text = Convert.ToString(serie / 5 + 1);
+                if (serie == 0)
+                {
+
+                    labelposicion1.Text = "1";
+
+                }
+               
+            }
+            limpiar();
+            filtrar(filtraropcion);
+            ordenar(ordenaropcion);
+            actualizar();
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            limpiar();
+
+            if(comboBox1.Text == "Sin filtro")
+            {
+                filtrar(1);
+                actualizar();
+            }
+            if (comboBox1.Text == "Peliculas")
+            {
+                filtrar(3);
+                actualizar();
+            }
+            if (comboBox1.Text == "Mp3s")
+            {
+                filtrar(2);
+                actualizar();   
+            }
+            if (comboBox1.Text == "Videojuegos")
+            {
+                filtrar(4);
+                actualizar();
+            }
         }
     }
 }

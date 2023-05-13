@@ -141,7 +141,6 @@ namespace menuavanzado.Registros.RegistroDVDs
                 string descripcion = pelicula.Attributes["Descripcion"].Value;
                 string imagen = pelicula.Attributes["Imagen"].Value;
 
-                MessageBox.Show(Tipo);
                 
                 DVD index1 = new DVD(nombre, Tipo, codigo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
                 DVDsRegistrados.Add(index1);
@@ -161,7 +160,6 @@ namespace menuavanzado.Registros.RegistroDVDs
                 string descripcion = MP3.Attributes["Descripcion"].Value;
                 string imagen = MP3.Attributes["Imagen"].Value;
 
-                MessageBox.Show(Tipo);
 
 
                 DVD index2 = new DVD(nombre, Tipo, codigo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
@@ -181,8 +179,6 @@ namespace menuavanzado.Registros.RegistroDVDs
                 bool prestamo = (juego.Attributes["Prestamo"].Value == "y") ? true : false;
                 string descripcion = juego.Attributes["Descripcion"].Value;
                 string imagen = juego.Attributes["Imagen"].Value;
-
-                MessageBox.Show(Tipo);
 
 
                 DVD index3 = new DVD(nombre, Tipo, codigo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
