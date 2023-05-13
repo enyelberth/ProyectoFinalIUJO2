@@ -59,3 +59,4 @@ C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\menuavanzado\obj\
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\menuavanzado\obj\x86\Debug\menuavanzado.csproj.CoreCompileInputs.cache
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\menuavanzado\obj\x86\Debug\menuavanzado.exe
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\menuavanzado\obj\x86\Debug\menuavanzado.pdb
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\menuavanzado\obj\x86\Debug\menuavanzado.Registros.RegistroDVDs.Menu_de_Datos_de_DVD.ElementosProducto.resources

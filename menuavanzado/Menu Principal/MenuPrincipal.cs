@@ -97,7 +97,7 @@ namespace menuavanzado
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirFormDescrip(new Registros.RegistroDVDs.RegistroDVD());
+            AbrirFormDescrip(new Registros.RegistroDVDs.DatosDVDs());
 
 
 
@@ -143,6 +143,16 @@ namespace menuavanzado
             }
             metodoecryp.desencriptar();
             string ruta = Path.GetFullPath("Datos.xml");
+
+            DateTime fechaIngreso = new DateTime(2022, 5, 12);
+
+            //BasededatosDVD.agregar(new DVD("doom", "Pelicula", "COD01", 5, 2005, fechaIngreso, true, "Descripción del producto 1", "imagen01.jpg"));
+            //BasededatosDVD.agregar(new DVD("dawn", "Mp3", "COD02", 3, 2010, fechaIngreso, false, "Descripción del producto 2", "imagen02.jpg", "archivo02.mp3"));
+            //BasededatosDVD.agregar(new DVD("god of war", "Videojuego", "COD21", 5, 2008, fechaIngreso, true, "Descripción del producto 1", "imagen01.jpg"));
+            //BasededatosDVD.agregar(new DVD("bury the light", "Mp3", "COD02", 3, 2020, fechaIngreso, false, "Descripción del producto 3", "imagen03.jpg", "archivo03.mp3"));
+            //BasededatosDVD.agregar(new DVD("eternal", "Videojuego", "COD21", 5, 2008, fechaIngreso, true, "Descripción del producto 1", "imagen01.jpg"));
+            //BasededatosDVD.agregar(new DVD("despacito", "Mp3", "COD02", 3, 2020, fechaIngreso, false, "Descripción del producto 3", "imagen03.jpg", "archivo03.mp3"));
+
 
 
             //esta linea oculta la base de datos cuando se desencripta esta oculta para que la podamos ver mientras trabajamos
