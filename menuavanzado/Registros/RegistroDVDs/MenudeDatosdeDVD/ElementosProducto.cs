@@ -1,4 +1,5 @@
-﻿using System;
+﻿using menuavanzado.Registros.RegistroDVDs.MenudeDatosdeDVD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ namespace menuavanzado.Registros.RegistroDVDs.Menu_de_Datos_de_DVD
 {
     internal partial class ElementosProducto : UserControl
     {
-        static DVD index;
+        DVD index;
 
         public ElementosProducto()
         {
@@ -32,6 +33,16 @@ namespace menuavanzado.Registros.RegistroDVDs.Menu_de_Datos_de_DVD
 
 
         }
+
+        public void reiniciar()
+        {
+
+
+            index = null;
+
+
+        }
+
         public string cantidadproducto
         {
             get { return labelcantidad.Text; }
@@ -63,6 +74,31 @@ namespace menuavanzado.Registros.RegistroDVDs.Menu_de_Datos_de_DVD
 
             set { labelcodigo.Text = value; }
 
+        }
+
+        private void ElementosProducto_Click(object sender, EventArgs e)
+        {
+            detallesproducto indexobjeto = new detallesproducto();
+
+            if (index != null)
+            {
+
+                indexobjeto.llenardatos(index);
+
+            }
+        }
+
+
+        private void pictureBoxproducto_Click(object sender, EventArgs e)
+        {
+            detallesproducto indexobjeto = new detallesproducto();
+
+            if (index != null)
+            {
+
+                indexobjeto.llenardatos(index);
+
+            }
         }
     }
 }
