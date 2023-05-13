@@ -15,9 +15,6 @@ namespace menuavanzado.Registros.RegistroDVDs
     {
         public static List<DVD> DVDsRegistrados = new List<DVD>();
 
-
-        int n = 0;
-
         public void agregar(DVD dvd)
         {
 
@@ -261,6 +258,15 @@ namespace menuavanzado.Registros.RegistroDVDs
 
 
             return confirmacion;
+        }
+
+        public List<DVD> clonar()
+        {
+            List<DVD> lista = new List<DVD>();
+
+            lista.AddRange(DVDsRegistrados);
+
+            return lista;
         }
 
     }
