@@ -38,6 +38,7 @@ namespace ProyectoFinalIUJO
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.PanelContenidoPrincipal = new System.Windows.Forms.Panel();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.PanelLateralIzquierdo = new System.Windows.Forms.Panel();
 			this.button3 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
@@ -51,31 +52,38 @@ namespace ProyectoFinalIUJO
 			this.BTNRestaurarTamaño = new System.Windows.Forms.PictureBox();
 			this.BTNMinimizar = new System.Windows.Forms.PictureBox();
 			this.BTNCerrar = new System.Windows.Forms.PictureBox();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.PanelContenidoPrincipal.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.PanelLateralIzquierdo.SuspendLayout();
 			this.BarraTitulo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.BTNMaximizarTamaño)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.BTNRestaurarTamaño)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.BTNMinimizar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.BTNCerrar)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// PanelContenidoPrincipal
 			// 
 			resources.ApplyResources(this.PanelContenidoPrincipal, "PanelContenidoPrincipal");
 			this.PanelContenidoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+			this.PanelContenidoPrincipal.Controls.Add(this.pictureBox1);
 			this.PanelContenidoPrincipal.Controls.Add(this.PanelLateralIzquierdo);
 			this.PanelContenidoPrincipal.Controls.Add(this.BarraTitulo);
-			this.PanelContenidoPrincipal.Controls.Add(this.pictureBox1);
 			this.PanelContenidoPrincipal.Name = "PanelContenidoPrincipal";
 			this.PanelContenidoPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenidoPrincipalPaint);
+			// 
+			// pictureBox1
+			// 
+			resources.ApplyResources(this.pictureBox1, "pictureBox1");
+			this.pictureBox1.BackColor = System.Drawing.Color.Gray;
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.PictureBox1Click);
 			// 
 			// PanelLateralIzquierdo
 			// 
 			resources.ApplyResources(this.PanelLateralIzquierdo, "PanelLateralIzquierdo");
-			this.PanelLateralIzquierdo.BackColor = System.Drawing.Color.White;
+			this.PanelLateralIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(14)))), ((int)(((byte)(51)))));
 			this.PanelLateralIzquierdo.Controls.Add(this.button3);
 			this.PanelLateralIzquierdo.Controls.Add(this.button2);
 			this.PanelLateralIzquierdo.Controls.Add(this.BtnDatosCliente);
@@ -153,7 +161,7 @@ namespace ProyectoFinalIUJO
 			// BarraTitulo
 			// 
 			resources.ApplyResources(this.BarraTitulo, "BarraTitulo");
-			this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(27)))), ((int)(((byte)(117)))));
+			this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(8)))), ((int)(((byte)(28)))));
 			this.BarraTitulo.Controls.Add(this.BTNMaximizarTamaño);
 			this.BarraTitulo.Controls.Add(this.BTNRestaurarTamaño);
 			this.BarraTitulo.Controls.Add(this.BTNMinimizar);
@@ -189,12 +197,6 @@ namespace ProyectoFinalIUJO
 			this.BTNCerrar.TabStop = false;
 			this.BTNCerrar.Click += new System.EventHandler(this.BTNCerrarClick);
 			// 
-			// pictureBox1
-			// 
-			resources.ApplyResources(this.pictureBox1, "pictureBox1");
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.TabStop = false;
-			// 
 			// MainForm
 			// 
 			resources.ApplyResources(this, "$this");
@@ -206,13 +208,13 @@ namespace ProyectoFinalIUJO
 			this.MinimizeBox = false;
 			this.Name = "MainForm";
 			this.PanelContenidoPrincipal.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.PanelLateralIzquierdo.ResumeLayout(false);
 			this.BarraTitulo.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.BTNMaximizarTamaño)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.BTNRestaurarTamaño)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.BTNMinimizar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.BTNCerrar)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 		}
 		private System.Windows.Forms.Button button2;
