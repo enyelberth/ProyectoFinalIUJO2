@@ -1,0 +1,9 @@
+<registros>
+  <DVDs>
+    <Peliculas />
+    <MP3 />
+    <Juegos />
+  </DVDs>
+  <Personas />
+  <Prestamos />
+</registros>

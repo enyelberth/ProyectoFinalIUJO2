@@ -18,3 +18,23 @@ C:\Users\Enyelbrth\Desktop\Proyecto2.0\ProyectoFinalIUJO\ProyectoFinalIUJO\bin\D
 C:\Users\Enyelbrth\Desktop\Proyecto2.0\ProyectoFinalIUJO\ProyectoFinalIUJO\bin\Debug\es\ProyectoFinalIUJO.resources.dll
 C:\Users\Enyelbrth\Desktop\Proyecto2.0\ProyectoFinalIUJO\ProyectoFinalIUJO\obj\Debug\af\ProyectoFinalIUJO.resources.dll
 C:\Users\Enyelbrth\Desktop\Proyecto2.0\ProyectoFinalIUJO\ProyectoFinalIUJO\obj\Debug\es\ProyectoFinalIUJO.resources.dll
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\bin\Debug\ProyectoFinalIUJO.exe.config
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\bin\Debug\ProyectoFinalIUJO.exe
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\bin\Debug\ProyectoFinalIUJO.pdb
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\bin\Debug\af\ProyectoFinalIUJO.resources.dll
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\bin\Debug\es\ProyectoFinalIUJO.resources.dll
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csprojResolveAssemblyReference.cache
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.MainForm.resources
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroClientes.PantallaCliente.resources
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroClientes.PantallaDatosClientes.resources
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.DatosDVDs.resources
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.detallesproducto.resources
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto.resources
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroDVD.RegistroDVD.resources
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.MainForm.af.resources
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.MainForm.es.resources
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csproj.GenerateResource.Cache
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\af\ProyectoFinalIUJO.resources.dll
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\es\ProyectoFinalIUJO.resources.dll
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.exe
+C:\Users\Enyelbrth\Desktop\preubas git\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.pdb
