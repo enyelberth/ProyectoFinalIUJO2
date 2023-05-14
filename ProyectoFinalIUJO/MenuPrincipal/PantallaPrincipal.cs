@@ -232,6 +232,11 @@ namespace ProyectoFinalIUJO
 		{
 			
 		}
+		
+		void Button2Click(object sender, EventArgs e)
+		{
+			
+		}
     }
 
 }

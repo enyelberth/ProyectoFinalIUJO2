@@ -39,25 +39,27 @@ namespace ProyectoFinalIUJO
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.PanelContenidoPrincipal = new System.Windows.Forms.Panel();
 			this.PanelLateralIzquierdo = new System.Windows.Forms.Panel();
+			this.button3 = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
 			this.BtnDatosCliente = new System.Windows.Forms.Button();
 			this.Btn_Cliente = new System.Windows.Forms.Button();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.button1 = new System.Windows.Forms.Button();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.BarraTitulo = new System.Windows.Forms.Panel();
 			this.BTNMaximizarTamaño = new System.Windows.Forms.PictureBox();
 			this.BTNRestaurarTamaño = new System.Windows.Forms.PictureBox();
 			this.BTNMinimizar = new System.Windows.Forms.PictureBox();
 			this.BTNCerrar = new System.Windows.Forms.PictureBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.PanelContenidoPrincipal.SuspendLayout();
 			this.PanelLateralIzquierdo.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.BarraTitulo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.BTNMaximizarTamaño)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.BTNRestaurarTamaño)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.BTNMinimizar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.BTNCerrar)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// PanelContenidoPrincipal
@@ -73,13 +75,42 @@ namespace ProyectoFinalIUJO
 			// PanelLateralIzquierdo
 			// 
 			resources.ApplyResources(this.PanelLateralIzquierdo, "PanelLateralIzquierdo");
-			this.PanelLateralIzquierdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(12)))), ((int)(((byte)(65)))));
+			this.PanelLateralIzquierdo.BackColor = System.Drawing.Color.White;
+			this.PanelLateralIzquierdo.Controls.Add(this.button3);
+			this.PanelLateralIzquierdo.Controls.Add(this.button2);
 			this.PanelLateralIzquierdo.Controls.Add(this.BtnDatosCliente);
 			this.PanelLateralIzquierdo.Controls.Add(this.Btn_Cliente);
 			this.PanelLateralIzquierdo.Controls.Add(this.panel2);
 			this.PanelLateralIzquierdo.Controls.Add(this.panel1);
 			this.PanelLateralIzquierdo.Controls.Add(this.button1);
 			this.PanelLateralIzquierdo.Name = "PanelLateralIzquierdo";
+			// 
+			// button3
+			// 
+			resources.ApplyResources(this.button3, "button3");
+			this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+			this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.button3.FlatAppearance.BorderSize = 0;
+			this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+			this.button3.ForeColor = System.Drawing.Color.White;
+			this.button3.Name = "button3";
+			this.button3.UseVisualStyleBackColor = false;
+			// 
+			// button2
+			// 
+			resources.ApplyResources(this.button2, "button2");
+			this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+			this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.button2.FlatAppearance.BorderSize = 0;
+			this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+			this.button2.ForeColor = System.Drawing.Color.White;
+			this.button2.Name = "button2";
+			this.button2.UseVisualStyleBackColor = false;
+			this.button2.Click += new System.EventHandler(this.Button2Click);
 			// 
 			// BtnDatosCliente
 			// 
@@ -118,12 +149,6 @@ namespace ProyectoFinalIUJO
 			this.button1.Name = "button1";
 			this.button1.UseVisualStyleBackColor = false;
 			this.button1.Click += new System.EventHandler(this.Button1Click);
-			// 
-			// pictureBox1
-			// 
-			resources.ApplyResources(this.pictureBox1, "pictureBox1");
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.TabStop = false;
 			// 
 			// BarraTitulo
 			// 
@@ -164,6 +189,12 @@ namespace ProyectoFinalIUJO
 			this.BTNCerrar.TabStop = false;
 			this.BTNCerrar.Click += new System.EventHandler(this.BTNCerrarClick);
 			// 
+			// pictureBox1
+			// 
+			resources.ApplyResources(this.pictureBox1, "pictureBox1");
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.TabStop = false;
+			// 
 			// MainForm
 			// 
 			resources.ApplyResources(this, "$this");
@@ -176,14 +207,16 @@ namespace ProyectoFinalIUJO
 			this.Name = "MainForm";
 			this.PanelContenidoPrincipal.ResumeLayout(false);
 			this.PanelLateralIzquierdo.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.BarraTitulo.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.BTNMaximizarTamaño)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.BTNRestaurarTamaño)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.BTNMinimizar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.BTNCerrar)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.PictureBox BTNCerrar;
 		private System.Windows.Forms.PictureBox BTNMinimizar;
 		private System.Windows.Forms.PictureBox BTNRestaurarTamaño;

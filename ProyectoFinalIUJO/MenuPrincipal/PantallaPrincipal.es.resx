@@ -117,9 +117,89 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Italic</value>
+  </data>
+  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAYdJREFUSEvtkz8vQ1EYh+8iFqvRIP7EJ5AYivgzSFosEpuJEYmYSPgaikRi9glE
+        y2YgsVWwiVGHxoh6frnvbe4951ytWPskT5ye33vet869jbr8m2azOY/H+IgfZg3LOGdlf4fDo3iD7bjG
+        ETvWGRyYxLpOG2qyjUW804bDOxbs+O9QqG+eNH/DBdzEW9T15KEhw9YmH4rS17KBD/GyIyrWJgwFeqAh
+        vlAPtYSLqIf+jSFmrZ0PoQ66qHnRSlqwp2HKXI6sxIdQr6JL2WIPspO4JEPNYh/CRlyToWSx8nVpH/VZ
+        1+XSsNiHMPSWLFkcGrCiAoe6xT6ET3FNhtw7JTuLSzLcW+xDeBrXZPjELbwMqMzl1dr5EE7HNUEOcQzH
+        rXYAe7Hf2a/qby4UVDCEBii7wDVbT+GBrZP9tgOGUD97Fw2oov7LZD2TWrf2rVU+FE2gOyRptI87uIfP
+        WMD0fvsBgsJBvMIEDVjFXezDHly22vR+ZwMSOKB7PscXDL1JrvlvURefKPoBH0LPoqYQvCMAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="button3.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 26</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>  Gestion De DVD</value>
+  </data>
+  <data name="button2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="button2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt, style=Italic</value>
+  </data>
+  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAOCSURBVEhLtZNZTxNRGIaJ8coYNWrihRfGC3+A8VYpiGDT
+        srtciG2JYjeghVCIgDJRg4a2UxS70JZaiqyVRCNCLS5BUSEKZZFAokHBqBCjuAHi1s8548EgPRinlCd5
+        kumc73tfJsyEcYWSxq4ok0QIaXGEzJC6M46ieMvx0dKgl2yPKhVHdJjSdk07FHyozBCAQ8mH84ei3hvE
+        kXo8FloM4gjKIo35UpsdDySdzB9hEPHK8XhooMWRYps85hupcK52Bd9vPBz1Ri/itRiVvJV4PXjOpUYO
+        k4oWslodC7SY14nXg4MWhQsqmP8nqeBfoqdHuziGO7qD4fYaQvB8rYrdYM/gQ01WHPsb7ehE4U4cwx1a
+        xHPPL5mrI10AF9RCGL6WC2/vUeBQCZj7v8uZJ76EY7hDS3iO2RL0+Vik0WBjPiFnlhDqCxLhoVMOU77i
+        P75szQeLLMaPnph5yYJ/y3WS8KIq5mWxynf7262H4VPXqb+KSF7IEUxXZghBL9mRjmO4czZVuKVcGu13
+        amK/k0pIVh2N/2pOi/5u3bdtNY7hjlufnGdjXprqwgRiCcnqY4lQoeb7G7RJGhzDHXdJYlHjiT1sGKmE
+        JJq9Urwf6rRJx3EMd6wUb73XnDLacu4gsYQkmm01pzx3nY5ah2OCw62N43fUSidJJSQ7a6Wf67SJMXh9
+        cdypPHSDVEKSmW3Fa4un0bA3b7z92A9S0VzH2wt/uOnkHLy2eCiKWuaxpNz++Gjh7xidXbccuIlm8Vpo
+        cFIJa66XH5gcu1sYUDrO3PMwZxcp/io8HlpuOcRDXQ1y6KyRwrA3lxVddzUoAJ3hsdCQVta7WVbWVZZu
+        6Wu76lDNPPNqAPn4sgoGrqjYayQ6QzNoVmns3oTXuZNNP1grM/qacl1PZ85cewc6zweor6JhqEn9p2zW
+        oaYs9gzNoFmN68kXudF3FWXguP8j09y7NbO870VJ8wQbNqveM8EWtLnSoKdRydrmOsLcM4Cu5e9ZtJth
+        7R9FWTj23+TX9m/ItPa/mhsy39Lm12C/5AWbu5W9Js3MqrI9Hsu29GzE8QujMPV0aJvfE0OCEWXJzb33
+        cTwZmcWXUFg/8pMUsBgL6kZ+Kkz9QlwTCPO0HtJiKFSaeppwTSBZFYOjpKVQqLYPjuCaQNT2gamTl8dh
+        KVTZBiZxTSCy8z6NzNSdtyQy2biGISzsF8nDK38m7sD7AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="button2.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 263</value>
+  </data>
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 34</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>  Gestion De Clientes</value>
+  </data>
+  <data name="button2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
   <data name="BtnDatosCliente.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 223</value>
+  </data>
+  <data name="Btn_Cliente.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="Btn_Cliente.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 175</value>
@@ -137,11 +217,14 @@
         RK5CYII=
 </value>
   </data>
+  <data name="button1.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
+  </data>
   <data name="PanelLateralIzquierdo.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 35</value>
   </data>
   <data name="PanelLateralIzquierdo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 612</value>
+    <value>177, 612</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PanelLateralIzquierdo.TabIndex" type="System.Int32, mscorlib">
@@ -470,7 +553,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAC9CAYAAABcUaN5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABIXSURBVHhe7dv5cxRnegfw1tynNKN7dF8jxAjdNwgJkBAI
+        YQUAAAAJcEhZcwAADsEAAA7BAbiRa+0AABIXSURBVHhe7dv5cxRnegfw1tynNKN7dF8jxAjdNwgJkBAI
         cQgwp42MsbHBgAGbNdjYxnh9sU5iZ9fxJsbX1tZuskk2SXmztfEmvySVSlUqqeRP+uZ5etSjGVlkXUkl
         pvx8f/iUet5+u2dk83z76Xdazr177yIej8NxHCIyor29HV999RWcXC634QQi+m47f/48HL/fv+FOIvpu
         Gx8f158b7ySi77ahoSH9ufFOIvpuGx5mABCZxQAgMowBQGQYA4DIMAYAkWEMACLDGABEhjEAiAxjABAZ
@@ -556,7 +639,6 @@
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>664, 449</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
