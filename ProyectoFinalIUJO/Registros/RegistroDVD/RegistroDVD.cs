@@ -21,6 +21,8 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
         OpenFileDialog ubicacionimagen;
         OpenFileDialog ubicacionarchivo;
 
+        ColeccionDVD x = new ColeccionDVD();
+
         public RegistroDVD()
         {
             InitializeComponent();
@@ -29,7 +31,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
         private void buttonregistro_Click(object sender, EventArgs e)
         {
-            ColeccionDVD x = new ColeccionDVD();
             bool confirmacion = false;
 
             if (textBoxAñoemision.Text != "")
@@ -93,6 +94,46 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 MessageBox.Show("Uno o mas de los campos del registro estan vacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
+        }
+
+
+        public void cargardatos(DVD dvd) 
+        {
+            this.Show();
+
+            textBoxTitulo.Text = dvd.producto;
+            textBoxcodigo.Text = dvd.codigo;
+            comboBoxtipoDVD.Text = dvd.tipo_DVD;
+            textBoxAñoemision.Text = Convert.ToString(dvd.año_emision);
+            textBoxCantidad.Text = Convert.ToString(dvd.cantidad);
+            if(dvd.tipo_DVD == "Mp3")
+            {
+                textBoxarchivo.Text = dvd.ubicacionArchivo;
+                labelArchivo.Visible = true;
+                textBoxarchivo.Visible = true;
+                buttonexaminararchivo.Visible = true;
+            }
+            
+            dateTimeFechaingreso.Value = dvd.fechaingreso;
+
+            if(dvd.prestamo == true)
+            {
+                
+               radioButtonSI.Checked = true ;
+               
+            }
+            else
+            { 
+                
+               radioButtonNO.Checked = true;
+
+            }
+
+            textBoxdescripcion.Text = dvd.descripcion;
+            textBoximagen.Text = dvd.ubicacionimagen;
+
+
+
         }
 
 
@@ -385,6 +426,76 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
             return resultado;
         }
+
+        private void buttonmodificar_Click(object sender, EventArgs e)
+        {
+            bool confirmacion = false;
+
+            if (textBoxAñoemision.Text != "")
+            {
+                if (textBoxCantidad.Text != "")
+                {
+                    if (textBoxcodigo.Text != "")
+                    {
+                        if (textBoxdescripcion.Text != "")
+                        {
+                            if (textBoxTitulo.Text != "")
+                            {
+                                if (textBoximagen.Text != "")
+                                {
+
+                                    confirmacion = true;
+
+                                    DateTime fechaingreso = dateTimeFechaingreso.Value.Date.ToLocalTime();
+
+
+                                    string Producto = textBoxTitulo.Text;
+                                    string Tipo_DVD = comboBoxtipoDVD.Text;
+                                    int Cantidad = Convert.ToInt32(textBoxCantidad.Text);
+                                    string Codigo = textBoxcodigo.Text;
+                                    int Año_emision = Convert.ToInt32(textBoxAñoemision.Text);
+                                    bool Prestamo = (radioButtonNO.Checked == true) ? false : true;
+                                    string Descripcion = textBoxdescripcion.Text;
+                                    string imagen = textBoximagen.Text;
+
+                                    if (Tipo_DVD == "Mp3")
+                                    {
+                                        string archivo = obtenerarchivo();
+                                        DVD index1 = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen, archivo);
+
+                                        limpiartextboxes();
+
+                                        x.modificar(index1);
+
+                                        MessageBox.Show("producto modificado");
+                                        this.Close();
+
+                                    }
+                                    else
+                                    {
+                                        DVD index = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen);
+
+                                        limpiartextboxes();
+
+                                        x.modificar(index);
+
+                                        MessageBox.Show("Producto modificado");
+                                        this.Close();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (confirmacion == false)
+            {
+                MessageBox.Show("Uno o mas de los campos del registro estan vacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+        }
+
 
     }
 }

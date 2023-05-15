@@ -62,6 +62,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             this.textBoxcodigo = new System.Windows.Forms.TextBox();
             this.textBoxAñoemision = new System.Windows.Forms.TextBox();
             this.buttonregistro = new System.Windows.Forms.Button();
+            this.buttonmodificar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,7 +90,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(488, 459);
+            this.label14.Location = new System.Drawing.Point(498, 432);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 18);
             this.label14.TabIndex = 51;
@@ -99,7 +100,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(142, 459);
+            this.label13.Location = new System.Drawing.Point(142, 429);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(98, 18);
             this.label13.TabIndex = 50;
@@ -139,7 +140,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(444, 312);
+            this.label11.Location = new System.Drawing.Point(445, 313);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(186, 18);
             this.label11.TabIndex = 42;
@@ -207,7 +208,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             // 
             // buttonarchivoimagen
             // 
-            this.buttonarchivoimagen.Location = new System.Drawing.Point(652, 507);
+            this.buttonarchivoimagen.Location = new System.Drawing.Point(662, 480);
             this.buttonarchivoimagen.Name = "buttonarchivoimagen";
             this.buttonarchivoimagen.Size = new System.Drawing.Size(75, 23);
             this.buttonarchivoimagen.TabIndex = 39;
@@ -217,7 +218,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             // 
             // textBoximagen
             // 
-            this.textBoximagen.Location = new System.Drawing.Point(395, 507);
+            this.textBoximagen.Location = new System.Drawing.Point(405, 480);
             this.textBoximagen.Name = "textBoximagen";
             this.textBoximagen.ReadOnly = true;
             this.textBoximagen.Size = new System.Drawing.Size(236, 20);
@@ -229,7 +230,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             this.groupBox1.Controls.Add(this.radioButtonSI);
             this.groupBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(485, 333);
+            this.groupBox1.Location = new System.Drawing.Point(486, 334);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(94, 67);
             this.groupBox1.TabIndex = 37;
@@ -284,7 +285,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             // 
             // textBoxdescripcion
             // 
-            this.textBoxdescripcion.Location = new System.Drawing.Point(51, 489);
+            this.textBoxdescripcion.Location = new System.Drawing.Point(51, 459);
             this.textBoxdescripcion.Multiline = true;
             this.textBoxdescripcion.Name = "textBoxdescripcion";
             this.textBoxdescripcion.Size = new System.Drawing.Size(280, 83);
@@ -319,7 +320,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             // 
             // buttonregistro
             // 
-            this.buttonregistro.Location = new System.Drawing.Point(408, 600);
+            this.buttonregistro.Location = new System.Drawing.Point(712, 591);
             this.buttonregistro.Name = "buttonregistro";
             this.buttonregistro.Size = new System.Drawing.Size(100, 34);
             this.buttonregistro.TabIndex = 54;
@@ -327,11 +328,22 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             this.buttonregistro.UseVisualStyleBackColor = true;
             this.buttonregistro.Click += new System.EventHandler(this.buttonregistro_Click);
             // 
+            // buttonmodificar
+            // 
+            this.buttonmodificar.Location = new System.Drawing.Point(592, 591);
+            this.buttonmodificar.Name = "buttonmodificar";
+            this.buttonmodificar.Size = new System.Drawing.Size(100, 34);
+            this.buttonmodificar.TabIndex = 55;
+            this.buttonmodificar.Text = "Modificar";
+            this.buttonmodificar.UseVisualStyleBackColor = true;
+            this.buttonmodificar.Click += new System.EventHandler(this.buttonmodificar_Click);
+            // 
             // RegistroDVD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 646);
+            this.Controls.Add(this.buttonmodificar);
             this.Controls.Add(this.buttonregistro);
             this.Controls.Add(this.dateTimeFechaingreso);
             this.Controls.Add(this.labelArchivo);
@@ -390,5 +402,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.Label labelArchivo;
 		private System.Windows.Forms.DateTimePicker dateTimeFechaingreso;
+        private System.Windows.Forms.Button buttonmodificar;
 	}
 }

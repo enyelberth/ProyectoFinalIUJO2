@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinalIUJO.Registros.RegistroDVD
 {
-	internal class DVD
+	public class DVD
     {
         private string Producto;
         private string Codigo;

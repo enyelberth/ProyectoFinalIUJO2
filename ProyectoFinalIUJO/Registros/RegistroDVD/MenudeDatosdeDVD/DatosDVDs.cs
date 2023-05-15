@@ -33,18 +33,33 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 
         private void DatosDVDs_Load(object sender, EventArgs e)
         {
-
-
-            listaDVDS.AddRange(coleccionDVD.clonar());
-
+            llenarbase();
 
             labelposicion1.Text = (serie < 1) ? "1" : Convert.ToString(serie / 5 + 1);
-            filtrar(1);
 
+            filtrar(1);
             ordenar(3);
             actualizar();
 
         }
+
+        public void llenarbase() 
+        {
+
+            listaDVDS.AddRange(coleccionDVD.clonar());
+            if (serie != 0) 
+            {
+
+                serie = serie - 5;
+
+            }
+            actualizar();
+
+
+        
+        
+        }
+
 
         public void actualizar()
         {
@@ -241,12 +256,10 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 
         public void limpiar()
         {
-            //foreach(Control control in this.Controls)
+           
             foreach(ElementosProducto elemento in this.Controls.OfType<ElementosProducto>())
             {
-                //if (control is ElementosProducto elemento)
-                //{
-
+                
 
                     elemento.reiniciar();
                     elemento.cantidadproducto = "0";
@@ -255,15 +268,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
                     string rutaarchivo = Path.GetFullPath("mostrarnulo.png");
                     Bitmap imagen = new Bitmap(rutaarchivo);
                     elemento.Imagenproducto = imagen;
-
-
-
-                //}
-
-               
-
-
-
             }
 
 

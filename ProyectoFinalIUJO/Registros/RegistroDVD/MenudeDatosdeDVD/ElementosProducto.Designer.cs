@@ -47,7 +47,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             // labelcantidad
             // 
             this.labelcantidad.AutoSize = true;
-            this.labelcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelcantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic);
             this.labelcantidad.Location = new System.Drawing.Point(140, 168);
             this.labelcantidad.Name = "labelcantidad";
             this.labelcantidad.Size = new System.Drawing.Size(15, 16);
@@ -68,7 +68,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             // labelcodigo
             // 
             this.labelcodigo.AutoSize = true;
-            this.labelcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic);
             this.labelcodigo.Location = new System.Drawing.Point(39, 168);
             this.labelcodigo.Name = "labelcodigo";
             this.labelcodigo.Size = new System.Drawing.Size(50, 16);
@@ -78,7 +78,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             // labelproducto
             // 
             this.labelproducto.AutoSize = true;
-            this.labelproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.labelproducto.Location = new System.Drawing.Point(35, 192);
             this.labelproducto.Name = "labelproducto";
             this.labelproducto.Size = new System.Drawing.Size(0, 20);
