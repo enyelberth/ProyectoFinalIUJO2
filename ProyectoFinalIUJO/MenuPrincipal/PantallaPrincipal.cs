@@ -75,7 +75,7 @@ namespace ProyectoFinalIUJO
         
         void BtnDatosClienteClick(object sender, EventArgs e)
         {
-        	AbrirFormDescrip(new RegistroDVD());
+        	AbrirFormDescrip(new PantallaDatosClientes());
         }
         
         

@@ -58,11 +58,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Registros\RegistroClientes\Cliente.cs" />
     <Compile Include="Registros\RegistroClientes\Coleccion_clientes.cs" />
     <Compile Include="Registros\RegistroClientes\PantallaCliente.cs">
@@ -104,9 +99,7 @@
       <DependentUpon>RegistroDVD.cs</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Registros\PrestamosCliente\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="MenuPrincipal\PantallaPrincipal.af.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
@@ -116,10 +109,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal\PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\RegistroClientes\PantallaCliente.resx">
       <DependentUpon>PantallaCliente.cs</DependentUpon>
