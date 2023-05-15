@@ -63,7 +63,7 @@ namespace ProyectoFinalIUJO
             // PanelContenidoPrincipal
             // 
             resources.ApplyResources(this.PanelContenidoPrincipal, "PanelContenidoPrincipal");
-            this.PanelContenidoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(107)))), ((int)(((byte)(134)))));
+            this.PanelContenidoPrincipal.BackColor = System.Drawing.Color.LightGray;
             this.PanelContenidoPrincipal.Controls.Add(this.PanelLateralIzquierdo);
             this.PanelContenidoPrincipal.Controls.Add(this.BarraTitulo);
             this.PanelContenidoPrincipal.Name = "PanelContenidoPrincipal";
@@ -84,8 +84,9 @@ namespace ProyectoFinalIUJO
             // BtnDatosCliente
             // 
             resources.ApplyResources(this.BtnDatosCliente, "BtnDatosCliente");
+            this.BtnDatosCliente.BackColor = System.Drawing.Color.Gray;
             this.BtnDatosCliente.Name = "BtnDatosCliente";
-            this.BtnDatosCliente.UseVisualStyleBackColor = true;
+            this.BtnDatosCliente.UseVisualStyleBackColor = false;
             this.BtnDatosCliente.Click += new System.EventHandler(this.BtnDatosClienteClick);
             // 
             // Btn_Cliente

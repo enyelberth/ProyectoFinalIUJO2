@@ -121,13 +121,16 @@
   <data name="BtnDatosCliente.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 223</value>
   </data>
+  <data name="BtnDatosCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 33</value>
+  </data>
   <data name="Btn_Cliente.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 175</value>
   </data>
   <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAYdJREFUSEvtkz8vQ1EYh+8iFqvRIP7EJ5AYivgzSFosEpuJEYmYSPgaikRi9glE
+        DQAACw0B7QfALAAAAYdJREFUSEvtkz8vQ1EYh+8iFqvRIP7EJ5AYivgzSFosEpuJEYmYSPgaikRi9glE
         y2YgsVWwiVGHxoh6frnvbe4951ytWPskT5ye33vet869jbr8m2azOY/H+IgfZg3LOGdlf4fDo3iD7bjG
         ETvWGRyYxLpOG2qyjUW804bDOxbs+O9QqG+eNH/DBdzEW9T15KEhw9YmH4rS17KBD/GyIyrWJgwFeqAh
         vlAPtYSLqIf+jSFmrZ0PoQ66qHnRSlqwp2HKXI6sxIdQr6JL2WIPspO4JEPNYh/CRlyToWSx8nVpH/VZ
@@ -136,6 +139,9 @@
         WMD0fvsBgsJBvMIEDVjFXezDHly22vR+ZwMSOKB7PscXDL1JrvlvURefKPoBH0LPoqYQvCMAAAAASUVO
         RK5CYII=
 </value>
+  </data>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 133</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

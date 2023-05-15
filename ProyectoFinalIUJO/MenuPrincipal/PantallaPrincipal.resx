@@ -225,9 +225,6 @@
   <data name="BTNRestaurarTamaño.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="PanelContenidoPrincipal.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
     <value>PanelLateralIzquierdo</value>
   </data>
@@ -273,6 +270,9 @@
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>162, 26</value>
   </data>
+  <data name="&gt;&gt;BTNMaximizarTamaño.Name" xml:space="preserve">
+    <value>BTNMaximizarTamaño</value>
+  </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>5, 26</value>
   </data>
@@ -291,8 +291,8 @@
   <data name="Btn_Cliente.Size" type="System.Drawing.Size, System.Drawing">
     <value>138, 23</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="PanelContenidoPrincipal.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -702,8 +702,8 @@
   <data name="button1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Italic</value>
   </data>
-  <data name="&gt;&gt;BTNMaximizarTamaño.Name" xml:space="preserve">
-    <value>BTNMaximizarTamaño</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="&gt;&gt;BTNMaximizarTamaño.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
