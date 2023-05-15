@@ -22,6 +22,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
         public detallesproducto()
         {
             InitializeComponent();
+            
         }
 
         private void detallesproducto_Load(object sender, EventArgs e)
@@ -44,7 +45,14 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 
             this.Show();
 
-
+            if (dvd.producto == "Doom")
+            {
+                buttonDemo.Visible = true;
+            }
+            if (dvd.tipo_DVD == "Mp3")
+            {
+                buttonReproducir.Visible = true;
+            }
 
         }
 
@@ -56,13 +64,13 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
         private void ButtonEliminar_Click(object sender, EventArgs e)
         {
 
-            DVDs.eliminar(producto);
+            datos.eliminar(producto);
 
         }
 
         private void buttonmodificar_Click(object sender, EventArgs e)
         {
-            registro.cargardatos(producto);
+            datos.modificar(producto);
         }
     }
 }

@@ -18,17 +18,19 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
         ColeccionDVD coleccionDVD = new ColeccionDVD();
         List<DVD> listaDVDS = new List<DVD>();
         List<DVD> listaarticulos = new List<DVD>();
+        private Form AbrirDescripcion = null;
 
-        int filtraropcion;
-        int ordenaropcion;
+        static int filtraropcion = 1;
+        static int ordenaropcion = 3;
 
 
-        int serie = 0;
+        static int serie = 0;
 
 
         public DatosDVDs()
         {
             InitializeComponent();
+            actualizar();
         }
 
         private void DatosDVDs_Load(object sender, EventArgs e)
@@ -47,6 +49,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
         {
 
             listaDVDS.AddRange(coleccionDVD.clonar());
+            listaarticulos.AddRange(listaDVDS);
             if (serie != 0) 
             {
 
@@ -229,8 +232,8 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 
                 case 4:
 
-                    listaarticulos = listaarticulos.OrderBy(dvd => dvd.producto).ToList();  
-                    listaarticulos.Reverse(); //z-a
+                    listaarticulos = listaarticulos.OrderBy(dvd => dvd.producto).ToList();   //z-a
+                    listaarticulos.Reverse();
 
                 break;
 
@@ -240,6 +243,12 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 
                 break;
 
+                case 6:
+
+                    listaarticulos = listaarticulos.OrderBy(dvd => dvd.año_emision).ToList(); //por fecha de emision mas antiguos
+                    listaarticulos.Reverse();
+                break;
+
 
 
 
@@ -247,11 +256,31 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 
 
             }
+        }
 
+        public void eliminar(DVD dvdeliminar)
+        {
 
-
+            coleccionDVD.eliminar(dvdeliminar);
+            llenarbase();
 
         }
+        
+
+        public void modificar(DVD dvdmodificar) 
+        {
+            RegistroDVD registro = new RegistroDVD();
+
+            
+            registro.cargardatos(dvdmodificar);
+            
+            
+
+        }
+
+            
+
+        
 
 
         public void limpiar()
@@ -273,6 +302,8 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 
 
         }
+
+        
 
 
         //eventos
@@ -351,6 +382,53 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             
         
     
-	}
+	    }
+
+        private void DatosDVDs_Activated(object sender, EventArgs e)
+        {
+            MessageBox.Show("activado");
+        }
+
+        private void DatosDVDs_Deactivate(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            limpiar();
+
+            if (comboBox2.Text == "A/Z")
+            {
+                ordenar(3);
+                actualizar();
+            }
+            if (comboBox2.Text == "Z/A")
+            {
+                ordenar(2);
+                actualizar();
+            }
+            if (comboBox2.Text == "Fecha de estreno de mayor a menor")
+            {
+                ordenar(5);
+                actualizar();
+            }
+            if (comboBox2.Text == "Fecha de estreno de menor a mayor")
+            {
+                ordenar(6);
+                actualizar();
+            }
+            if (comboBox2.Text == "Mas recientes")
+            {
+                ordenar(1);
+                actualizar();
+            }
+            if (comboBox2.Text == "Mas antiguos")
+            {
+                ordenar(2);
+                actualizar();
+            }
+        }
+
     }
 }

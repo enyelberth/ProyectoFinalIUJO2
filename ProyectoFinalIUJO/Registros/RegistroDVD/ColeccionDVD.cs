@@ -145,7 +145,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 
                 DVD index1 = new DVD(nombre, Tipo, codigo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
                 
-                MessageBox.Show(Convert.ToString(index1.producto));
                 DVDsRegistrados.Add(index1);
 
             }
@@ -201,7 +200,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
         public void modificar(DVD index)
         {
-
+        	MenudeDatosdeDVD.DatosDVDs datos = new MenudeDatosdeDVD.DatosDVDs();
             foreach (DVD dvd in DVDsRegistrados)
             {
                 if (dvd.codigo == index.codigo)
@@ -219,22 +218,26 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
                 }
 
-
-
             }
+            
+            datos.actualizar();
 
         }
 
         public void eliminar(DVD index)
         {
-            foreach (DVD dvd in DVDsRegistrados)
+            MenudeDatosdeDVD.DatosDVDs coleccion = new MenudeDatosdeDVD.DatosDVDs();
+
+            for (int i = 0; i < DVDsRegistrados.Count; i++)
             {
-
-                if (dvd == index)
-                    DVDsRegistrados.Remove(dvd);
-
+                if (DVDsRegistrados[i] == index)
+                {
+                    DVDsRegistrados.RemoveAt(i);
+                   
+                }
             }
 
+            
 
         }
 
@@ -266,6 +269,17 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             lista.AddRange(DVDsRegistrados);
 
             return lista;
+        }
+
+
+       
+        public void AbrirFormDescrip(Form descripcion1)
+        {
+            descripcion1.TopLevel = false;
+            descripcion1.FormBorderStyle = FormBorderStyle.None;
+            descripcion1.Dock = DockStyle.Fill;
+            descripcion1.BringToFront();
+            descripcion1.Show();
         }
 
     }

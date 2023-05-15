@@ -74,6 +74,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.buttonDemo.TabIndex = 19;
             this.buttonDemo.Text = "Probar";
             this.buttonDemo.UseVisualStyleBackColor = true;
+            this.buttonDemo.Visible = false;
             // 
             // buttonReproducir
             // 
@@ -84,6 +85,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.buttonReproducir.TabIndex = 18;
             this.buttonReproducir.Text = "Reproducir";
             this.buttonReproducir.UseVisualStyleBackColor = true;
+            this.buttonReproducir.Visible = false;
             // 
             // buttonmodificar
             // 

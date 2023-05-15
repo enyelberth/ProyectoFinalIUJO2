@@ -336,6 +336,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             this.buttonmodificar.TabIndex = 55;
             this.buttonmodificar.Text = "Modificar";
             this.buttonmodificar.UseVisualStyleBackColor = true;
+            this.buttonmodificar.Visible = false;
             this.buttonmodificar.Click += new System.EventHandler(this.buttonmodificar_Click);
             // 
             // RegistroDVD
@@ -370,6 +371,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             this.Controls.Add(this.textBoxAñoemision);
             this.Name = "RegistroDVD";
             this.Text = "RegistroDVD";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegistroDVD_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
