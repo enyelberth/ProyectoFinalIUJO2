@@ -122,6 +122,9 @@
     <EmbeddedResource Include="Registros\RegistroDVD\MenudeDatosdeDVD\detallesproducto.resx">
       <DependentUpon>detallesproducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\RegistroDVD\MenudeDatosdeDVD\ElementosProducto.aa.resx">
+      <DependentUpon>ElementosProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\RegistroDVD\MenudeDatosdeDVD\ElementosProducto.resx">
       <DependentUpon>ElementosProducto.cs</DependentUpon>
     </EmbeddedResource>

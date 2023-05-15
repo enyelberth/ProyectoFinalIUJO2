@@ -40,7 +40,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.buttonrentar = new System.Windows.Forms.Button();
             this.buttonDemo = new System.Windows.Forms.Button();
             this.buttonReproducir = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonmodificar = new System.Windows.Forms.Button();
             this.ButtonEliminar = new System.Windows.Forms.Button();
             this.textBoxdescripcion = new System.Windows.Forms.TextBox();
             this.labelprestamo = new System.Windows.Forms.Label();
@@ -85,15 +85,16 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.buttonReproducir.Text = "Reproducir";
             this.buttonReproducir.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonmodificar
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(199, 481);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 38);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonmodificar.Location = new System.Drawing.Point(199, 481);
+            this.buttonmodificar.Name = "buttonmodificar";
+            this.buttonmodificar.Size = new System.Drawing.Size(101, 38);
+            this.buttonmodificar.TabIndex = 17;
+            this.buttonmodificar.Text = "Modificar";
+            this.buttonmodificar.UseVisualStyleBackColor = true;
+            this.buttonmodificar.Click += new System.EventHandler(this.buttonmodificar_Click);
             // 
             // ButtonEliminar
             // 
@@ -104,6 +105,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.ButtonEliminar.TabIndex = 16;
             this.ButtonEliminar.Text = "Eliminar";
             this.ButtonEliminar.UseVisualStyleBackColor = true;
+            this.ButtonEliminar.Click += new System.EventHandler(this.ButtonEliminar_Click);
             // 
             // textBoxdescripcion
             // 
@@ -222,7 +224,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.Controls.Add(this.buttonrentar);
             this.Controls.Add(this.buttonDemo);
             this.Controls.Add(this.buttonReproducir);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonmodificar);
             this.Controls.Add(this.ButtonEliminar);
             this.Controls.Add(this.textBoxdescripcion);
             this.Name = "detallesproducto";
@@ -245,7 +247,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 		private System.Windows.Forms.Label labelprestamo;
 		private System.Windows.Forms.TextBox textBoxdescripcion;
 		private System.Windows.Forms.Button ButtonEliminar;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button buttonmodificar;
 		private System.Windows.Forms.Button buttonReproducir;
 		private System.Windows.Forms.Button buttonDemo;
 		private System.Windows.Forms.Button buttonrentar;

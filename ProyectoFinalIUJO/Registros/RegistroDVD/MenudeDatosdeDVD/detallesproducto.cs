@@ -12,6 +12,13 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 {
     internal partial class detallesproducto : Form
     {
+
+        DVD producto;
+
+        RegistroDVD registro = new RegistroDVD();
+        ColeccionDVD DVDs = new ColeccionDVD();
+        DatosDVDs datos = new DatosDVDs();
+
         public detallesproducto()
         {
             InitializeComponent();
@@ -24,6 +31,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 
         public void llenardatos(DVD dvd)
         {
+            producto = dvd;
             labelnombre.Text = dvd.producto;
             labelcodigo.Text = dvd.codigo;
             labeltipo.Text = dvd.tipo_DVD;
@@ -43,6 +51,18 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
         private void detallesproducto_Deactivate(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ButtonEliminar_Click(object sender, EventArgs e)
+        {
+
+            DVDs.eliminar(producto);
+
+        }
+
+        private void buttonmodificar_Click(object sender, EventArgs e)
+        {
+            registro.cargardatos(producto);
         }
     }
 }
