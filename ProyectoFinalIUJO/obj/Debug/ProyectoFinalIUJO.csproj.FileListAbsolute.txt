@@ -67,4 +67,7 @@ C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO
 C:\Users\Enyelbrth\Desktop\Proyecto\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csprojResolveAssemblyReference.cache
 C:\Users\Enyelbrth\Desktop\Proyecto\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.exe
 C:\Users\Enyelbrth\Desktop\Proyecto\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.pdb
+<<<<<<< HEAD
 C:\Users\Enyelbrth\Desktop\Proyecto\ProyectoFinalIUJO2\ProyectoFinalIUJO\bin\Debug\ProyectoFinalIUJO.exe.config
+=======
+>>>>>>> parent of 2627141 (dasd)
