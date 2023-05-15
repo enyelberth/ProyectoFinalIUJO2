@@ -64,3 +64,7 @@ C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto.aa.resources
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ar-DZ\ProyectoFinalIUJO.resources.dll
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\aa\ProyectoFinalIUJO.resources.dll
+C:\Users\Enyelbrth\Desktop\Proyecto\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csprojResolveAssemblyReference.cache
+C:\Users\Enyelbrth\Desktop\Proyecto\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.exe
+C:\Users\Enyelbrth\Desktop\Proyecto\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.pdb
+C:\Users\Enyelbrth\Desktop\Proyecto\ProyectoFinalIUJO2\ProyectoFinalIUJO\bin\Debug\ProyectoFinalIUJO.exe.config
