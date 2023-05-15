@@ -1,0 +1,11 @@
+<registros>
+  <DVDs>
+    <Peliculas>
+      <producto nombre="Titanic" codigo="00001" Tipo="Pelicula" cantidad="1" AEmision="1997" Fechaingreso="13/5/2022 12:00:00 a. m." Prestamo="n" Descripcion="Romance/Drama" Imagen="ruta/a/titanic.jpg" />
+    </Peliculas>
+    <MP3 />
+    <Juegos />
+  </DVDs>
+  <Personas />
+  <Prestamos />
+</registros>
