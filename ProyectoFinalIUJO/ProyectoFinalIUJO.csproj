@@ -99,7 +99,9 @@
       <DependentUpon>RegistroDVD.cs</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Registros\PrestamosCliente" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MenuPrincipal\PantallaPrincipal.af.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
