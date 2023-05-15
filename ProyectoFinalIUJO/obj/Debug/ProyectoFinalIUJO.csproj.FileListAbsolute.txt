@@ -78,3 +78,4 @@ C:\Users\Enyelbrth\Desktop\Proyectonuevo\ProyectoFinalIUJO2\ProyectoFinalIUJO\ob
 C:\Users\Enyelbrth\Desktop\Proyectonuevo\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csproj.GenerateResource.Cache
 C:\Users\Enyelbrth\Desktop\Proyectonuevo\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\af\ProyectoFinalIUJO.resources.dll
 C:\Users\Enyelbrth\Desktop\Proyectonuevo\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\es\ProyectoFinalIUJO.resources.dll
+C:\Users\Enyelbrth\Desktop\Proyectonuevo\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Properties.Resources.resources
