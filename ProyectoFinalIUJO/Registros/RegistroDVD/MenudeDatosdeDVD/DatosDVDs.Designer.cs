@@ -46,12 +46,12 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.labelfiltro = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.elementosProducto1 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
-            this.elementosProducto2 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
-            this.elementosProducto3 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
-            this.elementosProducto4 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
-            this.elementosProducto5 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
             this.elementosProducto6 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
+            this.elementosProducto5 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
+            this.elementosProducto4 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
+            this.elementosProducto3 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
+            this.elementosProducto2 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
+            this.elementosProducto1 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
             this.SuspendLayout();
             // 
             // labelposicion2
@@ -93,6 +93,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.buttonatras.TabIndex = 23;
             this.buttonatras.Text = "Atras";
             this.buttonatras.UseVisualStyleBackColor = true;
+            this.buttonatras.Click += new System.EventHandler(this.buttonatras_Click);
             // 
             // buttonadelante
             // 
@@ -103,6 +104,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.buttonadelante.TabIndex = 24;
             this.buttonadelante.Text = "adelante";
             this.buttonadelante.UseVisualStyleBackColor = true;
+            this.buttonadelante.Click += new System.EventHandler(this.buttonadelante_Click);
             // 
             // label2
             // 
@@ -153,55 +155,25 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 28;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // elementosProducto1
+            // elementosProducto6
             // 
-            this.elementosProducto1.cantidadproducto = "0";
-            this.elementosProducto1.Codigoproducto = "000000";
-            this.elementosProducto1.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto1.Imagenproducto")));
-            this.elementosProducto1.Location = new System.Drawing.Point(54, 87);
-            this.elementosProducto1.Name = "elementosProducto1";
-            this.elementosProducto1.Nombreproducto = "";
-            this.elementosProducto1.Size = new System.Drawing.Size(202, 234);
-            this.elementosProducto1.TabIndex = 32;
-            // 
-            // elementosProducto2
-            // 
-            this.elementosProducto2.cantidadproducto = "0";
-            this.elementosProducto2.Codigoproducto = "000000";
-            this.elementosProducto2.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto2.Imagenproducto")));
-            this.elementosProducto2.Location = new System.Drawing.Point(307, 87);
-            this.elementosProducto2.Name = "elementosProducto2";
-            this.elementosProducto2.Nombreproducto = "";
-            this.elementosProducto2.Size = new System.Drawing.Size(202, 234);
-            this.elementosProducto2.TabIndex = 33;
-            // 
-            // elementosProducto3
-            // 
-            this.elementosProducto3.cantidadproducto = "0";
-            this.elementosProducto3.Codigoproducto = "000000";
-            this.elementosProducto3.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto3.Imagenproducto")));
-            this.elementosProducto3.Location = new System.Drawing.Point(564, 87);
-            this.elementosProducto3.Name = "elementosProducto3";
-            this.elementosProducto3.Nombreproducto = "";
-            this.elementosProducto3.Size = new System.Drawing.Size(202, 234);
-            this.elementosProducto3.TabIndex = 34;
-            // 
-            // elementosProducto4
-            // 
-            this.elementosProducto4.cantidadproducto = "0";
-            this.elementosProducto4.Codigoproducto = "000000";
-            this.elementosProducto4.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto4.Imagenproducto")));
-            this.elementosProducto4.Location = new System.Drawing.Point(54, 339);
-            this.elementosProducto4.Name = "elementosProducto4";
-            this.elementosProducto4.Nombreproducto = "";
-            this.elementosProducto4.Size = new System.Drawing.Size(202, 234);
-            this.elementosProducto4.TabIndex = 35;
+            this.elementosProducto6.cantidadproducto = "0";
+            this.elementosProducto6.Codigoproducto = "000000";
+            this.elementosProducto6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.elementosProducto6.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto6.Imagenproducto")));
+            this.elementosProducto6.Location = new System.Drawing.Point(564, 339);
+            this.elementosProducto6.Name = "elementosProducto6";
+            this.elementosProducto6.Nombreproducto = "";
+            this.elementosProducto6.Size = new System.Drawing.Size(202, 234);
+            this.elementosProducto6.TabIndex = 37;
             // 
             // elementosProducto5
             // 
             this.elementosProducto5.cantidadproducto = "0";
             this.elementosProducto5.Codigoproducto = "000000";
+            this.elementosProducto5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.elementosProducto5.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto5.Imagenproducto")));
             this.elementosProducto5.Location = new System.Drawing.Point(307, 339);
             this.elementosProducto5.Name = "elementosProducto5";
@@ -209,16 +181,53 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.elementosProducto5.Size = new System.Drawing.Size(202, 234);
             this.elementosProducto5.TabIndex = 36;
             // 
-            // elementosProducto6
+            // elementosProducto4
             // 
-            this.elementosProducto6.cantidadproducto = "0";
-            this.elementosProducto6.Codigoproducto = "000000";
-            this.elementosProducto6.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto6.Imagenproducto")));
-            this.elementosProducto6.Location = new System.Drawing.Point(564, 339);
-            this.elementosProducto6.Name = "elementosProducto6";
-            this.elementosProducto6.Nombreproducto = "";
-            this.elementosProducto6.Size = new System.Drawing.Size(202, 234);
-            this.elementosProducto6.TabIndex = 37;
+            this.elementosProducto4.cantidadproducto = "0";
+            this.elementosProducto4.Codigoproducto = "000000";
+            this.elementosProducto4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.elementosProducto4.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto4.Imagenproducto")));
+            this.elementosProducto4.Location = new System.Drawing.Point(54, 339);
+            this.elementosProducto4.Name = "elementosProducto4";
+            this.elementosProducto4.Nombreproducto = "";
+            this.elementosProducto4.Size = new System.Drawing.Size(202, 234);
+            this.elementosProducto4.TabIndex = 35;
+            // 
+            // elementosProducto3
+            // 
+            this.elementosProducto3.cantidadproducto = "0";
+            this.elementosProducto3.Codigoproducto = "000000";
+            this.elementosProducto3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.elementosProducto3.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto3.Imagenproducto")));
+            this.elementosProducto3.Location = new System.Drawing.Point(564, 87);
+            this.elementosProducto3.Name = "elementosProducto3";
+            this.elementosProducto3.Nombreproducto = "";
+            this.elementosProducto3.Size = new System.Drawing.Size(202, 234);
+            this.elementosProducto3.TabIndex = 34;
+            // 
+            // elementosProducto2
+            // 
+            this.elementosProducto2.cantidadproducto = "0";
+            this.elementosProducto2.Codigoproducto = "000000";
+            this.elementosProducto2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.elementosProducto2.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto2.Imagenproducto")));
+            this.elementosProducto2.Location = new System.Drawing.Point(307, 87);
+            this.elementosProducto2.Name = "elementosProducto2";
+            this.elementosProducto2.Nombreproducto = "";
+            this.elementosProducto2.Size = new System.Drawing.Size(202, 234);
+            this.elementosProducto2.TabIndex = 33;
+            // 
+            // elementosProducto1
+            // 
+            this.elementosProducto1.cantidadproducto = "0";
+            this.elementosProducto1.Codigoproducto = "000000";
+            this.elementosProducto1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.elementosProducto1.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto1.Imagenproducto")));
+            this.elementosProducto1.Location = new System.Drawing.Point(54, 87);
+            this.elementosProducto1.Name = "elementosProducto1";
+            this.elementosProducto1.Nombreproducto = "";
+            this.elementosProducto1.Size = new System.Drawing.Size(202, 234);
+            this.elementosProducto1.TabIndex = 32;
             // 
             // DatosDVDs
             // 
@@ -242,6 +251,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.Controls.Add(this.buttonadelante);
             this.Name = "DatosDVDs";
             this.Text = "DatosDVDs";
+            this.Load += new System.EventHandler(this.DatosDVDs_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

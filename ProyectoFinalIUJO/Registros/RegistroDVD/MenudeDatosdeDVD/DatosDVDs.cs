@@ -40,10 +40,8 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 
             labelposicion1.Text = (serie < 1) ? "1" : Convert.ToString(serie / 5 + 1);
             filtrar(1);
-            filtraropcion = 1;
 
             ordenar(3);
-            ordenaropcion = 3;
             actualizar();
 
         }
@@ -94,10 +92,10 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 
                     foreach (DVD d in listaDVDS)
                     {
-                        if (d.prestamo == true)
-                        {
+                        //if (d.prestamo == true)
+                        //{
                             listaarticulos.Add(d);
-                        }
+                        //}
 
                     }
                     int posicionfinal = listaarticulos.Count / 5;
