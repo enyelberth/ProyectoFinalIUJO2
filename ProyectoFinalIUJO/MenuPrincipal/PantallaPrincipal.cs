@@ -150,7 +150,7 @@ namespace ProyectoFinalIUJO
             string ruta = Path.GetFullPath("Datos.xml");
 
             // Crear 30 objetos de la clase DVD
-            //DVD dvd1 = new DVD("Titanic", "Pelicula", "00001", 1, 1997, new DateTime(2022, 5, 13), false, "Romance/Drama", "ruta/a/titanic.jpg");
+            //DVD dvd1 = new DVD("Titanic", "Pelicula", "00001", 1, 1997, new DateTime(2022, 05, 13), false, "Romance/Drama", "ruta/a/titanic.jpg");
             //DVD dvd2 = new DVD("El Señor de los Anillos: El Retorno del Rey", "Pelicula", "00002", 1, 2003, new DateTime(2022, 5, 13), false, "Fantasía/Aventura", "ruta/a/senordelosanillos.jpg");
             //DVD dvd3 = new DVD("The Dark Knight", "Pelicula", "00003", 1, 2008, new DateTime(2022, 5, 13), false, "Acción/Crimen", "ruta/a/thedarkknight.jpg");
             //DVD dvd4 = new DVD("Inception", "Pelicula", "00004", 1, 2010, new DateTime(2022, 5, 13), false, "Acción/Ciencia Ficción", "ruta/a/inception.jpg");
