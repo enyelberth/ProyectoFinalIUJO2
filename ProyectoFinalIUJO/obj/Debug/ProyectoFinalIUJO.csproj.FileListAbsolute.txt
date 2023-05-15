@@ -38,3 +38,6 @@ C:\Users\user\Desktop\ProyectoFinalIUJO\ProyectoFinalIUJO\bin\Debug\es\ProyectoF
 C:\Users\user\Desktop\ProyectoFinalIUJO\ProyectoFinalIUJO\obj\Debug\af\ProyectoFinalIUJO.resources.dll
 C:\Users\user\Desktop\ProyectoFinalIUJO\ProyectoFinalIUJO\obj\Debug\es\ProyectoFinalIUJO.resources.dll
 C:\Users\user\Desktop\ProyectoFinalIUJO\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.pdb
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\bin\Debug\ProyectoFinalIUJO.exe.config
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.exe
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.pdb
