@@ -120,10 +120,6 @@
   <data name="&gt;&gt;BTNMinimizar.Parent" xml:space="preserve">
     <value>BarraTitulo</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
   <data name="&gt;&gt;BarraTitulo.Parent" xml:space="preserve">
     <value>PanelContenidoPrincipal</value>
   </data>
@@ -131,6 +127,13 @@
   <data name="BarraTitulo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
+  <data name="&gt;&gt;BTNCerrar.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PanelContenidoPrincipal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BTNMinimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -176,8 +179,8 @@
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;BTNCerrar.Name" xml:space="preserve">
+    <value>BTNCerrar</value>
   </data>
   <data name="BTNMaximizarTamaño.Location" type="System.Drawing.Point, System.Drawing">
     <value>620, 4</value>
@@ -186,7 +189,7 @@
     <value>BarraTitulo</value>
   </data>
   <data name="&gt;&gt;BarraTitulo.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;button1.Parent" xml:space="preserve">
     <value>PanelLateralIzquierdo</value>
@@ -194,8 +197,8 @@
   <data name="&gt;&gt;BTNRestaurarTamaño.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="BTNRestaurarTamaño.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
+  <data name="&gt;&gt;BTNRestaurarTamaño.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -215,6 +218,9 @@
   <data name="&gt;&gt;BTNMinimizar.Name" xml:space="preserve">
     <value>BTNMinimizar</value>
   </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="PanelContenidoPrincipal.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -223,9 +229,6 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="BTNRestaurarTamaño.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="PanelContenidoPrincipal.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
@@ -242,6 +245,9 @@
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>5, 26</value>
+  </data>
+  <data name="&gt;&gt;BtnDatosCliente.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;BTNMaximizarTamaño.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -260,9 +266,6 @@
   </data>
   <data name="BTNMinimizar.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="BTNMinimizar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
   </data>
   <data name="PanelContenidoPrincipal.Size" type="System.Drawing.Size, System.Drawing">
     <value>839, 647</value>
@@ -285,14 +288,20 @@
   <data name="BTNRestaurarTamaño.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 21</value>
   </data>
-  <data name="&gt;&gt;PanelContenidoPrincipal.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;BtnDatosCliente.Parent" xml:space="preserve">
+    <value>PanelLateralIzquierdo</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="BTNRestaurarTamaño.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
   </data>
   <data name="Btn_Cliente.Size" type="System.Drawing.Size, System.Drawing">
     <value>138, 23</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="PanelContenidoPrincipal.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -324,9 +333,6 @@
         RK5CYII=
 </value>
   </data>
-  <data name="&gt;&gt;BTNRestaurarTamaño.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="BTNMaximizarTamaño.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
@@ -339,14 +345,20 @@
   <data name="PanelLateralIzquierdo.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
   <data name="&gt;&gt;BtnDatosCliente.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PanelLateralIzquierdo.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="BTNRestaurarTamaño.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="BTNCerrar.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -387,14 +399,17 @@
         mS8IgiAIgiAIgiAIgiDkMUVF/wOol5OWhUKkWgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 115</value>
+  <data name="BtnDatosCliente.Text" xml:space="preserve">
+    <value>Datos Clientes</value>
   </data>
   <data name="PanelContenidoPrincipal.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="BtnDatosCliente.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 267</value>
+  </data>
+  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 84</value>
   </data>
   <data name="BtnDatosCliente.Size" type="System.Drawing.Size, System.Drawing">
     <value>138, 23</value>
@@ -407,9 +422,6 @@
   </data>
   <data name="&gt;&gt;BTNCerrar.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="BTNCerrar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 25</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -435,8 +447,8 @@
   <data name="&gt;&gt;BTNRestaurarTamaño.Name" xml:space="preserve">
     <value>BTNRestaurarTamaño</value>
   </data>
-  <data name="BTNMinimizar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>598, 3</value>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>PanelContenidoPrincipal</value>
   </data>
   <data name="BarraTitulo.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -687,11 +699,8 @@
         YII=
 </value>
   </data>
-  <data name="BtnDatosCliente.Text" xml:space="preserve">
-    <value>Datos Clientes</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MainForm</value>
+  <data name="BTNMinimizar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>598, 3</value>
   </data>
   <data name="BTNMinimizar.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 22</value>
@@ -708,8 +717,8 @@
   <data name="&gt;&gt;BTNMaximizarTamaño.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BTNCerrar.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="button1.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="BTNMaximizarTamaño.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -12692,8 +12701,8 @@
   <data name="BTNCerrar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="&gt;&gt;BtnDatosCliente.Parent" xml:space="preserve">
-    <value>PanelLateralIzquierdo</value>
+  <data name="BTNCerrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
   </data>
   <data name="BarraTitulo.Location" type="System.Drawing.Point, System.Drawing">
     <value>169, 0</value>
@@ -12707,20 +12716,26 @@
   <data name="$this.Text" xml:space="preserve">
     <value>ProyectoFinalIUJO</value>
   </data>
-  <data name="&gt;&gt;BTNCerrar.Name" xml:space="preserve">
-    <value>BTNCerrar</value>
+  <data name="BTNMinimizar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
   </data>
-  <data name="&gt;&gt;BtnDatosCliente.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 115</value>
+  </data>
+  <data name="PanelLateralIzquierdo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="PanelLateralIzquierdo.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>839, 647</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
   </data>
   <data name="Btn_Cliente.Location" type="System.Drawing.Point, System.Drawing">
     <value>25, 224</value>
@@ -12731,14 +12746,17 @@
   <data name="&gt;&gt;Btn_Cliente.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="PanelLateralIzquierdo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;BarraTitulo.Name" xml:space="preserve">
     <value>BarraTitulo</value>
   </data>
-  <data name="PanelLateralIzquierdo.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
