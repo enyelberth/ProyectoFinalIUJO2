@@ -50,7 +50,6 @@ namespace ProyectoFinalIUJO
             this.BTNRestaurarTamaño = new System.Windows.Forms.PictureBox();
             this.BTNMinimizar = new System.Windows.Forms.PictureBox();
             this.BTNCerrar = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelContenidoPrincipal.SuspendLayout();
             this.PanelLateralIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,14 +58,12 @@ namespace ProyectoFinalIUJO
             ((System.ComponentModel.ISupportInitialize)(this.BTNRestaurarTamaño)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTNMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTNCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelContenidoPrincipal
             // 
             resources.ApplyResources(this.PanelContenidoPrincipal, "PanelContenidoPrincipal");
-            this.PanelContenidoPrincipal.BackColor = System.Drawing.Color.LightGray;
-            this.PanelContenidoPrincipal.Controls.Add(this.pictureBox2);
+            this.PanelContenidoPrincipal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(107)))), ((int)(((byte)(134)))));
             this.PanelContenidoPrincipal.Controls.Add(this.PanelLateralIzquierdo);
             this.PanelContenidoPrincipal.Controls.Add(this.BarraTitulo);
             this.PanelContenidoPrincipal.Name = "PanelContenidoPrincipal";
@@ -87,9 +84,8 @@ namespace ProyectoFinalIUJO
             // BtnDatosCliente
             // 
             resources.ApplyResources(this.BtnDatosCliente, "BtnDatosCliente");
-            this.BtnDatosCliente.BackColor = System.Drawing.Color.Gray;
             this.BtnDatosCliente.Name = "BtnDatosCliente";
-            this.BtnDatosCliente.UseVisualStyleBackColor = false;
+            this.BtnDatosCliente.UseVisualStyleBackColor = true;
             this.BtnDatosCliente.Click += new System.EventHandler(this.BtnDatosClienteClick);
             // 
             // Btn_Cliente
@@ -173,12 +169,6 @@ namespace ProyectoFinalIUJO
             this.BTNCerrar.TabStop = false;
             this.BTNCerrar.Click += new System.EventHandler(this.BTNCerrar_Click_1);
             // 
-            // pictureBox2
-            // 
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.TabStop = false;
-            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -197,7 +187,6 @@ namespace ProyectoFinalIUJO
             ((System.ComponentModel.ISupportInitialize)(this.BTNRestaurarTamaño)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTNMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BTNCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -214,6 +203,5 @@ namespace ProyectoFinalIUJO
 		private System.Windows.Forms.Button BtnDatosCliente;
 		private System.Windows.Forms.Panel PanelLateralIzquierdo;
 		private System.Windows.Forms.Panel PanelContenidoPrincipal;
-        private System.Windows.Forms.PictureBox pictureBox2;
 	}
 }
