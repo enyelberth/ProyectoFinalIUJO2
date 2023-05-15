@@ -58,3 +58,9 @@ C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csproj.GenerateResource.Cache
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\af\ProyectoFinalIUJO.resources.dll
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\es\ProyectoFinalIUJO.resources.dll
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\bin\Debug\ar-DZ\ProyectoFinalIUJO.resources.dll
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\bin\Debug\aa\ProyectoFinalIUJO.resources.dll
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.MainForm.ar-DZ.resources
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto.aa.resources
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ar-DZ\ProyectoFinalIUJO.resources.dll
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\aa\ProyectoFinalIUJO.resources.dll

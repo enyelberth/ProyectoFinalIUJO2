@@ -19,10 +19,11 @@ using ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD;
 
 namespace ProyectoFinalIUJO
 {
-
+    
+    
 	public partial class MainForm : Form
     {
-        
+        public Panel panelcontenido = new Panel();
         encriptacion metodoecryp = new encriptacion();
         ColeccionDVD BasededatosDVD = new ColeccionDVD();
         public MainForm()
@@ -80,7 +81,7 @@ namespace ProyectoFinalIUJO
         
         
         private Form AbrirDescripcion = null;
-        private void AbrirFormDescrip(Form descripcion1)
+        public void AbrirFormDescrip(Form descripcion1)
         {
             if (AbrirDescripcion != null)
                 AbrirDescripcion.Close();
@@ -88,8 +89,8 @@ namespace ProyectoFinalIUJO
             descripcion1.TopLevel = false;
             descripcion1.FormBorderStyle = FormBorderStyle.None;
             descripcion1.Dock = DockStyle.Fill;
-            PanelContenidoPrincipal.Controls.Add(descripcion1);
-            PanelContenidoPrincipal.Tag = descripcion1;
+            panelcontenido.Controls.Add(descripcion1);
+            panelcontenido.Tag = descripcion1;
             descripcion1.BringToFront();
             descripcion1.Show();
         }
@@ -219,6 +220,16 @@ namespace ProyectoFinalIUJO
 
             BasededatosDVD.leerbase();
 
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AbrirFormDescrip(new Registros.RegistroDVD.RegistroDVD());
+        }
+
+        private void panelcontenido_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 

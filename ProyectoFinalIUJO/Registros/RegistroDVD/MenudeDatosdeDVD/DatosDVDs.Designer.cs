@@ -122,14 +122,17 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
-            "Peliculas",
-            "Mp3",
-            "Videojuegos",
-            "Sin filtro"});
+            "A/Z",
+            "Z/A",
+            "Fecha de estreno de mayor a menor",
+            "Fecha de estreno de menor a mayor",
+            "Mas recientes",
+            "Mas antiguos"});
             this.comboBox2.Location = new System.Drawing.Point(372, 32);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 23);
             this.comboBox2.TabIndex = 30;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // labelfiltro
             // 
@@ -251,6 +254,8 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.Controls.Add(this.buttonadelante);
             this.Name = "DatosDVDs";
             this.Text = "DatosDVDs";
+            this.Activated += new System.EventHandler(this.DatosDVDs_Activated);
+            this.Deactivate += new System.EventHandler(this.DatosDVDs_Deactivate);
             this.Load += new System.EventHandler(this.DatosDVDs_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -270,6 +275,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 		private System.Windows.Forms.Button buttonatras;
 		private System.Windows.Forms.Label labelposicion1;
 		private System.Windows.Forms.Label de;
-		private System.Windows.Forms.Label labelposicion2;
+        private System.Windows.Forms.Label labelposicion2;
 	}
 }

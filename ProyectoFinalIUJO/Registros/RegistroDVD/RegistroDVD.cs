@@ -22,11 +22,14 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
         OpenFileDialog ubicacionarchivo;
 
         ColeccionDVD x = new ColeccionDVD();
+        
 
         public RegistroDVD()
         {
             InitializeComponent();
             textBoxcodigo.Text = generarcodigo();
+            buttonmodificar.Visible = false;
+            buttonregistro.Visible = true;
         }
 
         private void buttonregistro_Click(object sender, EventArgs e)
@@ -99,8 +102,12 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
         public void cargardatos(DVD dvd) 
         {
-            this.Show();
+        	
+        	this.Show();
 
+            buttonregistro.Visible = false;
+            buttonmodificar.Visible = true;
+        	
             textBoxTitulo.Text = dvd.producto;
             textBoxcodigo.Text = dvd.codigo;
             comboBoxtipoDVD.Text = dvd.tipo_DVD;
@@ -132,7 +139,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             textBoxdescripcion.Text = dvd.descripcion;
             textBoximagen.Text = dvd.ubicacionimagen;
 
-
+			
 
         }
 
@@ -232,7 +239,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
                     MessageBox.Show("Se ha producido un error\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                catch (ArgumentException ex)
+                catch (Exception ex)
                 {
 
                     MessageBox.Show("Se ha producido un error al seleccionar la imagen, seleccione una imagen valida porfavor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -494,6 +501,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 MessageBox.Show("Uno o mas de los campos del registro estan vacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
+        }
+
+        private void RegistroDVD_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
 
 
