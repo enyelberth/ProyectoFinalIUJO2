@@ -7,7 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
-using System.Globalization;
 
 namespace ProyectoFinalIUJO.Registros.RegistroDVD
 {
@@ -137,17 +136,16 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 int cantidad = Convert.ToInt32(pelicula.Attributes["cantidad"].Value);
                 int añoemision = Convert.ToInt32(pelicula.Attributes["AEmision"].Value);
                 string convertirfecha = pelicula.Attributes["Fechaingreso"].Value;
-                //MessageBox.Show(convertirfecha);
-                DateTime fechaingreso = new DateTime(2000, 1, 1);
-                //DateTime fechaingreso = DateTime.ParseExact(convertirfecha, "d/M/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
-             
-              // MessageBox.Show();
+                DateTime fechaingreso = DateTime.Parse(convertirfecha);
+                
                 bool prestamo = (pelicula.Attributes["Prestamo"].Value == "y") ? true : false;
                 string descripcion = pelicula.Attributes["Descripcion"].Value;
                 string imagen = pelicula.Attributes["Imagen"].Value;
 
                 
                 DVD index1 = new DVD(nombre, Tipo, codigo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
+                
+                MessageBox.Show(Convert.ToString(index1.producto));
                 DVDsRegistrados.Add(index1);
 
             }
@@ -160,8 +158,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 int cantidad = Convert.ToInt32(MP3.Attributes["cantidad"].Value);
                 int añoemision = Convert.ToInt32(MP3.Attributes["AEmision"].Value);
                 string convertirfecha = MP3.Attributes["Fechaingreso"].Value;
-                DateTime fechaingreso = new DateTime(2000, 1, 1);
-                //DateTime fechaingreso = DateTime.Parse(convertirfecha);
+                DateTime fechaingreso = DateTime.Parse(convertirfecha);
                 bool prestamo = (MP3.Attributes["Prestamo"].Value == "y") ? true : false;
                 string descripcion = MP3.Attributes["Descripcion"].Value;
                 string imagen = MP3.Attributes["Imagen"].Value;
@@ -181,8 +178,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 int cantidad = Convert.ToInt32(juego.Attributes["cantidad"].Value);
                 int añoemision = Convert.ToInt32(juego.Attributes["AEmision"].Value);
                 string convertirfecha = juego.Attributes["Fechaingreso"].Value;
-                DateTime fechaingreso = new DateTime(2000, 1, 1);
-                //DateTime fechaingreso = DateTime.Parse(convertirfecha);
+                DateTime fechaingreso = DateTime.Parse(convertirfecha);
                 bool prestamo = (juego.Attributes["Prestamo"].Value == "y") ? true : false;
                 string descripcion = juego.Attributes["Descripcion"].Value;
                 string imagen = juego.Attributes["Imagen"].Value;

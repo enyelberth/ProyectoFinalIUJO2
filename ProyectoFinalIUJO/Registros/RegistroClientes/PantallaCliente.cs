@@ -108,12 +108,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
     	  		e.Handled = true;
     	  		return;
 			}
-		}
-		
-		void InputCedulaValidated(object sender, EventArgs e)
-		{
-	
-		}
+        }
 		
 		void InputCedulaKeyPress(object sender, KeyPressEventArgs e)
 		{

@@ -34,7 +34,7 @@ namespace ProyectoFinalIUJO
 
         
 
-        private void BTNCerrar_Click(object sender, EventArgs e)
+        private void BTNCerrar_Click_1(object sender, EventArgs e)
         {
             if (File.Exists(Path.GetFullPath("Datos.xml"))) // nuevo codigo para encriptar lo escrito en la base de datos y borra el archivo remanente
             {
@@ -150,9 +150,9 @@ namespace ProyectoFinalIUJO
             string ruta = Path.GetFullPath("Datos.xml");
 
             // Crear 30 objetos de la clase DVD
-            DVD dvd1 = new DVD("Titanic", "Pelicula", "00001", 1, 1997, new DateTime(2022, 5, 13), false, "Romance/Drama", "ruta/a/titanic.jpg");
-            DVD dvd2 = new DVD("El Señor de los Anillos: El Retorno del Rey", "Pelicula", "00002", 1, 2003, new DateTime(2022, 5, 13), false, "Fantasía/Aventura", "ruta/a/senordelosanillos.jpg");
-            DVD dvd3 = new DVD("The Dark Knight", "Pelicula", "00003", 1, 2008, new DateTime(2022, 5, 13), false, "Acción/Crimen", "ruta/a/thedarkknight.jpg");
+            //DVD dvd1 = new DVD("Titanic", "Pelicula", "00001", 1, 1997, new DateTime(2022, 5, 13), false, "Romance/Drama", "ruta/a/titanic.jpg");
+            //DVD dvd2 = new DVD("El Señor de los Anillos: El Retorno del Rey", "Pelicula", "00002", 1, 2003, new DateTime(2022, 5, 13), false, "Fantasía/Aventura", "ruta/a/senordelosanillos.jpg");
+            //DVD dvd3 = new DVD("The Dark Knight", "Pelicula", "00003", 1, 2008, new DateTime(2022, 5, 13), false, "Acción/Crimen", "ruta/a/thedarkknight.jpg");
             //DVD dvd4 = new DVD("Inception", "Pelicula", "00004", 1, 2010, new DateTime(2022, 5, 13), false, "Acción/Ciencia Ficción", "ruta/a/inception.jpg");
             //DVD dvd5 = new DVD("Bohemian Rhapsody", "Mp3", "00005", 1, 2018, new DateTime(2022, 5, 13), false, "Rock/Biografía", "ruta/a/bohemianrhapsody.jpg");
             //DVD dvd6 = new DVD("The Beatles - 1", "Mp3", "00006", 1, 2000, new DateTime(2022, 5, 13), false, "Rock", "ruta/a/thebeatles1.jpg");
@@ -182,9 +182,9 @@ namespace ProyectoFinalIUJO
             //DVD dvd30 = new DVD("The Last of Us Part II", "Videojuego", "00030", 1, 2020, new DateTime(2022, 5, 13), false, "Acción/Aventura", "ruta/a/thelastofuspart2.jpg");
 
             //// Agregar los objetos a la base de datos de DVD utilizando el método agregar()
-            BasededatosDVD.agregar(dvd1);
-            BasededatosDVD.agregar(dvd2);
-            BasededatosDVD.agregar(dvd3);
+            //BasededatosDVD.agregar(dvd1);
+            //BasededatosDVD.agregar(dvd2);
+            //BasededatosDVD.agregar(dvd3);
             //BasededatosDVD.agregar(dvd4);
             //BasededatosDVD.agregar(dvd5);
             //BasededatosDVD.agregar(dvd6);
@@ -215,33 +215,14 @@ namespace ProyectoFinalIUJO
 
 
             //esta linea oculta la base de datos cuando se desencripta esta oculta para que la podamos ver mientras trabajamos
-            File.SetAttributes(ruta, File.GetAttributes(ruta) | FileAttributes.Hidden);
+            //File.SetAttributes(ruta, File.GetAttributes(ruta) | FileAttributes.Hidden);
 
             BasededatosDVD.leerbase();
 
 
         }
-		
-		void BTNCerrarClick(object sender, EventArgs e)
-		{
-			Close();
-			
-		}
-		
-		void Button1Click(object sender, EventArgs e)
-		{
-			
-		}
-		
-		void Button2Click(object sender, EventArgs e)
-		{
-			
-		}
-		
-		void PictureBox1Click(object sender, EventArgs e)
-		{
-			
-		}
+
+        
     }
 
 }
