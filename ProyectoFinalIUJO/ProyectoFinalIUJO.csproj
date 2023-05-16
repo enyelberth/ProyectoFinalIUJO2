@@ -113,7 +113,6 @@
     <Compile Include="Registros\RegistroDVD\RegistroDVD.Designer.cs">
       <DependentUpon>RegistroDVD.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -136,10 +135,7 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-=======
->>>>>>> parent of 2627141 (dasd)
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="MenuPrincipal\PantallaPrincipal.af.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
