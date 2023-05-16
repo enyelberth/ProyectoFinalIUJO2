@@ -430,5 +430,10 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             }
         }
 
+        private void buttonatualizar_Click(object sender, EventArgs e)
+        {
+            actualizar();
+        }
+
     }
 }

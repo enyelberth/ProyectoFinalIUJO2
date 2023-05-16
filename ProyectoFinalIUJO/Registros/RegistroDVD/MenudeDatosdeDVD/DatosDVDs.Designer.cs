@@ -52,6 +52,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.elementosProducto3 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
             this.elementosProducto2 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
             this.elementosProducto1 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
+            this.buttonatualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelposicion2
@@ -232,11 +233,23 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.elementosProducto1.Size = new System.Drawing.Size(202, 234);
             this.elementosProducto1.TabIndex = 32;
             // 
+            // buttonatualizar
+            // 
+            this.buttonatualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonatualizar.Location = new System.Drawing.Point(694, 25);
+            this.buttonatualizar.Name = "buttonatualizar";
+            this.buttonatualizar.Size = new System.Drawing.Size(95, 34);
+            this.buttonatualizar.TabIndex = 38;
+            this.buttonatualizar.Text = "Actualizar";
+            this.buttonatualizar.UseVisualStyleBackColor = true;
+            this.buttonatualizar.Click += new System.EventHandler(this.buttonatualizar_Click);
+            // 
             // DatosDVDs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 667);
+            this.Controls.Add(this.buttonatualizar);
             this.Controls.Add(this.elementosProducto6);
             this.Controls.Add(this.elementosProducto5);
             this.Controls.Add(this.elementosProducto4);
@@ -276,5 +289,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 		private System.Windows.Forms.Label labelposicion1;
 		private System.Windows.Forms.Label de;
         private System.Windows.Forms.Label labelposicion2;
+        private System.Windows.Forms.Button buttonatualizar;
 	}
 }
