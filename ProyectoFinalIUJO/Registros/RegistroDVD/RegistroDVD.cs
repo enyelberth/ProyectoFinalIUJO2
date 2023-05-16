@@ -105,6 +105,10 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
         	
         	this.Show();
 
+            this.BringToFront();
+
+            this.FormBorderStyle = FormBorderStyle.None;
+
             buttonregistro.Visible = false;
             buttonmodificar.Visible = true;
         	
