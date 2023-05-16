@@ -58,19 +58,12 @@ C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csproj.GenerateResource.Cache
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\af\ProyectoFinalIUJO.resources.dll
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\es\ProyectoFinalIUJO.resources.dll
-<<<<<<< HEAD
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\bin\Debug\ar-DZ\ProyectoFinalIUJO.resources.dll
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\bin\Debug\aa\ProyectoFinalIUJO.resources.dll
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.MainForm.ar-DZ.resources
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto.aa.resources
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ar-DZ\ProyectoFinalIUJO.resources.dll
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\aa\ProyectoFinalIUJO.resources.dll
-C:\Users\Enyelbrth\Desktop\Proyecto\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csprojResolveAssemblyReference.cache
-C:\Users\Enyelbrth\Desktop\Proyecto\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.exe
-C:\Users\Enyelbrth\Desktop\Proyecto\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.pdb
-<<<<<<< HEAD
-C:\Users\Enyelbrth\Desktop\Proyecto\ProyectoFinalIUJO2\ProyectoFinalIUJO\bin\Debug\ProyectoFinalIUJO.exe.config
-=======
->>>>>>> parent of 2627141 (dasd)
-=======
->>>>>>> parent of 7eb5414 (Carpetas de Prestamos)
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2-98653070daa4e6f1d61e8c59d86025918c80cea3\ProyectoFinalIUJO\bin\Debug\ProyectoFinalIUJO.exe.config
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2-98653070daa4e6f1d61e8c59d86025918c80cea3\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.exe
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2-98653070daa4e6f1d61e8c59d86025918c80cea3\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.pdb
