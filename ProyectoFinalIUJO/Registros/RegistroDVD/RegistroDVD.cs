@@ -23,7 +23,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
         ColeccionDVD x = new ColeccionDVD();
         
-
+        
         public RegistroDVD()
         {
             InitializeComponent();
@@ -35,6 +35,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
         private void buttonregistro_Click(object sender, EventArgs e)
         {
             bool confirmacion = false;
+            bool disponibilidad;
 
             if (textBoxAñoemision.Text != "")
             {
@@ -46,45 +47,54 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                         {
                             if (textBoxTitulo.Text != "")
                             {
-                                if (textBoximagen.Text != "")
+                                confirmacion = true;
+
+                                DateTime fechaingreso = dateTimeFechaingreso.Value.Date.ToLocalTime();
+
+
+                                string Producto = textBoxTitulo.Text;
+                                string Tipo_DVD = comboBoxtipoDVD.Text;
+                                int Cantidad = Convert.ToInt32(textBoxCantidad.Text);
+                                string Codigo = textBoxcodigo.Text;
+                                int Año_emision = Convert.ToInt32(textBoxAñoemision.Text);
+                                bool Prestamo = (radioButtonNO.Checked == true) ? false : true;
+                                string Descripcion = textBoxdescripcion.Text;
+                                disponibilidad = x.confirmardisponible(Producto, Tipo_DVD, Cantidad);
+                                
+                                if (disponibilidad == false)
                                 {
-
-                                    confirmacion = true;
-
-                                    DateTime fechaingreso = dateTimeFechaingreso.Value.Date.ToLocalTime();
-
-
-                                    string Producto = textBoxTitulo.Text;
-                                    string Tipo_DVD = comboBoxtipoDVD.Text;
-                                    int Cantidad = Convert.ToInt32(textBoxCantidad.Text);
-                                    string Codigo = textBoxcodigo.Text;
-                                    int Año_emision = Convert.ToInt32(textBoxAñoemision.Text);
-                                    bool Prestamo = (radioButtonNO.Checked == true) ? false : true;
-                                    string Descripcion = textBoxdescripcion.Text;
-                                    string imagen = obtenerimagen();
-
-                                    if (Tipo_DVD == "Mp3")
+                                	
+                                	return;
+                                }
+                                
+								string imagen = obtenerimagen();
+								
+                                if (Tipo_DVD == "Mp3")
+                                {
+                                	string archivo = obtenerarchivo();
+                                    
+                                    if(textBoximagen.Text != "" && textBoxarchivo.Text != "" && disponibilidad == true)
                                     {
-                                        string archivo = obtenerarchivo();
-                                        DVD index1 = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen, archivo);
+                                    	
+                                    	DVD index1 = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen, archivo);
+                                    	
+                                    	limpiartextboxes();
 
-                                        limpiartextboxes();
+                                    	x.agregar(index1);
 
-                                        x.agregar(index1);
-
-                                        MessageBox.Show("" + Producto + " agregado a " + Tipo_DVD + "s" );
-
+                                    	MessageBox.Show("" + Producto + " agregado a " + Tipo_DVD + "s" );
                                     }
-                                    else
-                                    {
-                                        DVD index = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen);
+                                    
+                                }
+                                else if (textBoximagen.Text != "" && disponibilidad == true) 
+                                {
+                                	DVD index = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen);
 
-                                        limpiartextboxes();
+                                    limpiartextboxes();
 
-                                        x.agregar(index);
+                                    x.agregar(index);
 
-                                        MessageBox.Show("" + Producto + " agregado a " + Tipo_DVD + "s");
-                                    }
+                                    MessageBox.Show("" + Producto + " agregado a " + Tipo_DVD + "s");
                                 }
                             }
                         }
@@ -97,6 +107,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 MessageBox.Show("Uno o mas de los campos del registro estan vacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
+             
         }
 
 
@@ -156,7 +167,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             {
                 string texto = textBoxTitulo.Text;
                 textBoxTitulo.Text = texto.Substring(0, 1).ToUpper() + texto.Substring(1).ToLower();
-                textBoxTitulo.SelectionStart = textBoxTitulo.Text.Length; // Colocamos el cursor al final del texto
+                textBoxTitulo.SelectionStart = textBoxTitulo.Text.Length; 
                 textBoxTitulo.SelectionLength = 0; 
             }
         }
@@ -211,7 +222,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
         {
             bool continuar = false;
             OpenFileDialog nuevo = new OpenFileDialog();
-
             do
             {
 
@@ -293,7 +303,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
         {
             bool continuar = false;
             OpenFileDialog nuevoarchivo = new OpenFileDialog();
-
             do
             {
 
@@ -314,7 +323,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 {
                     string archivo = Path.GetFileName(nuevoarchivo.FileName);
                     FileInfo fileInfo = new FileInfo(archivo);
-                    if (fileInfo.Extension.Equals(".mp3", StringComparison.OrdinalIgnoreCase)) 
+                    if (fileInfo.Extension.Equals(".wav", StringComparison.OrdinalIgnoreCase)) 
                     {
                         continuar = true;
 
@@ -329,6 +338,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
 
                     MessageBox.Show("Se ha producido un error\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    
                 }
                 catch (ArgumentException ex)
                 {
@@ -346,23 +356,38 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
         public string obtenerimagen()
         {
             OpenFileDialog nuevo = ubicacionimagen;
+            
+            
             string caminocarpeta = "";
             string caminofinal = "";
-            string caminoarchivo = nuevo.FileName;
-
+            
+            string caminoarchivo = "";
+            	
+            if (nuevo != null)
+            {
+            caminoarchivo = nuevo.FileName;
+            }
+            
+            
             try
             {
 
                 caminocarpeta = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                caminofinal = Path.Combine(caminocarpeta, "imagenesdvds\\" + Path.GetFileName(nuevo.FileName));
+                caminofinal = Path.Combine(caminocarpeta, "imagenesdvds\\" + textBoximagen.Text);
 
                 MessageBox.Show(caminofinal);
 
-                File.Copy(caminoarchivo, caminofinal);
+                
+                if (nuevo != null) 
+                {
+                    MessageBox.Show(caminoarchivo);
+                	File.Copy(caminoarchivo, caminofinal);
+                }
 
 
 
-                return Path.GetFileName(nuevo.FileName); ;
+                return textBoximagen.Text; 
+                
             }
 
             catch (IOException e)
@@ -370,11 +395,12 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
 
                 MessageBox.Show("Se ha producido un error\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                textBoximagen.Text = "";
             }
             catch (ArgumentException e)
             {
 
-                MessageBox.Show("Se ha producido un error al seleccionar la imagen, seleccione una imagen valida porfavor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Se ha producido un error al seleccionar la imagen, seleccione una imagen valida porfavor, detalles \n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
 
@@ -387,21 +413,33 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
             OpenFileDialog nuevo = ubicacionarchivo;
             string caminocarpeta;
             string caminofinal;
-            string caminoarchivo = nuevo.FileName;
+            string caminoarchivo = "";
+            
+            if (nuevo != null) 
+            {
+            	caminoarchivo = nuevo.FileName;
+            }
+            
+            
 
             try
             {
 
                 caminocarpeta = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                caminofinal = Path.Combine(caminocarpeta, "archivosmp3\\" + Path.GetFileName(nuevo.FileName));
+                caminofinal = Path.Combine(caminocarpeta, "archivosmp3\\" + textBoxarchivo.Text);
 
                 MessageBox.Show(caminofinal);
+				
+                if (nuevo != null) 
+                {
+                	File.Copy(caminoarchivo, caminofinal);
+                }
+                
 
-                File.Copy(caminoarchivo, caminofinal);
 
 
-
-                return Path.GetFileName(nuevo.FileName); ;
+                return textBoxarchivo.Text;
+                
             }
 
             catch (IOException e)
@@ -409,11 +447,13 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
 
                 MessageBox.Show("Se ha producido un error\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("aqui");
+                textBoxarchivo.Text = "";
             }
             catch (ArgumentException e)
             {
 
-                MessageBox.Show("Se ha producido un error al seleccionar el archivo, seleccione un archivo valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Se ha producido un error al seleccionar el archivo, seleccione un archivo valido, detalles \n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
 
@@ -441,6 +481,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
         private void buttonmodificar_Click(object sender, EventArgs e)
         {
             bool confirmacion = false;
+            bool disponibilidad;
 
             if (textBoxAñoemision.Text != "")
             {
@@ -452,29 +493,30 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                         {
                             if (textBoxTitulo.Text != "")
                             {
-                                if (textBoximagen.Text != "")
+                                confirmacion = true;
+
+                                DateTime fechaingreso = dateTimeFechaingreso.Value.Date.ToLocalTime();
+
+
+                                string Producto = textBoxTitulo.Text;
+                                string Tipo_DVD = comboBoxtipoDVD.Text;
+                                int Cantidad = Convert.ToInt32(textBoxCantidad.Text);
+                                string Codigo = textBoxcodigo.Text;
+                                int Año_emision = Convert.ToInt32(textBoxAñoemision.Text);
+                                bool Prestamo = (radioButtonNO.Checked == true) ? false : true;
+                                string Descripcion = textBoxdescripcion.Text;
+                                
+                                string imagen = obtenerimagen();
+
+                                if (Tipo_DVD == "Mp3")
                                 {
-
-                                    confirmacion = true;
-
-                                    DateTime fechaingreso = dateTimeFechaingreso.Value.Date.ToLocalTime();
-
-
-                                    string Producto = textBoxTitulo.Text;
-                                    string Tipo_DVD = comboBoxtipoDVD.Text;
-                                    int Cantidad = Convert.ToInt32(textBoxCantidad.Text);
-                                    string Codigo = textBoxcodigo.Text;
-                                    int Año_emision = Convert.ToInt32(textBoxAñoemision.Text);
-                                    bool Prestamo = (radioButtonNO.Checked == true) ? false : true;
-                                    string Descripcion = textBoxdescripcion.Text;
-                                    string imagen = textBoximagen.Text;
-
-                                    if (Tipo_DVD == "Mp3")
+                                	string archivo = obtenerarchivo();
+                                    
+                                    if(textBoximagen.Text != "" && textBoxarchivo.Text != "")
                                     {
-                                        string archivo = obtenerarchivo();
-                                        DVD index1 = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen, archivo);
-
-                                        limpiartextboxes();
+                                    	DVD index1 = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen, archivo);
+                                    	
+                                    	limpiartextboxes();
 
                                         x.modificar(index1);
 
@@ -498,15 +540,14 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                         }
                     }
                 }
-            }
-
+            
             if (confirmacion == false)
             {
                 MessageBox.Show("Uno o mas de los campos del registro estan vacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
+            }
         }
-
         private void RegistroDVD_FormClosed(object sender, FormClosedEventArgs e)
         {
 

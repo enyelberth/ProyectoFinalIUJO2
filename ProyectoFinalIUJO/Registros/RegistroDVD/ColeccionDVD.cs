@@ -7,6 +7,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using ProyectoFinalIUJO.Registros.RegistroDVD;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Reflection;
 
 namespace ProyectoFinalIUJO.Registros.RegistroDVD
 {
@@ -161,10 +166,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 bool prestamo = (MP3.Attributes["Prestamo"].Value == "y") ? true : false;
                 string descripcion = MP3.Attributes["Descripcion"].Value;
                 string imagen = MP3.Attributes["Imagen"].Value;
+                string archivo = MP3.Attributes["Archivo"].Value;
 
 
 
-                DVD index2 = new DVD(nombre, Tipo, codigo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen);
+                DVD index2 = new DVD(nombre, Tipo, codigo, cantidad, añoemision, fechaingreso, prestamo, descripcion, imagen, archivo);
                 DVDsRegistrados.Add(index2);
 
             }
@@ -226,19 +232,26 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
         public void eliminar(DVD index)
         {
-            MenudeDatosdeDVD.DatosDVDs coleccion = new MenudeDatosdeDVD.DatosDVDs();
+            
 
             for (int i = 0; i < DVDsRegistrados.Count; i++)
             {
                 if (DVDsRegistrados[i] == index)
                 {
+                	string caminocarpeta = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+                	string caminofinal = Path.Combine(caminocarpeta, "imagenesdvds\\" + DVDsRegistrados[i].ubicacionimagen);
+                    File.Delete(caminofinal);
+                	if (DVDsRegistrados[i].tipo_DVD == "Mp3") 
+                	{
+                		string caminofinalarchivo = Path.Combine(caminocarpeta, "archivosmp3\\" + DVDsRegistrados[i].ubicacionArchivo);
+                		File.Delete(caminofinalarchivo);
+                		
+                	}
+                   
                     DVDsRegistrados.RemoveAt(i);
                    
                 }
             }
-
-            
-
         }
 
 
@@ -260,6 +273,27 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
 
             return confirmacion;
+        }
+        
+        public bool confirmardisponible(string producto, string tipo, int cantidad)
+        {
+        	foreach(DVD dvd in DVDsRegistrados)
+        	{
+        		
+        			if (producto == dvd.producto && tipo == dvd.tipo_DVD) 
+        			{
+							
+							dvd.cantidad = dvd.cantidad + cantidad;
+							MessageBox.Show("Unidad/es añadida a " + dvd.producto);
+						
+        				return false;
+        			}
+        		
+        	}
+        		
+        	
+        	return true;
+        	
         }
 
         public List<DVD> clonar()
