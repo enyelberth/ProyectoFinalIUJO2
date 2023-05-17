@@ -87,10 +87,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 					int telefonoR = int.Parse(InputTelefonoResidencial.Text);
 					string correo = inputCorreo.Text;
 					string direccion = InputDireccion.Text;
+                    string sexooo = "Masculino";
 					DateTime fechaR = new DateTime(2022, 10,31);
-	
 
-					x.Agregar(nombre,apellido,cedula,sexo,fechaN,telefonoC,telefonoR,correo,direccion,fechaR);
+                   // DVD index1 = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen, archivo);
+                    Cliente index1 = new Cliente(nombre, apellido, cedula, sexooo, fechaN, telefonoC, telefonoR, correo, direccion, fechaR);
 					MessageBox.Show("Funciona el boton");
 					
 				}

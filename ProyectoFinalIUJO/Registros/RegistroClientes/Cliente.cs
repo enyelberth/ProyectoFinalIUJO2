@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ProyectoFinalIUJO.Registros.RegistroClientes
 {
@@ -8,7 +12,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 		private string _nombreCliente;
 		private string _apellidoCliente;
 		private int _cedulaCliente;
-		private bool _sexoCliente;
+		private string _sexoCliente;
 		private DateTime _fechaNacimiento_cliente;
 		private int _telefonoCelular;
 		private int _telefonoResidencial;
@@ -23,7 +27,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 		public string Nombre_Cliente {get {return _nombreCliente;} set {_nombreCliente = value;}}
 		public string Apellido_Cliente {get {return _apellidoCliente;} set {_apellidoCliente = value;}}
 		public int Cedula{get {return _cedulaCliente;} set {_cedulaCliente = value;}}
-		public bool Sexo{get {return _sexoCliente;} set {_sexoCliente = value;}}
+		public string Sexo{get {return _sexoCliente;} set {_sexoCliente = value;}}
 		public DateTime FechaNacimientoCliente {get {return _fechaNacimiento_cliente;} set {_fechaNacimiento_cliente= value;}}
 		public int TelefonoCelular {get {return _telefonoCelular;} set {_telefonoCelular = value;}}
 		public int TelefonoResidencial {get {return _telefonoResidencial;} set {_telefonoResidencial = value;}}
@@ -31,7 +35,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 		public string Direccion {get {return _direccionHabitación;} set {_direccionHabitación = value;}}
 		public DateTime FechaRegistroCliente {get {return _fechaRegistro_cliente;} set {_fechaRegistro_cliente = value;}}
 		
-		public Cliente(string nombre,string apellido,int cedula,bool sexo, DateTime fechaN, int telefonoC,int telefonoR,string correo,string direccion,DateTime fechaR)
+		public Cliente(string nombre,string apellido,int cedula,string sexo, DateTime fechaN, int telefonoC,int telefonoR,string correo,string direccion,DateTime fechaR)
 		{
 			this._nombreCliente = nombre;
 			this._apellidoCliente = apellido;

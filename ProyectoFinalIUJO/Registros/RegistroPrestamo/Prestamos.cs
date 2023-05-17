@@ -23,11 +23,59 @@ namespace ProyectoFinalIUJO.Registros.RegistroPrestamo
         private int MontoPagar;
 
 
- //           public Prestamo(DateTime fechaPrestamo, DateTime fechaDevolucion, Cliente cliente, Item item)
+        //public Prestamo(DateTime fechaPrestamo, DateTime fechaDevolucion, Cliente cliente, Item item)
         //private string
         public Prestamos(DateTime _FechaPrestamo,DateTime _FechaDevolucion,string _NombreCliente, string Producto)
-        { 
+        {
+            this.id = ++contador;
+            this._FechaPrestamo = _FechaPrestamo;
+            this._FechaDevolucion = _FechaDevolucion;
+            this._NombreCliente = _NombreCliente;
+            this.Producto = Producto;
+            this.MontoPagar = MontoPagar;
         
         }
+        /*
+        private decimal CalcularMontoAPagar()
+        {
+            decimal montoAPagar = 0;
+            
+            //if (Producto is DVD)
+            if (Producto)
+            {
+                int duracion = (_FechaDevolucion - _FechaPrestamo).Days;
+                MontoPagar = 2 * (duracion / 3);
+
+                if (duracion % 3 != 0)
+                {
+                    MontoPagar += 2;
+                }
+            }
+            else if (Producto is JuegoConsola)
+            {
+                int duracion = (_FechaDevolucion - _FechaPrestamo).Days;
+                MontoPagar = 2 * (duracion / 4);
+
+                if (duracion % 4 != 0)
+                {
+                    MontoPagar += 2;
+                }
+            }
+            else if (Producto is DVDpistasAudio)
+            {
+                int duracion = (_FechaDevolucion - _FechaPrestamo).Days;
+                MontoPagar = 2 * (duracion / 7);
+
+                if (duracion % 7 != 0)
+                {
+                    MontoPagar += 2;
+                }
+            }
+
+            return MontoPagar;
+        }
+         * */
+
+
     }
 }

@@ -90,7 +90,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 attribute = DVDdatos.CreateAttribute("Imagen");
                 attribute.Value = dvd.ubicacionimagen;
                 producto.Attributes.Append(attribute);
-
+                
                 if(dvd.tipo_DVD == "Mp3")
                 {
                     attribute = DVDdatos.CreateAttribute("Archivo");
