@@ -29,7 +29,7 @@ namespace ProyectoFinalIUJO
         public MainForm()
         {
             InitializeComponent();
-            Btn_Cliente.Click += new EventHandler(Btn_ClienteClick);
+           // Btn_Cliente.Click += new EventHandler(Btn_ClienteClick);
             inicio();
         }
 
@@ -100,17 +100,7 @@ namespace ProyectoFinalIUJO
         {
         	
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           AbrirFormDescrip(new Registros.RegistroDVD.MenudeDatosdeDVD.DatosDVDs());
-
-
-
-
-            
-        }
-
+  
 
         //esto desencripta la base de datos y si no existe la crea
         void inicio()
@@ -223,15 +213,44 @@ namespace ProyectoFinalIUJO
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        // Botones de los modulos
+    
+
+        private void Btn_Registro_DVD_Click(object sender, EventArgs e)
         {
             AbrirFormDescrip(new Registros.RegistroDVD.RegistroDVD());
         }
 
-        private void panelcontenido_Paint(object sender, PaintEventArgs e)
+        private void Btn_Gestion_DVD_Click(object sender, EventArgs e)
+        {
+            AbrirFormDescrip(new Registros.RegistroDVD.MenudeDatosdeDVD.DatosDVDs());
+        }
+
+        private void Btn_Registro_Cliente_Click(object sender, EventArgs e)
+        {
+            AbrirFormDescrip(new Registros.RegistroClientes.PantallaCliente());
+        }
+
+        private void Btn_Datos_Cliente_Click(object sender, EventArgs e)
+        {
+            AbrirFormDescrip(new Registros.RegistroClientes.PantallaDatosClientes());
+        }
+
+        private void Btn_Registro_Prestamo_Click(object sender, EventArgs e)
+        {
+            AbrirFormDescrip(new Registros.RegistroPrestamo.PantallaPrestamo());
+        }
+
+        private void Btn_Consulta_Prestamos_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void Btn_Consulta_Ingresos_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         
     }

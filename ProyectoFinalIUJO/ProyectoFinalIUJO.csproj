@@ -113,6 +113,7 @@
     <Compile Include="Registros\RegistroDVD\RegistroDVD.Designer.cs">
       <DependentUpon>RegistroDVD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registros\RegistroPrestamo\ColeccionePrestamos.cs" />
     <Compile Include="Registros\RegistroPrestamo\PantallaPrestamo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\RegistroDVD\RegistroDVD.resx">
       <DependentUpon>RegistroDVD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\RegistroPrestamo\PantallaPrestamo.resx">
+      <DependentUpon>PantallaPrestamo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

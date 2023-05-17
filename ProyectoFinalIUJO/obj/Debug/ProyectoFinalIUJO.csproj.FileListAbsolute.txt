@@ -119,3 +119,4 @@ C:\Users\enyel\Desktop\Proyecto3.0\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debu
 C:\Users\enyel\Desktop\Proyecto3.0\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ar-DZ\ProyectoFinalIUJO.resources.dll
 C:\Users\enyel\Desktop\Proyecto3.0\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\es\ProyectoFinalIUJO.resources.dll
 C:\Users\enyel\Desktop\Proyecto3.0\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\aa\ProyectoFinalIUJO.resources.dll
+C:\Users\enyel\Desktop\Proyecto3.0\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroPrestamo.PantallaPrestamo.resources
