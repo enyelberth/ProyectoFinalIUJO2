@@ -44,5 +44,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			this._direccionHabitación = direccion;
 			this._fechaRegistro_cliente = fechaR;
 		}
+       
 	}
 }
