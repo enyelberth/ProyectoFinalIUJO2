@@ -83,7 +83,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 					sexo=false;
 				}
 					DateTime fechaN = new DateTime(2015, 10,31); 
-					int telefonoC = int.Parse(InputTelefonoCelular.Text);
+					int telefonoC = 04245424;
 					int telefonoR = int.Parse(InputTelefonoResidencial.Text);
 					string correo = inputCorreo.Text;
 					string direccion = InputDireccion.Text;

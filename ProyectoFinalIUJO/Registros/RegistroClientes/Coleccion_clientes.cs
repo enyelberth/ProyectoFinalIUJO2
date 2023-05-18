@@ -33,13 +33,17 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
             RegistroCLiente.Load("Datos.xml");
 
             XmlNode Clientes = RegistroCLiente.SelectSingleNode("/registros/Personas");
-        //    XmlNode MP3s = RegistroCLiente.SelectSingleNode("/registros/DVDs/MP3");
             
-            Clientes.RemoveAll();
+                        XmlNode peliculas = RegistroCLiente.SelectSingleNode("/registros/DVDs/Peliculas");
+            XmlNode MP3s = RegistroCLiente.SelectSingleNode("/registros/DVDs/MP3");
+            XmlNode Juegos = RegistroCLiente.SelectSingleNode("/registros/DVDs/Juegos");
+       
+            
+            //Clientes.RemoveAll();
 
 
 
-            foreach (Cliente cliente in RegistroCLiente)
+            foreach (Cliente cliente in ListaClientes)
             {
 
                 XmlElement Persona = RegistroCLiente.CreateElement("Persona");
@@ -97,44 +101,35 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 
 
                 Persona.AppendChild(Persona);
+
                
 
      
-                /*
-                if (dvd.tipo_DVD == "Mp3")
-                {
-                    attribute = RegistroCLiente.CreateAttribute("Archivo");
-                    attribute.Value = dvd.ubicacionArchivo;
-                    producto.Attributes.Append(attribute);
-
-                    MP3s.AppendChild(producto);
-
-                }
-                else if (dvd.tipo_DVD == "Videojuego")
-                {
-
-                    Juegos.AppendChild(producto);
-
-                }
-                else if (dvd.tipo_DVD == "Pelicula")
-                {
-
-                    peliculas.AppendChild(producto);
-
-                }
-                 */
 
 
             }
-
-            RegistroCLiente.Save("Datos.xml");
+                RegistroCLiente.Save("Datos.xml");
+            
         }
-        // asdasfadsfasdfasdfasdfasdfiopashidofñhasdioñfasiodfhasiodpfhasuiopdfhioasdhifo
-		/*public void Agregar(string nombre,string apellido,int cedula,bool sexo, DateTime fechaN, int telefonoC,int telefonoR,string correo,string direccion,DateTime fechaR)
-		{
-			Cliente x = new Cliente(nombre,apellido,cedula,sexo,fechaN,telefonoC,telefonoR,correo,direccion,fechaR);
-			ListaClientes.Add(x);
-		}*/
+       
+        public void LeerRegistro()
+        {
+        	 string camino = Path.GetFullPath("Datos.xml");
+            XmlDocument leer = new XmlDocument();
+
+            leer.Load(camino);
+            XmlNode Clientes = leer.SelectSingleNode("/registros/Personas");
+            XmlNode peliculas = leer.SelectSingleNode("/registros/DVDs/Peliculas");
+            XmlNode MP3s = leer.SelectSingleNode("/registros/DVDs/MP3");
+            XmlNode Juegos = leer.SelectSingleNode("/registros/DVDs/Juegos");
+            
+//            foreach (XmlNode Personas in Personas)
+//            {
+//            	string nombre = Personas.Attributes["nombre"].Value;
+//            }
+
+        	
+        }
 		public void Actualizar(int a, Cliente e)
 		{
 			foreach(Cliente s in ListaClientes)
