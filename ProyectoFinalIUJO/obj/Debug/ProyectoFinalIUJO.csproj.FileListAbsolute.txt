@@ -175,3 +175,6 @@ C:\Users\user\Downloads\ProyectoFinalIUJO2\ProyectoFinalIUJO2\ProyectoFinalIUJO\
 C:\Users\user\Downloads\ProyectoFinalIUJO2\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ar-DZ\ProyectoFinalIUJO.resources.dll
 C:\Users\user\Downloads\ProyectoFinalIUJO2\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\es\ProyectoFinalIUJO.resources.dll
 C:\Users\user\Downloads\ProyectoFinalIUJO2\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\aa\ProyectoFinalIUJO.resources.dll
+C:\Users\user\Desktop\ProyectoFinalIUJO2\ProyectoFinalIUJO2\ProyectoFinalIUJO\bin\Debug\ProyectoFinalIUJO.exe.config
+C:\Users\user\Desktop\ProyectoFinalIUJO2\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.exe
+C:\Users\user\Desktop\ProyectoFinalIUJO2\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.pdb
