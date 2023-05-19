@@ -90,12 +90,27 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 
                     Cliente index1 = new Cliente(nombre, apellido, cedula, sexooo, fechaN, telefonoC, telefonoR, correo, direccion, fechaR);
 
-					coleccion.agregar(index1);	
+					coleccion.agregar(index1);
+
+					limpiartextboxes();
 					
 				}
 		}
-		
-		void InputCorreoTextChanged(object sender, EventArgs e)
+
+        public void limpiartextboxes()
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox)
+                {
+                    control.Text = "";
+                }
+
+            }
+
+        }
+
+        void InputCorreoTextChanged(object sender, EventArgs e)
 		{
 			
 		}

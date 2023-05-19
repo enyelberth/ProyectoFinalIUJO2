@@ -80,7 +80,7 @@ namespace ProyectoFinalIUJO
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(998, 35);
+            this.BarraTitulo.Size = new System.Drawing.Size(1190, 35);
             this.BarraTitulo.TabIndex = 3;
             // 
             // BTNMaximizarTamaño
@@ -88,7 +88,7 @@ namespace ProyectoFinalIUJO
             this.BTNMaximizarTamaño.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BTNMaximizarTamaño.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNMaximizarTamaño.Image = ((System.Drawing.Image)(resources.GetObject("BTNMaximizarTamaño.Image")));
-            this.BTNMaximizarTamaño.Location = new System.Drawing.Point(948, 4);
+            this.BTNMaximizarTamaño.Location = new System.Drawing.Point(1140, 4);
             this.BTNMaximizarTamaño.Name = "BTNMaximizarTamaño";
             this.BTNMaximizarTamaño.Size = new System.Drawing.Size(25, 21);
             this.BTNMaximizarTamaño.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -101,7 +101,7 @@ namespace ProyectoFinalIUJO
             this.BTNRestaurarTamaño.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BTNRestaurarTamaño.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNRestaurarTamaño.Image = ((System.Drawing.Image)(resources.GetObject("BTNRestaurarTamaño.Image")));
-            this.BTNRestaurarTamaño.Location = new System.Drawing.Point(948, 4);
+            this.BTNRestaurarTamaño.Location = new System.Drawing.Point(1140, 4);
             this.BTNRestaurarTamaño.Name = "BTNRestaurarTamaño";
             this.BTNRestaurarTamaño.Size = new System.Drawing.Size(25, 21);
             this.BTNRestaurarTamaño.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -114,7 +114,7 @@ namespace ProyectoFinalIUJO
             this.BTNMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BTNMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("BTNMinimizar.Image")));
-            this.BTNMinimizar.Location = new System.Drawing.Point(926, 3);
+            this.BTNMinimizar.Location = new System.Drawing.Point(1118, 3);
             this.BTNMinimizar.Name = "BTNMinimizar";
             this.BTNMinimizar.Size = new System.Drawing.Size(25, 22);
             this.BTNMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -127,7 +127,7 @@ namespace ProyectoFinalIUJO
             this.BTNCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BTNCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BTNCerrar.Image = ((System.Drawing.Image)(resources.GetObject("BTNCerrar.Image")));
-            this.BTNCerrar.Location = new System.Drawing.Point(970, 2);
+            this.BTNCerrar.Location = new System.Drawing.Point(1162, 2);
             this.BTNCerrar.Name = "BTNCerrar";
             this.BTNCerrar.Size = new System.Drawing.Size(25, 25);
             this.BTNCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -151,7 +151,7 @@ namespace ProyectoFinalIUJO
             this.PanelLateralIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelLateralIzquierdo.Location = new System.Drawing.Point(0, 35);
             this.PanelLateralIzquierdo.Name = "PanelLateralIzquierdo";
-            this.PanelLateralIzquierdo.Size = new System.Drawing.Size(169, 651);
+            this.PanelLateralIzquierdo.Size = new System.Drawing.Size(169, 749);
             this.PanelLateralIzquierdo.TabIndex = 2;
             // 
             // Btn_Consulta_Ingresos
@@ -360,10 +360,10 @@ namespace ProyectoFinalIUJO
             this.PanelContenidoPrincipal.Controls.Add(this.panelcontenido);
             this.PanelContenidoPrincipal.Controls.Add(this.PanelLateralIzquierdo);
             this.PanelContenidoPrincipal.Controls.Add(this.BarraTitulo);
-            this.PanelContenidoPrincipal.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PanelContenidoPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContenidoPrincipal.Location = new System.Drawing.Point(0, 0);
             this.PanelContenidoPrincipal.Name = "PanelContenidoPrincipal";
-            this.PanelContenidoPrincipal.Size = new System.Drawing.Size(998, 686);
+            this.PanelContenidoPrincipal.Size = new System.Drawing.Size(1190, 784);
             this.PanelContenidoPrincipal.TabIndex = 3;
             this.PanelContenidoPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContenidoPrincipalPaint);
             // 
@@ -372,14 +372,14 @@ namespace ProyectoFinalIUJO
             this.panelcontenido.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelcontenido.Location = new System.Drawing.Point(169, 35);
             this.panelcontenido.Name = "panelcontenido";
-            this.panelcontenido.Size = new System.Drawing.Size(829, 651);
+            this.panelcontenido.Size = new System.Drawing.Size(1021, 749);
             this.panelcontenido.TabIndex = 4;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 686);
+            this.ClientSize = new System.Drawing.Size(1190, 784);
             this.ControlBox = false;
             this.Controls.Add(this.PanelContenidoPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
