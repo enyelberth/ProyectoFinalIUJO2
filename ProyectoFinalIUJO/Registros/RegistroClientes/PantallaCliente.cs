@@ -9,16 +9,14 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 	/// </summary>
 	public partial class PantallaCliente : Form
 	{
-		Coleccion_clientes x;
-    	
-		public PantallaCliente()
+        Coleccion_clientes coleccion = new Coleccion_clientes();
+
+        public PantallaCliente()
 		{
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
-			x = new Coleccion_clientes();
-			
 			Btn_Registro.Click += new EventHandler(Btn_RegistroCliente);
 			
 			//
@@ -90,9 +88,9 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
                     string sexooo = "Masculino";
 					DateTime fechaR = new DateTime(2022, 10,31);
 
-                   // DVD index1 = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen, archivo);
                     Cliente index1 = new Cliente(nombre, apellido, cedula, sexooo, fechaN, telefonoC, telefonoR, correo, direccion, fechaR);
-					MessageBox.Show("Funciona el boton");
+
+					coleccion.agregar(index1);	
 					
 				}
 		}
@@ -171,5 +169,10 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
         {
 
         }
-	}
+
+        private void Btn_Registro_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

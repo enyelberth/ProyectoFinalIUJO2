@@ -25,7 +25,10 @@ namespace ProyectoFinalIUJO
     {
         public Panel panelcontenido = new Panel();
         encriptacion metodoecryp = new encriptacion();
+
+
         ColeccionDVD BasededatosDVD = new ColeccionDVD();
+        Coleccion_clientes Basededatoscliente = new Coleccion_clientes();
         public MainForm()
         {
             InitializeComponent();
@@ -40,6 +43,7 @@ namespace ProyectoFinalIUJO
             if (File.Exists(Path.GetFullPath("Datos.xml"))) // nuevo codigo para encriptar lo escrito en la base de datos y borra el archivo remanente
             {
                 BasededatosDVD.escribirenbase();
+                Basededatoscliente.escribirenbase();
                 metodoecryp.encriptar();
 
                 File.Delete(Path.GetFullPath("Datos.xml"));
@@ -140,7 +144,6 @@ namespace ProyectoFinalIUJO
             metodoecryp.desencriptar();
             string ruta = Path.GetFullPath("Datos.xml");
 
-            // Crear 30 objetos de la clase DVD
             //DVD dvd1 = new DVD("Titanic", "Pelicula", "00001", 1, 1997, new DateTime(2022, 05, 13), false, "Romance/Drama", "ruta/a/titanic.jpg");
             //DVD dvd2 = new DVD("El Señor de los Anillos: El Retorno del Rey", "Pelicula", "00002", 1, 2003, new DateTime(2022, 5, 13), false, "Fantasía/Aventura", "ruta/a/senordelosanillos.jpg");
             //DVD dvd3 = new DVD("The Dark Knight", "Pelicula", "00003", 1, 2008, new DateTime(2022, 5, 13), false, "Acción/Crimen", "ruta/a/thedarkknight.jpg");
@@ -172,7 +175,6 @@ namespace ProyectoFinalIUJO
             //DVD dvd29 = new DVD("The Beatles - Help!", "Mp3", "00029", 1, 1965, new DateTime(2022, 5, 13), false, "Rock", "ruta/a/thebeatleshelp.jpg");
             //DVD dvd30 = new DVD("The Last of Us Part II", "Videojuego", "00030", 1, 2020, new DateTime(2022, 5, 13), false, "Acción/Aventura", "ruta/a/thelastofuspart2.jpg");
 
-            //// Agregar los objetos a la base de datos de DVD utilizando el método agregar()
             //BasededatosDVD.agregar(dvd1);
             //BasededatosDVD.agregar(dvd2);
             //BasededatosDVD.agregar(dvd3);
@@ -209,6 +211,7 @@ namespace ProyectoFinalIUJO
             //File.SetAttributes(ruta, File.GetAttributes(ruta) | FileAttributes.Hidden);
 
             BasededatosDVD.leerbase();
+            Basededatoscliente.LeerRegistro();
 
 
         }

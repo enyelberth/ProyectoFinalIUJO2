@@ -34,12 +34,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 
             XmlNode Clientes = RegistroCLiente.SelectSingleNode("/registros/Personas");
             
-                        XmlNode peliculas = RegistroCLiente.SelectSingleNode("/registros/DVDs/Peliculas");
-            XmlNode MP3s = RegistroCLiente.SelectSingleNode("/registros/DVDs/MP3");
-            XmlNode Juegos = RegistroCLiente.SelectSingleNode("/registros/DVDs/Juegos");
-       
-            
-            //Clientes.RemoveAll();
+            Clientes.RemoveAll();
 
 
 
@@ -95,16 +90,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
                 Persona.Attributes.Append(attribute);
 
 
-
-
-
-
-
-                Persona.AppendChild(Persona);
-
-               
-
-     
+               Clientes.AppendChild(Persona);
 
 
             }
@@ -116,17 +102,24 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
         {
         	 string camino = Path.GetFullPath("Datos.xml");
             XmlDocument leer = new XmlDocument();
-
             leer.Load(camino);
+
             XmlNode Clientes = leer.SelectSingleNode("/registros/Personas");
-            XmlNode peliculas = leer.SelectSingleNode("/registros/DVDs/Peliculas");
-            XmlNode MP3s = leer.SelectSingleNode("/registros/DVDs/MP3");
-            XmlNode Juegos = leer.SelectSingleNode("/registros/DVDs/Juegos");
             
-//            foreach (XmlNode Personas in Personas)
-//            {
-//            	string nombre = Personas.Attributes["nombre"].Value;
-//            }
+            foreach (XmlNode cliente in Clientes)
+            {
+            	string nombre = cliente.Attributes["nombre"].Value;
+
+
+
+
+
+
+
+                //Cliente index = new Cliente(nombre, apellido, cedula, sexooo, fechaN, telefonoC, telefonoR, correo, direccion, fechaR);
+
+                //agregar(index);
+            }
 
         	
         }

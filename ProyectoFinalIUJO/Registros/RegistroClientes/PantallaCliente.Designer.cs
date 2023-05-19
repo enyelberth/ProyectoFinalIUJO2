@@ -180,6 +180,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
             this.Btn_Registro.Text = "Registrar";
             this.Btn_Registro.UseVisualStyleBackColor = false;
             this.Btn_Registro.TextChanged += new System.EventHandler(this.Btn_RegistroCliente);
+            this.Btn_Registro.Click += new System.EventHandler(this.Btn_Registro_Click);
             // 
             // InputDireccion
             // 
