@@ -458,13 +458,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 		
 		void ElementosProducto2MouseMove(object sender, MouseEventArgs e)
 		{
-            actualizar();
 			elementosProducto2.Imagenproducto = null;
 		}
 		
 		void ElementosProducto1MouseMove(object sender, MouseEventArgs e)
 		{
-            actualizar();
 		   elementosProducto1.Imagenproducto = null;
 		}
 		
@@ -488,20 +486,17 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 		
 		void ElementosProducto3MouseMove(object sender, MouseEventArgs e)
 		{
-            actualizar();
 			elementosProducto3.Imagenproducto = null;
 		}
 		
 		void ElementosProducto4MouseMove(object sender, MouseEventArgs e)
 		{
-            actualizar();
 			elementosProducto4.Imagenproducto = null;
 			
 		}
 		
 		void ElementosProducto5MouseMove(object sender, MouseEventArgs e)
 		{
-            actualizar();
 			elementosProducto5.Imagenproducto = null;
 		}
 		
@@ -514,16 +509,19 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 		void ElementosProducto4MouseLeave(object sender, EventArgs e)
 		{
 			limpiar();
+            actualizar();
 		}
 		
 		void ElementosProducto5MouseLeave(object sender, EventArgs e)
 		{
 			limpiar();
+            actualizar();
 		}
 		
 		void ElementosProducto6MouseLeave(object sender, EventArgs e)
 		{   
 			limpiar();
+            actualizar();
 		}
 		
 		void DatosDVDsMouseMove(object sender, MouseEventArgs e)

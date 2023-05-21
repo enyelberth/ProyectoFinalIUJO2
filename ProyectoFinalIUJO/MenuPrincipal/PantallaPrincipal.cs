@@ -189,7 +189,7 @@ namespace ProyectoFinalIUJO
 
         private void Btn_Consulta_Ingresos_Click(object sender, EventArgs e)
         {
-
+            AbrirFormDescrip(new Registros.consultaIngresos());
         }
 
 

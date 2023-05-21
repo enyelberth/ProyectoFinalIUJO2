@@ -190,6 +190,8 @@ namespace ProyectoFinalIUJO.Registros.RegistroPrestamo
             
                 prestamos.agregar(index);
 
+                Dvds.eliminar(index.Producto, index.Tipo_DVD, index.Cantidad);
+
                 limpiartxtboxes();
             
             }

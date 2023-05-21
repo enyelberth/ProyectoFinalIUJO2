@@ -234,6 +234,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.Name = "detallesproducto";
             this.Text = "detallesproducto";
             this.Deactivate += new System.EventHandler(this.detallesproducto_Deactivate);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.detallesproducto_FormClosing);
             this.Load += new System.EventHandler(this.detallesproducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxproductodetalles)).EndInit();
             this.ResumeLayout(false);

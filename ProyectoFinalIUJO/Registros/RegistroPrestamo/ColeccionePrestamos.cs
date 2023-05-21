@@ -28,6 +28,8 @@ namespace ProyectoFinalIUJO.Registros.RegistroPrestamo
 
         }
 
+        
+
         public void modificar(Prestamos index)
         {
             foreach (Prestamos prestamo in listaprestamos)

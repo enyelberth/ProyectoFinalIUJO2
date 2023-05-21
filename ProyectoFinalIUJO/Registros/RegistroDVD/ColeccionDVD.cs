@@ -28,6 +28,28 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
         }
 
+        public void eliminar(string producto, string tipo, int cantidad)
+        {
+            foreach (DVD dvd in DVDsRegistrados)
+            {
+                if (dvd.producto == producto && dvd.tipo_DVD == tipo && dvd.cantidad == cantidad)
+                {
+                    dvd.cantidad = dvd.cantidad - cantidad;
+
+                    if(dvd.cantidad == 0)
+                    {
+                        eliminar(dvd);
+
+                    }
+
+                }
+
+
+            }
+
+
+        }
+
         //esta funcion escribe un objeto en la base de datos
 
 

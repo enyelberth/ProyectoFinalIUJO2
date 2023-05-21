@@ -42,8 +42,12 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
         	}
           string caminoarchivo = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
 		  string caminofinal = Path.Combine(caminoarchivo, "archivosmp3\\" + producto.ubicacionArchivo);
+
 		  
 			leer = new SoundPlayer(caminofinal);
+
+            Rectangle rect = this.RectangleToScreen(this.ClientRectangle);
+            Cursor.Clip = rect;
         }
 
         public void llenardatos(DVD dvd)
@@ -85,6 +89,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
         	leer.Dispose();
             this.Close();
             
+
         }
 
         private void ButtonEliminar_Click(object sender, EventArgs e)
@@ -111,5 +116,9 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 			leer.Play();
 		}
 
+        private void detallesproducto_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Cursor.Clip = Rectangle.Empty;
+        }
     }
 }
