@@ -41,6 +41,12 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.Base_D)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -51,11 +57,18 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 									this.Column2,
 									this.Column3,
 									this.Column4,
-									this.Column5});
-			this.Base_D.Location = new System.Drawing.Point(100, 87);
+									this.Column5,
+									this.Column1,
+									this.Column6,
+									this.Column7,
+									this.Column8,
+									this.Column9,
+									this.Column10});
+			this.Base_D.Location = new System.Drawing.Point(0, 117);
 			this.Base_D.Name = "Base_D";
-			this.Base_D.Size = new System.Drawing.Size(544, 262);
+			this.Base_D.Size = new System.Drawing.Size(1021, 262);
 			this.Base_D.TabIndex = 2;
+			this.Base_D.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Base_DCellContentClick);
 			// 
 			// Column2
 			// 
@@ -81,17 +94,54 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			this.Column5.Name = "Column5";
 			this.Column5.ReadOnly = true;
 			// 
+			// Column1
+			// 
+			this.Column1.HeaderText = "Fecha de Nacimiento";
+			this.Column1.Name = "Column1";
+			// 
+			// Column6
+			// 
+			this.Column6.HeaderText = "Telefono Celular";
+			this.Column6.Name = "Column6";
+			// 
+			// Column7
+			// 
+			this.Column7.HeaderText = "Telefono Residencial";
+			this.Column7.Name = "Column7";
+			// 
+			// Column8
+			// 
+			this.Column8.HeaderText = "Correo Electronico";
+			this.Column8.Name = "Column8";
+			// 
+			// Column9
+			// 
+			this.Column9.HeaderText = "Direccion";
+			this.Column9.Name = "Column9";
+			// 
+			// Column10
+			// 
+			this.Column10.HeaderText = "Fecha de Registro";
+			this.Column10.Name = "Column10";
+			// 
 			// PantallaDatosClientes
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(744, 437);
+			this.ClientSize = new System.Drawing.Size(1033, 705);
 			this.Controls.Add(this.Base_D);
 			this.Name = "PantallaDatosClientes";
 			this.Text = "PantallaDatosClientes";
+			this.Load += new System.EventHandler(this.PantallaDatosClientesLoad);
 			((System.ComponentModel.ISupportInitialize)(this.Base_D)).EndInit();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
