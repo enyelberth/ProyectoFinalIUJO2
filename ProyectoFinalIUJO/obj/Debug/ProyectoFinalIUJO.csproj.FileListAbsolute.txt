@@ -178,8 +178,6 @@ C:\Users\user\Desktop\ProyectoFinalIUJO2\ProyectoFinalIUJO2\ProyectoFinalIUJO\ob
 C:\Users\user\Desktop\ProyectoFinalIUJO2\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.pdb
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroPrestamo.PantallaPrestamo.resources
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\bin\Debug\Registros\RegistroDVD\MenudeDatosdeDVD\ElementosProducto.resx
-C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csproj.AssemblyReference.cache
-C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csproj.CoreCompileInputs.cache
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroPrestamo.Consultadeprestamos.resources
 C:\Users\user\Desktop\menuavanzado\ProyectoFinalIUJO\bin\Debug\Registros\RegistroDVD\MenudeDatosdeDVD\ElementosProducto.resx
 C:\Users\user\Desktop\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csproj.AssemblyReference.cache
@@ -190,3 +188,5 @@ C:\Users\user\Desktop\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\ProyectoFinalIUJO\bin\Debug\ProyectoFinalIUJO.exe.config
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.exe
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.pdb
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.consultaIngresos.resources
+C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csprojResolveAssemblyReference.cache

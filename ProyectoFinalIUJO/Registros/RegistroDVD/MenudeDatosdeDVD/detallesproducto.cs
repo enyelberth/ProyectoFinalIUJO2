@@ -120,5 +120,12 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
         {
             Cursor.Clip = Rectangle.Empty;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            leer.Stop();
+            leer.Dispose();
+            this.Close();
+        }
     }
 }

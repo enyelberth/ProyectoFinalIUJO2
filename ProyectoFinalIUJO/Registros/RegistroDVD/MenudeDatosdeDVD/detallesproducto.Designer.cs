@@ -52,6 +52,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.labelcodigo = new System.Windows.Forms.Label();
             this.labelnombre = new System.Windows.Forms.Label();
             this.pictureBoxproductodetalles = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxproductodetalles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,11 +212,23 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.pictureBoxproductodetalles.TabIndex = 29;
             this.pictureBoxproductodetalles.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(735, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 27);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // detallesproducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 531);
+            this.ClientSize = new System.Drawing.Size(780, 531);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBoxproductodetalles);
             this.Controls.Add(this.labelprestamo);
             this.Controls.Add(this.label);
@@ -256,5 +269,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 		private System.Windows.Forms.Button buttonReproducir;
 		private System.Windows.Forms.Button buttonDemo;
 		private System.Windows.Forms.Button buttonrentar;
+        private System.Windows.Forms.Button button1;
     }
 }
