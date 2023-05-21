@@ -33,6 +33,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimeFechaingreso = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewclientes = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewproductos = new System.Windows.Forms.DataGridView();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreDVD = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,11 +46,6 @@
             this.textBoxnombreDVD = new System.Windows.Forms.TextBox();
             this.textBoxcantidad = new System.Windows.Forms.TextBox();
             this.textBoxTipodvd = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonmenos = new System.Windows.Forms.Button();
             this.buttonmas = new System.Windows.Forms.Button();
             this.textBoxcantidadtotal = new System.Windows.Forms.TextBox();
@@ -113,6 +111,24 @@
             this.dataGridViewclientes.Size = new System.Drawing.Size(346, 414);
             this.dataGridViewclientes.TabIndex = 58;
             this.dataGridViewclientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewclientes_CellClick);
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Cedula";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
             // 
             // dataGridViewproductos
             // 
@@ -202,56 +218,6 @@
             this.textBoxTipodvd.Size = new System.Drawing.Size(168, 21);
             this.textBoxTipodvd.TabIndex = 65;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "A/Z",
-            "Z/A",
-            "Fecha de estreno de mayor a menor",
-            "Fecha de estreno de menor a mayor",
-            "Mas recientes",
-            "Mas antiguos"});
-            this.comboBox2.Location = new System.Drawing.Point(714, 59);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 66;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Sin filtro",
-            "Peliculas",
-            "Mp3s",
-            "Videojuegos"});
-            this.comboBox1.Location = new System.Drawing.Point(552, 59);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 67;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Cedula";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
             // buttonmenos
             // 
             this.buttonmenos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -326,8 +292,6 @@
             this.Controls.Add(this.textBoxcantidadtotal);
             this.Controls.Add(this.buttonmas);
             this.Controls.Add(this.buttonmenos);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.textBoxTipodvd);
             this.Controls.Add(this.textBoxcantidad);
             this.Controls.Add(this.textBoxnombreDVD);
@@ -367,8 +331,6 @@
         private System.Windows.Forms.TextBox textBoxnombreDVD;
         private System.Windows.Forms.TextBox textBoxcantidad;
         private System.Windows.Forms.TextBox textBoxTipodvd;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;

@@ -251,7 +251,8 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 }
 
             }
-            
+
+            MessageBox.Show("archivo modificado actualize la lista para aplicar los cambios");
             datos.actualizar();
 
         }
@@ -265,8 +266,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 if (DVDsRegistrados[i] == index)
                 {
                 	string caminocarpeta = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-                	string caminofinal = Path.Combine(caminocarpeta, "imagenesdvds\\" + DVDsRegistrados[i].ubicacionimagen);
-                    File.Delete(caminofinal);
                 	if (DVDsRegistrados[i].tipo_DVD == "Mp3") 
                 	{
                 		string caminofinalarchivo = Path.Combine(caminocarpeta, "archivosmp3\\" + DVDsRegistrados[i].ubicacionArchivo);
@@ -275,7 +274,8 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 	}
                    
                     DVDsRegistrados.RemoveAt(i);
-                   
+                    MessageBox.Show("archivo eliminado actualize la lista para aplicar los cambios");
+
                 }
             }
         }

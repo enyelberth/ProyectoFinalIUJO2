@@ -29,10 +29,13 @@ namespace ProyectoFinalIUJO.Registros
             prestamos.Clear();
             prestamos.AddRange(lista.clonar());
             dataGridViewprestamos.Rows.Clear();
+            DateTime fecha;
 
             foreach (Prestamos prestamo in prestamos)
             {
-                if (dateTimePicker1.Value == prestamo.FechaDevolucion1)
+                fecha = prestamo.FechaDevolucion1;
+
+                if (dateTimePicker1.Value.Date == fecha.Date)
                 {
                     dataGridViewprestamos.Rows.Add(prestamo.Codigoprestamo, prestamo.FechaPrestamo1.ToString("dd/MM/yyyy"), prestamo.FechaDevolucion1.ToString("dd/MM/yyyy"), prestamo.Nombre_cliente, prestamo.Apellido_cliente, prestamo.Cedula_cliente, prestamo.Cantidad, prestamo.Tipo_DVD, prestamo.Producto, prestamo.MontoPagar1);
                     monto = monto + prestamo.MontoPagar1;

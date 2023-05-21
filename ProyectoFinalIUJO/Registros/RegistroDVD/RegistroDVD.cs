@@ -375,13 +375,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 caminocarpeta = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
                 caminofinal = Path.Combine(caminocarpeta, "imagenesdvds\\" + textBoximagen.Text);
 
-                MessageBox.Show(caminofinal);
 
                 
                 if (nuevo != null) 
                 {
-                    MessageBox.Show(caminoarchivo);
-                	File.Copy(caminoarchivo, caminofinal);
+                	File.Copy(caminoarchivo, caminofinal, true);
                 }
 
 
@@ -392,10 +390,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
             catch (IOException e)
             {
-
-
-                MessageBox.Show("Se ha producido un error\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                textBoximagen.Text = "";
+                return textBoximagen.Text;
             }
             catch (ArgumentException e)
             {
@@ -428,7 +423,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 caminocarpeta = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
                 caminofinal = Path.Combine(caminocarpeta, "archivosmp3\\" + textBoxarchivo.Text);
 
-                MessageBox.Show(caminofinal);
 				
                 if (nuevo != null) 
                 {
@@ -444,11 +438,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
             catch (IOException e)
             {
-
-
-                MessageBox.Show("Se ha producido un error\n" + e.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                MessageBox.Show("aqui");
-                textBoxarchivo.Text = "";
+                return textBoxarchivo.Text;
             }
             catch (ArgumentException e)
             {
@@ -481,7 +471,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
         private void buttonmodificar_Click(object sender, EventArgs e)
         {
             bool confirmacion = false;
-            bool disponibilidad;
 
             if (textBoxAñoemision.Text != "")
             {
@@ -493,6 +482,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                         {
                             if (textBoxTitulo.Text != "")
                             {
+                                MessageBox.Show("entro1");
                                 confirmacion = true;
 
                                 DateTime fechaingreso = dateTimeFechaingreso.Value.Date.ToLocalTime();
@@ -507,7 +497,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                                 string Descripcion = textBoxdescripcion.Text;
                                 
                                 string imagen = obtenerimagen();
-
+                                MessageBox.Show("entro imagen");
                                 if (Tipo_DVD == "Mp3")
                                 {
                                 	string archivo = obtenerarchivo();
@@ -520,22 +510,23 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
                                         x.modificar(index1);
 
-                                        MessageBox.Show("producto modificado");
                                         this.Close();
 
                                     }
-                                    else
-                                    {
-                                        DVD index = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen);
-
-                                        limpiartextboxes();
-
-                                        x.modificar(index);
-
-                                        MessageBox.Show("Producto modificado");
-                                        this.Close();
-                                    }
+                                    
                                 }
+                                else if (Tipo_DVD != "Mp3" && textBoximagen.Text != "" )
+                                {
+                                    MessageBox.Show("entro2");
+                                    DVD index = new DVD(Producto, Tipo_DVD, Codigo, Cantidad, Año_emision, fechaingreso, Prestamo, Descripcion, imagen);
+
+                                    limpiartextboxes();
+
+                                    x.modificar(index);
+
+                                    this.Close();
+                                }
+
                             }
                         }
                     }

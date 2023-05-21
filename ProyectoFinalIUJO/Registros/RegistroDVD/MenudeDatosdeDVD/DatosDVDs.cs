@@ -23,7 +23,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
         static int ordenaropcion = 3;
 
 
-        static int serie = 0;
+        int serie = 0;
 
 
         public DatosDVDs()
@@ -38,9 +38,20 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 
             labelposicion1.Text = (serie < 1) ? "1" : Convert.ToString(serie / 5 + 1);
 
+            
+
             filtrar(1);
             ordenar(3);
             actualizar();
+
+            string posicionfinal = Convert.ToString(listaarticulos.Count / 5 +1);
+            if (posicionfinal == "0")
+            {
+                posicionfinal = "1";
+            }
+            labelposicion2.Text = posicionfinal;
+
+
 
         }
 
@@ -50,12 +61,12 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             listaDVDS.AddRange(coleccionDVD.clonar());
             listaarticulos.Clear();
             listaarticulos.AddRange(listaDVDS);
-            if (serie != 0) 
-            {
 
-                serie = serie - 5;
 
-            }
+            serie = 0;
+            labelposicion1.Text = "1";
+            labelposicion2.Text = Convert.ToString(listaarticulos.Count / 5 +1);
+
             actualizar();
 
 
@@ -66,36 +77,81 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 
         public void actualizar()
         {
-
-
-            if (listaarticulos.Count > serie && listaarticulos[serie] != null)
+            if (serie == 0)
             {
-                elementosProducto1.adquiririnformacion(listaarticulos[serie]);
+
+
+
+
+                if (listaarticulos.Count > serie && listaarticulos[serie] != null)
+                {
+                    elementosProducto1.adquiririnformacion(listaarticulos[serie]);
+                }
+
+                if (listaarticulos.Count > serie + 1 && listaarticulos[serie + 1] != null)
+                {
+                    elementosProducto2.adquiririnformacion(listaarticulos[serie + 1]);
+                }
+
+                if (listaarticulos.Count > serie + 2 && listaarticulos[serie + 2] != null)
+                {
+                    elementosProducto3.adquiririnformacion(listaarticulos[serie + 2]);
+                }
+
+                if (listaarticulos.Count > serie + 3 && listaarticulos[serie + 3] != null)
+                {
+                    elementosProducto4.adquiririnformacion(listaarticulos[serie + 3]);
+                }
+
+                if (listaarticulos.Count > serie + 4 && listaarticulos[serie + 4] != null)
+                {
+                    elementosProducto5.adquiririnformacion(listaarticulos[serie + 4]);
+                }
+
+                if (listaarticulos.Count > serie + 5 && listaarticulos[serie + 5] != null)
+                {
+                    elementosProducto6.adquiririnformacion(listaarticulos[serie + 5]);
+                }
+
             }
-
-            if (listaarticulos.Count > serie+1 && listaarticulos[serie+1] != null)
+            else
             {
-                elementosProducto2.adquiririnformacion(listaarticulos[serie + 1]);
-            }
+                if (listaarticulos.Count > serie && listaarticulos[serie +1] != null)
+                {
+                    elementosProducto1.adquiririnformacion(listaarticulos[serie + 1]);
+                }
 
-            if (listaarticulos.Count > serie+2 && listaarticulos[serie+2] != null)
-            {
-                elementosProducto3.adquiririnformacion(listaarticulos[serie+2]);
-            }
+                if (listaarticulos.Count > serie + 2 && listaarticulos[serie + 2] != null)
+                {
+                    elementosProducto2.adquiririnformacion(listaarticulos[serie + 2]);
+                }
 
-            if (listaarticulos.Count > serie+3 && listaarticulos[serie+3] != null)
-            {
-                elementosProducto4.adquiririnformacion(listaarticulos[serie + 3]);
-            }
+                if (listaarticulos.Count > serie + 3 && listaarticulos[serie + 3] != null)
+                {
+                    elementosProducto3.adquiririnformacion(listaarticulos[serie + 3]);
+                }
 
-            if (listaarticulos.Count > serie+4 && listaarticulos[serie+4] != null)
-            {
-                elementosProducto5.adquiririnformacion(listaarticulos[serie + 4]);
-            }
+                if (listaarticulos.Count > serie + 4 && listaarticulos[serie + 4] != null)
+                {
+                    elementosProducto4.adquiririnformacion(listaarticulos[serie + 4]);
+                }
 
-            if (listaarticulos.Count > serie+5 && listaarticulos[serie+5] != null)
-            {
-                elementosProducto6.adquiririnformacion(listaarticulos[serie + 5]);
+                if (listaarticulos.Count > serie + 5 && listaarticulos[serie + 5] != null)
+                {
+                    elementosProducto5.adquiririnformacion(listaarticulos[serie + 5]);
+                }
+
+                if (listaarticulos.Count > serie + 6 && listaarticulos[serie + 6] != null)
+                {
+                    elementosProducto6.adquiririnformacion(listaarticulos[serie + 6]);
+                }
+
+
+
+
+
+
+
             }
 
         }
@@ -334,8 +390,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 
             }
             limpiar();
-            filtrar(filtraropcion);
-            ordenar(ordenaropcion);
             actualizar();
         }
 
@@ -359,8 +413,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
                
             }
             limpiar();
-            filtrar(filtraropcion);
-            ordenar(ordenaropcion);
             actualizar();
 
         }
@@ -445,6 +497,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
         	limpiar();
         	llenarbase();
             actualizar();
+            labelposicion2.Text = Convert.ToString(serie / 5 + 1);
         }
 
 		
@@ -468,19 +521,16 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 		
 		void ElementosProducto1MouseLeave(object sender, EventArgs e)
 		{
-			limpiar();
 			actualizar();
 		}
 		
 		void ElementosProducto2MouseLeave(object sender, EventArgs e)
 		{
-			limpiar();
 			actualizar();
 		}
 		
 		void ElementosProducto3MouseLeave(object sender, EventArgs e)
 		{
-			limpiar();
 			actualizar();
 		}
 		
@@ -502,25 +552,21 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 		
 		void ElementosProducto6MouseMove(object sender, MouseEventArgs e)
 		{
-            actualizar();
 			elementosProducto6.Imagenproducto = null;
 		}
 		
 		void ElementosProducto4MouseLeave(object sender, EventArgs e)
 		{
-			limpiar();
             actualizar();
 		}
 		
 		void ElementosProducto5MouseLeave(object sender, EventArgs e)
 		{
-			limpiar();
             actualizar();
 		}
 		
 		void ElementosProducto6MouseLeave(object sender, EventArgs e)
 		{   
-			limpiar();
             actualizar();
 		}
 		

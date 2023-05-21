@@ -14,6 +14,7 @@ using ProyectoFinalIUJO.Registros.RegistroDVD;
 using ProyectoFinalIUJO;
 using ProyectoFinalIUJO.Registros.RegistroClientes;
 using ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD;
+using ProyectoFinalIUJO.Registros.RegistroPrestamo;
 //using ProyectoFinalIUJO.Datos.Pantallas;
 //using ProyectoFinalIUJO.Registros.RegistroDVDs;
 
@@ -29,6 +30,7 @@ namespace ProyectoFinalIUJO
 
         ColeccionDVD BasededatosDVD = new ColeccionDVD();
         Coleccion_clientes Basededatoscliente = new Coleccion_clientes();
+        ColeccionePrestamos Basedatosprestamos = new ColeccionePrestamos(); 
         public MainForm()
         {
             InitializeComponent();
@@ -44,6 +46,7 @@ namespace ProyectoFinalIUJO
             {
                 BasededatosDVD.escribirenbase();
                 Basededatoscliente.escribirenbase();
+                Basedatosprestamos.escribirenbase();
                 metodoecryp.encriptar();
 
                 File.Delete(Path.GetFullPath("Datos.xml"));
@@ -150,6 +153,7 @@ namespace ProyectoFinalIUJO
 
             BasededatosDVD.leerbase();
             Basededatoscliente.LeerRegistro();
+            Basedatosprestamos.LeerRegistro();
 
 
         }

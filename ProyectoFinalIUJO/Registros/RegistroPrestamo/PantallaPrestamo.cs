@@ -177,9 +177,9 @@ namespace ProyectoFinalIUJO.Registros.RegistroPrestamo
 
                 int diferencia = (int)(fechadevolucion - fechaprestamo).TotalDays;
 
-                if (fechaprestamo == fechadevolucion || diferencia < 3)
+                if (fechaprestamo == fechadevolucion || diferencia < 4)
                 {
-                    MessageBox.Show("Error la fecha de devolucion debe ser por lo menos una semana mayor a la fecha del prestamo", "Error");
+                    MessageBox.Show("Error la fecha de devolucion debe ser por lo menos mayor a 4 dias", "Error");
                     return;
 
                 }

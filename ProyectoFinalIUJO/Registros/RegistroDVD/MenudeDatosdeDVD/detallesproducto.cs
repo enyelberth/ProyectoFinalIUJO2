@@ -76,6 +76,21 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             {
                 buttonDemo.Visible = true;
             }
+            if (dvd.producto == "Age of empires")
+            {
+                buttonDemo.Visible = true;
+
+            }
+            if (dvd.producto == "Mario")
+            {
+                buttonDemo.Visible = true;
+
+            }
+            if (dvd.producto == "Half life")
+            {
+                buttonDemo.Visible= true;
+
+            }
             if (dvd.tipo_DVD == "Mp3")
             {
                 buttonReproducir.Visible = true;
@@ -105,8 +120,8 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
         {
         	pictureBoxproductodetalles.BackgroundImage.Dispose();
         	pictureBoxproductodetalles.BackgroundImage = null;
-        	this.Close();
             datos.modificar(producto);
+            this.Close();
         }
 		
 		void ButtonReproducirClick(object sender, EventArgs e)
