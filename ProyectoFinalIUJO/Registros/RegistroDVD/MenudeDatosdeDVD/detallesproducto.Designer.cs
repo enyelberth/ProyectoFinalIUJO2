@@ -76,6 +76,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.buttonDemo.Text = "Probar";
             this.buttonDemo.UseVisualStyleBackColor = true;
             this.buttonDemo.Visible = false;
+            this.buttonDemo.Click += new System.EventHandler(this.buttonDemo_Click);
             // 
             // buttonReproducir
             // 

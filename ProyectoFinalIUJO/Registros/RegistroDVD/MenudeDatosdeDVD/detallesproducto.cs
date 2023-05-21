@@ -126,9 +126,18 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 		
 		void ButtonReproducirClick(object sender, EventArgs e)
 		{
-			buttonReproducir.Enabled = false;
-			
-			leer.Play();
+            try
+            {
+
+
+                buttonReproducir.Enabled = false;
+
+                leer.Play();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("No se pudo reproducir el arhivo, es posible que haya sido eliminado o actualize la lista de articulos");
+            }
 		}
 
         private void detallesproducto_FormClosing(object sender, FormClosingEventArgs e)
@@ -141,6 +150,38 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             leer.Stop();
             leer.Dispose();
             this.Close();
+        }
+
+        private void buttonDemo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                if (labelnombre.Text == "Doom")
+                {
+                    buttonDemo.Visible = true;
+                }
+                if (labelnombre.Text == "Age of empires")
+                {
+                    buttonDemo.Visible = true;
+
+                }
+                if (labelnombre.Text == "Mario")
+                {
+                    buttonDemo.Visible = true;
+
+                }
+                if (labelnombre.Text == "Half life")
+                {
+                    buttonDemo.Visible = true;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo correr la prueba, es probable que no exista el archivo o que no se ha actualizado la lista de articulos");
+            }
         }
     }
 }
