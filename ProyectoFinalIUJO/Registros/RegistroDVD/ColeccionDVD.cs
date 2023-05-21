@@ -38,7 +38,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
                     if(dvd.cantidad == 0)
                     {
-                        eliminar(dvd);
+                        dvd.prestamo = false;
 
                     }
 
