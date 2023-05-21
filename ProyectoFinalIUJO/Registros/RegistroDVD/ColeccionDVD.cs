@@ -202,7 +202,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
 
         }
 
-
+        //revisarrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
 
         public void modificar(DVD index)
         {
@@ -219,8 +219,12 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                     dvd.año_emision = index.año_emision;
                     dvd.fechaingreso = index.fechaingreso;
                     dvd.prestamo = index.prestamo;
-                    dvd.ubicacionArchivo = index.ubicacionArchivo;
+                    dvd.ubicacionimagen = index.ubicacionimagen;
 
+                    if (dvd.tipo_DVD == "Mp3")
+                    {
+                    dvd.ubicacionArchivo = index.ubicacionArchivo;
+                    }
 
                 }
 

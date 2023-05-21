@@ -184,7 +184,7 @@ namespace ProyectoFinalIUJO
 
         private void Btn_Consulta_Prestamos_Click(object sender, EventArgs e)
         {
-
+            AbrirFormDescrip(new Registros.RegistroPrestamo.Consultadeprestamos());
         }
 
         private void Btn_Consulta_Ingresos_Click(object sender, EventArgs e)

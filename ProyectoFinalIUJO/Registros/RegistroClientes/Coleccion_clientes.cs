@@ -156,5 +156,10 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 				}
 			}
 		}
+
+        public List<Cliente> clonar()
+        {
+            return ListaClientes;
+        }
 	}
 }

@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using ProyectoFinalIUJO.Registros.RegistroClientes;
+using ProyectoFinalIUJO.Registros.RegistroDVD;
+
 namespace ProyectoFinalIUJO.Registros.RegistroPrestamo
 {
     public class Prestamos
@@ -14,67 +17,179 @@ namespace ProyectoFinalIUJO.Registros.RegistroPrestamo
          * , cada juego en cónsola 2 $ por 4 días y 2 $ por cada DVD de pistas de audio po
          * r una semana. dando un monto total que deberá pagar el cliente al momento del registro.
          */
-        private static int contador = 0;
-        private int id;
-        private DateTime _FechaPrestamo;
-        private DateTime _FechaDevolucion;
-        private string _NombreCliente;
-        private string Producto;
-        private int MontoPagar;
+        private int cantidad;
+        private string producto;
+        private string tipo_DVD;
+        private DateTime FechaPrestamo;
+        private DateTime FechaDevolucion;
+        private string nombre_cliente;
+        private string apellido_cliente;
+        private string cedula_cliente;
+        private decimal MontoPagar;
+        private string codigoprestamo;
 
+        public int Cantidad { get => cantidad; set => cantidad = value; }
+        public string Producto { get => producto; set => producto = value; }
+        public string Tipo_DVD { get => tipo_DVD; set => tipo_DVD = value; }
+        public DateTime FechaPrestamo1 { get => FechaPrestamo; set => FechaPrestamo = value; }
+        public DateTime FechaDevolucion1 { get => FechaDevolucion; set => FechaDevolucion = value; }
+        public string Nombre_cliente { get => nombre_cliente; set => nombre_cliente = value; }
+        public string Apellido_cliente { get => apellido_cliente; set => apellido_cliente = value; }
+        public string Cedula_cliente { get => cedula_cliente; set => cedula_cliente = value; }
+        public decimal MontoPagar1 { get => MontoPagar; set => MontoPagar = value; }
+        public string Codigoprestamo { get => codigoprestamo; set => codigoprestamo = value; }
 
-        //public Prestamo(DateTime fechaPrestamo, DateTime fechaDevolucion, Cliente cliente, Item item)
-        //private string
-        public Prestamos(DateTime _FechaPrestamo,DateTime _FechaDevolucion,string _NombreCliente, string Producto)
+        public Prestamos(DateTime _FechaPrestamo, DateTime _FechaDevolucion, string _NombreCliente, string apellidocliente, string cedula, string producto, string tipoDVD, int _cantidad)
         {
-            this.id = ++contador;
-            this._FechaPrestamo = _FechaPrestamo;
-            this._FechaDevolucion = _FechaDevolucion;
-            this._NombreCliente = _NombreCliente;
-            this.Producto = Producto;
-            this.MontoPagar = MontoPagar;
+            Cantidad = _cantidad;
+
+            Producto = producto;
+
+            Tipo_DVD = tipoDVD;
+
+            FechaPrestamo1 = _FechaPrestamo;
+
+            FechaDevolucion = _FechaDevolucion;
+
+            Nombre_cliente = _NombreCliente;
+
+            Apellido_cliente = apellidocliente;
+
+            Cedula_cliente = cedula;
+
+            MontoPagar1 = calcularmonto(_FechaPrestamo, _FechaDevolucion, _cantidad, tipo_DVD);
+
+            Codigoprestamo = generarcodigo();
+
+        }
+
+        public Prestamos(DateTime _FechaPrestamo, DateTime _FechaDevolucion, string _NombreCliente, string apellidocliente, string cedula, string producto, string tipoDVD, int _cantidad, decimal monto, string codigo)
+        {
+            Cantidad = _cantidad;
+
+            Producto = producto;
+
+            Tipo_DVD = tipoDVD;
+
+            FechaPrestamo1 = _FechaPrestamo;
+
+            FechaDevolucion = _FechaDevolucion;
+
+            Nombre_cliente = _NombreCliente;
+
+            Apellido_cliente = apellidocliente;
+
+            Cedula_cliente = cedula;
+
+            MontoPagar1 = monto;
+
+            Codigoprestamo = codigo;
+
+        }
+
+        public string generarcodigo()
+        {
+            string resultado;
+            bool continuar = false;
+            ColeccionePrestamos prestamos = new ColeccionePrestamos();
+            do
+            {
+                Random codigo = new Random();
+                resultado = Convert.ToString(codigo.Next(10000, 99999));
+                continuar = prestamos.confirmarcodigo(resultado);
+
+            } while (continuar != true);
+
+            return resultado;
+        }
+
+        // acomodar el decimal que sale de aqui ojo
+
+        public decimal calcularmonto(DateTime fecha_prestamo, DateTime fecha_devolucion, int cantidad, string tipo_dvd)
+        {
+            decimal monto = 0.00M;
+            int diferencia = 0;
+            decimal dias;
+
+            diferencia = (int)(fecha_devolucion - fecha_prestamo).TotalDays;
+            if(diferencia == 0) diferencia = 1;
+
+            if (tipo_dvd == "Mp3")
+            {
+                dias = diferencia / 7;
+
+
+                if (dias == 0) dias = 1;
+
+                monto = (dias * 2) * cantidad;
+
+                MessageBox.Show(Convert.ToString(monto));
+
+            }
+            else if (tipo_dvd == "Pelicula")
+            {
+                dias = diferencia / 3;
+
+                if (dias == 0) dias = 1;
+
+                monto = (dias * 2) * cantidad;
+
+            }
+            else if (tipo_dvd == "Videojuego")
+            {
+                dias = diferencia / 4;
+
+                if (dias == 0) dias = 1;
+
+                monto = (dias * 2) * cantidad;
+
+            }
+
+            return monto;
+        }
+
         
-        }
+
         /*
-        private decimal CalcularMontoAPagar()
-        {
-            decimal montoAPagar = 0;
-            
-            //if (Producto is DVD)
-            if (Producto)
-            {
-                int duracion = (_FechaDevolucion - _FechaPrestamo).Days;
-                MontoPagar = 2 * (duracion / 3);
+private decimal CalcularMontoAPagar()
+{
+decimal montoAPagar = 0;
 
-                if (duracion % 3 != 0)
-                {
-                    MontoPagar += 2;
-                }
-            }
-            else if (Producto is JuegoConsola)
-            {
-                int duracion = (_FechaDevolucion - _FechaPrestamo).Days;
-                MontoPagar = 2 * (duracion / 4);
+//if (Producto is DVD)
+if (Producto)
+{
+int duracion = (_FechaDevolucion - _FechaPrestamo).Days;
+MontoPagar = 2 * (duracion / 3);
 
-                if (duracion % 4 != 0)
-                {
-                    MontoPagar += 2;
-                }
-            }
-            else if (Producto is DVDpistasAudio)
-            {
-                int duracion = (_FechaDevolucion - _FechaPrestamo).Days;
-                MontoPagar = 2 * (duracion / 7);
+if (duracion % 3 != 0)
+{
+MontoPagar += 2;
+}
+}
+else if (Producto is JuegoConsola)
+{
+int duracion = (_FechaDevolucion - _FechaPrestamo).Days;
+MontoPagar = 2 * (duracion / 4);
 
-                if (duracion % 7 != 0)
-                {
-                    MontoPagar += 2;
-                }
-            }
+if (duracion % 4 != 0)
+{
+MontoPagar += 2;
+}
+}
+else if (Producto is DVDpistasAudio)
+{
+int duracion = (_FechaDevolucion - _FechaPrestamo).Days;
+MontoPagar = 2 * (duracion / 7);
 
-            return MontoPagar;
-        }
-         * */
+if (duracion % 7 != 0)
+{
+MontoPagar += 2;
+}
+}
+
+return MontoPagar;
+}
+* */
 
 
     }

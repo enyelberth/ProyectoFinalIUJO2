@@ -110,5 +110,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 			
 			leer.Play();
 		}
+
     }
 }
