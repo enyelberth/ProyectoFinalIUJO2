@@ -54,6 +54,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroPrestamo
             {
 
                 dataGridViewclientes.Rows.Add(cliente.Nombre_Cliente, cliente.Apellido_Cliente, cliente.Cedula);
+                
 
             }
 

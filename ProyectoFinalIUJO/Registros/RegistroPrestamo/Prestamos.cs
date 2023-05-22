@@ -28,16 +28,16 @@ namespace ProyectoFinalIUJO.Registros.RegistroPrestamo
         private decimal MontoPagar;
         private string codigoprestamo;
 
-        public int Cantidad { get => cantidad; set => cantidad = value; }
-        public string Producto { get => producto; set => producto = value; }
-        public string Tipo_DVD { get => tipo_DVD; set => tipo_DVD = value; }
-        public DateTime FechaPrestamo1 { get => FechaPrestamo; set => FechaPrestamo = value; }
-        public DateTime FechaDevolucion1 { get => FechaDevolucion; set => FechaDevolucion = value; }
-        public string Nombre_cliente { get => nombre_cliente; set => nombre_cliente = value; }
-        public string Apellido_cliente { get => apellido_cliente; set => apellido_cliente = value; }
-        public string Cedula_cliente { get => cedula_cliente; set => cedula_cliente = value; }
-        public decimal MontoPagar1 { get => MontoPagar; set => MontoPagar = value; }
-        public string Codigoprestamo { get => codigoprestamo; set => codigoprestamo = value; }
+        public int Cantidad { get {return cantidad;} set {cantidad = value; }}
+        public string Producto { get {return producto;} set { producto = value; }}
+        public string Tipo_DVD { get {return tipo_DVD;} set { tipo_DVD = value; }}
+        public DateTime FechaPrestamo1 { get {return FechaPrestamo;} set { FechaPrestamo = value; }}
+        public DateTime FechaDevolucion1 { get {return FechaDevolucion;} set { FechaDevolucion = value; }}
+        public string Nombre_cliente { get {return nombre_cliente;} set { nombre_cliente = value; }}
+        public string Apellido_cliente { get {return apellido_cliente;} set { apellido_cliente = value; }}
+        public string Cedula_cliente { get {return cedula_cliente;} set { cedula_cliente = value; }}
+        public decimal MontoPagar1 { get {return MontoPagar;} set { MontoPagar = value; }}
+        public string Codigoprestamo { get {return codigoprestamo;} set { codigoprestamo = value; }}
 
         public Prestamos(DateTime _FechaPrestamo, DateTime _FechaDevolucion, string _NombreCliente, string apellidocliente, string cedula, string producto, string tipoDVD, int _cantidad)
         {

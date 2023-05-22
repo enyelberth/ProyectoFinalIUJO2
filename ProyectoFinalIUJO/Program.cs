@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using ProyectoFinalIUJO.MenuPrincipal.Login;
 
 
 namespace ProyectoFinalIUJO
@@ -20,6 +21,7 @@ namespace ProyectoFinalIUJO
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new MainForm());
+			
 		}
 		
 	}

@@ -39,6 +39,12 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaDatosClientes));
 			this.Base_D = new System.Windows.Forms.DataGridView();
 			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,10 +66,16 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			this.Base_D.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.Base_D.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
 									this.Column2,
+									this.Column1,
+									this.Column6,
+									this.Column7,
+									this.Column8,
+									this.Column9,
+									this.Column10,
 									this.Column3,
 									this.Column4,
 									this.Column5});
-			this.Base_D.Location = new System.Drawing.Point(99, 116);
+			this.Base_D.Location = new System.Drawing.Point(99, 115);
 			this.Base_D.Name = "Base_D";
 			this.Base_D.Size = new System.Drawing.Size(544, 262);
 			this.Base_D.TabIndex = 2;
@@ -74,6 +86,36 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			this.Column2.HeaderText = "Nombre";
 			this.Column2.Name = "Column2";
 			this.Column2.ReadOnly = true;
+			// 
+			// Column1
+			// 
+			this.Column1.HeaderText = "Fecha de Nacimiento";
+			this.Column1.Name = "Column1";
+			// 
+			// Column6
+			// 
+			this.Column6.HeaderText = "Telefono Celular";
+			this.Column6.Name = "Column6";
+			// 
+			// Column7
+			// 
+			this.Column7.HeaderText = "Telefono Residencial";
+			this.Column7.Name = "Column7";
+			// 
+			// Column8
+			// 
+			this.Column8.HeaderText = "Correo Electronico";
+			this.Column8.Name = "Column8";
+			// 
+			// Column9
+			// 
+			this.Column9.HeaderText = "Direccion";
+			this.Column9.Name = "Column9";
+			// 
+			// Column10
+			// 
+			this.Column10.HeaderText = "Fecha de Registro";
+			this.Column10.Name = "Column10";
 			// 
 			// Column3
 			// 
@@ -104,7 +146,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(744, 79);
 			this.panel1.TabIndex = 3;
-			//this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1Paint);
 			// 
 			// pictureBox2
 			// 
@@ -119,7 +160,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			// linkLabel1
 			// 
 			this.linkLabel1.Enabled = false;
-			this.linkLabel1.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.linkLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
 			this.linkLabel1.LinkColor = System.Drawing.Color.White;
@@ -149,7 +190,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(65, 324);
 			this.panel2.TabIndex = 4;
-			//this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2Paint);
 			// 
 			// panel3
 			// 
@@ -159,7 +199,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			this.panel3.Name = "panel3";
 			this.panel3.Size = new System.Drawing.Size(744, 34);
 			this.panel3.TabIndex = 4;
-			//this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel3Paint);
 			// 
 			// panel4
 			// 
@@ -169,7 +208,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new System.Drawing.Size(68, 324);
 			this.panel4.TabIndex = 4;
-			//this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel4Paint);
 			// 
 			// PantallaDatosClientes
 			// 
@@ -190,6 +228,12 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.LinkLabel linkLabel1;
 		private System.Windows.Forms.PictureBox pictureBox2;

@@ -63,6 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="encriptar.cs" />
+    <Compile Include="MenuPrincipal\Login\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal\Login\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal\MenuColor.cs" />
     <Compile Include="MenuPrincipal\MenuRenderizado.cs" />
     <Compile Include="MenuPrincipal\PantallaPrincipal.cs">
@@ -162,6 +168,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="MenuPrincipal\Login\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal\PantallaPrincipal.af.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </EmbeddedResource>

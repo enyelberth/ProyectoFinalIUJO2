@@ -15,6 +15,7 @@ using ProyectoFinalIUJO;
 using ProyectoFinalIUJO.Registros.RegistroClientes;
 using ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD;
 using ProyectoFinalIUJO.Registros.RegistroPrestamo;
+using ProyectoFinalIUJO.MenuPrincipal.Login;
 //using ProyectoFinalIUJO.Datos.Pantallas;
 //using ProyectoFinalIUJO.Registros.RegistroDVDs;
 
@@ -34,14 +35,18 @@ namespace ProyectoFinalIUJO
         public MainForm()
         {
             InitializeComponent();
+      
            // Btn_Cliente.Click += new EventHandler(Btn_ClienteClick);
             inicio();
+//            	Login p = new Login();
+//        	p.Show();
         }
 
         
 
         private void BTNCerrar_Click_1(object sender, EventArgs e)
         {
+        
             if (File.Exists(Path.GetFullPath("Datos.xml"))) // nuevo codigo para encriptar lo escrito en la base de datos y borra el archivo remanente
             {
                 BasededatosDVD.escribirenbase();
