@@ -189,5 +189,25 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
         {
 
         }
+		
+		void InputNombreTextChanged(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void InputApellidoTextChanged(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void InputCedulaTextChanged(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void Label1Click(object sender, EventArgs e)
+		{
+			
+		}
     }
 }

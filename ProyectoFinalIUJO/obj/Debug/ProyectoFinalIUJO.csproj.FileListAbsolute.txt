@@ -190,3 +190,41 @@ C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\Pr
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.pdb
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.consultaIngresos.resources
 C:\Users\user\Documents\GitHub\ProyectoFinalIUJO2\menuavanzado\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csprojResolveAssemblyReference.cache
+C:\Users\Naytor029\Documents\Proyecto Final\ProyectoFinalIUJO2-master (2)\ProyectoFinalIUJO2-master\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csprojResolveAssemblyReference.cache
+C:\Users\Naytor029\Documents\Proyecto Final\ProyectoFinalIUJO2-master (2)\ProyectoFinalIUJO2-master\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.exe
+C:\Users\Naytor029\Documents\Proyecto Final\ProyectoFinalIUJO2-master (2)\ProyectoFinalIUJO2-master\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.pdb
+C:\Users\Naytor029\Documents\Proyecto Final\ProyectoFinalIUJO2-master (2)\ProyectoFinalIUJO2-master\ProyectoFinalIUJO\bin\Debug\ProyectoFinalIUJO.exe.config
+C:\Users\Naytor029\Documents\Proyecto Final\ProyectoFinalIUJO2-master (2)\ModificacionesHVDouble 2\ModificacionesHVDouble2\ModificacionesHVDouble\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csprojResolveAssemblyReference.cache
+C:\Users\Naytor029\Documents\Proyecto Final\ProyectoFinalIUJO2-master (2)\ModificacionesHVDouble 2\ModificacionesHVDouble2\ModificacionesHVDouble2.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csprojResolveAssemblyReference.cache
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csproj.AssemblyReference.cache
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.MainForm.resources
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.consultaIngresos.resources
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroClientes.PantallaCliente.resources
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroClientes.PantallaDatosClientes.resources
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.DatosDVDs.resources
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.detallesproducto.resources
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto.resources
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroDVD.RegistroDVD.resources
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroPrestamo.Consultadeprestamos.resources
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroPrestamo.PantallaPrestamo.resources
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.MainForm.af.resources
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.MainForm.ar-DZ.resources
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.MainForm.es.resources
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto.aa.resources
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csproj.GenerateResource.cache
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\bin\Debug\Registros\RegistroDVD\MenudeDatosdeDVD\ElementosProducto.resx
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\bin\Debug\ProyectoFinalIUJO.exe.config
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\bin\Debug\ProyectoFinalIUJO.exe
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\bin\Debug\ProyectoFinalIUJO.pdb
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\bin\Debug\af\ProyectoFinalIUJO.resources.dll
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\bin\Debug\ar-DZ\ProyectoFinalIUJO.resources.dll
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\bin\Debug\es\ProyectoFinalIUJO.resources.dll
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\bin\Debug\aa\ProyectoFinalIUJO.resources.dll
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\af\ProyectoFinalIUJO.resources.dll
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ar-DZ\ProyectoFinalIUJO.resources.dll
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\es\ProyectoFinalIUJO.resources.dll
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\aa\ProyectoFinalIUJO.resources.dll
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.exe
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.pdb
+C:\Users\user\Downloads\ModificacionesHVDouble3.0\ProyectoFinalIUJO\obj\Debug\ProyectoFinalIUJO.Properties.Resources.resources

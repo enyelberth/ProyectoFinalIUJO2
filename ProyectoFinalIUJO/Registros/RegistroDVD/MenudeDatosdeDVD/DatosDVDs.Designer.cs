@@ -53,13 +53,15 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.elementosProducto3 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
             this.elementosProducto2 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
             this.elementosProducto1 = new ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelposicion2
             // 
             this.labelposicion2.AutoSize = true;
             this.labelposicion2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelposicion2.Location = new System.Drawing.Point(435, 621);
+            this.labelposicion2.Location = new System.Drawing.Point(541, 705);
             this.labelposicion2.Name = "labelposicion2";
             this.labelposicion2.Size = new System.Drawing.Size(19, 20);
             this.labelposicion2.TabIndex = 27;
@@ -69,7 +71,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             // 
             this.de.AutoSize = true;
             this.de.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.de.Location = new System.Drawing.Point(387, 621);
+            this.de.Location = new System.Drawing.Point(493, 705);
             this.de.Name = "de";
             this.de.Size = new System.Drawing.Size(32, 20);
             this.de.TabIndex = 26;
@@ -79,7 +81,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             // 
             this.labelposicion1.AutoSize = true;
             this.labelposicion1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelposicion1.Location = new System.Drawing.Point(351, 621);
+            this.labelposicion1.Location = new System.Drawing.Point(457, 705);
             this.labelposicion1.Name = "labelposicion1";
             this.labelposicion1.Size = new System.Drawing.Size(19, 20);
             this.labelposicion1.TabIndex = 25;
@@ -87,30 +89,35 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             // 
             // buttonatras
             // 
+            this.buttonatras.BackColor = System.Drawing.Color.Indigo;
             this.buttonatras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonatras.Location = new System.Drawing.Point(250, 620);
+            this.buttonatras.ForeColor = System.Drawing.Color.White;
+            this.buttonatras.Location = new System.Drawing.Point(356, 704);
             this.buttonatras.Name = "buttonatras";
             this.buttonatras.Size = new System.Drawing.Size(75, 23);
             this.buttonatras.TabIndex = 23;
             this.buttonatras.Text = "Atras";
-            this.buttonatras.UseVisualStyleBackColor = true;
+            this.buttonatras.UseVisualStyleBackColor = false;
             this.buttonatras.Click += new System.EventHandler(this.buttonatras_Click);
             // 
             // buttonadelante
             // 
+            this.buttonadelante.BackColor = System.Drawing.Color.Indigo;
             this.buttonadelante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonadelante.Location = new System.Drawing.Point(480, 621);
+            this.buttonadelante.ForeColor = System.Drawing.Color.White;
+            this.buttonadelante.Location = new System.Drawing.Point(586, 705);
             this.buttonadelante.Name = "buttonadelante";
             this.buttonadelante.Size = new System.Drawing.Size(75, 23);
             this.buttonadelante.TabIndex = 24;
             this.buttonadelante.Text = "adelante";
-            this.buttonadelante.UseVisualStyleBackColor = true;
+            this.buttonadelante.UseVisualStyleBackColor = false;
             this.buttonadelante.Click += new System.EventHandler(this.buttonadelante_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Indigo;
             this.label2.Location = new System.Drawing.Point(277, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 16);
@@ -119,8 +126,10 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             // 
             // comboBox2
             // 
+            this.comboBox2.BackColor = System.Drawing.Color.Indigo;
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.ForeColor = System.Drawing.Color.White;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "A/Z",
@@ -139,6 +148,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             // 
             this.labelfiltro.AutoSize = true;
             this.labelfiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelfiltro.ForeColor = System.Drawing.Color.Indigo;
             this.labelfiltro.Location = new System.Drawing.Point(35, 32);
             this.labelfiltro.Name = "labelfiltro";
             this.labelfiltro.Size = new System.Drawing.Size(88, 20);
@@ -147,8 +157,10 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             // 
             // comboBox1
             // 
+            this.comboBox1.BackColor = System.Drawing.Color.Indigo;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Sin filtro",
@@ -163,13 +175,15 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             // 
             // buttonatualizar
             // 
+            this.buttonatualizar.BackColor = System.Drawing.Color.Indigo;
             this.buttonatualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonatualizar.Location = new System.Drawing.Point(673, 25);
+            this.buttonatualizar.ForeColor = System.Drawing.Color.White;
+            this.buttonatualizar.Location = new System.Drawing.Point(870, 31);
             this.buttonatualizar.Name = "buttonatualizar";
             this.buttonatualizar.Size = new System.Drawing.Size(133, 34);
             this.buttonatualizar.TabIndex = 38;
             this.buttonatualizar.Text = "Actualizar Listas";
-            this.buttonatualizar.UseVisualStyleBackColor = true;
+            this.buttonatualizar.UseVisualStyleBackColor = false;
             this.buttonatualizar.Click += new System.EventHandler(this.buttonatualizar_Click);
             // 
             // elementosProducto6
@@ -179,11 +193,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.elementosProducto6.Codigoproducto = "000000";
             this.elementosProducto6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.elementosProducto6.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto6.Imagenproducto")));
-            this.elementosProducto6.Location = new System.Drawing.Point(564, 339);
+            this.elementosProducto6.Location = new System.Drawing.Point(673, 398);
             this.elementosProducto6.Name = "elementosProducto6";
             this.elementosProducto6.Nombreproducto = "";
             this.elementosProducto6.Size = new System.Drawing.Size(202, 234);
-            this.elementosProducto6.TabIndex = 37;
+            this.elementosProducto6.TabIndex = 44;
             this.elementosProducto6.MouseLeave += new System.EventHandler(this.ElementosProducto6MouseLeave);
             this.elementosProducto6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ElementosProducto6MouseMove);
             // 
@@ -194,11 +208,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.elementosProducto5.Codigoproducto = "000000";
             this.elementosProducto5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.elementosProducto5.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto5.Imagenproducto")));
-            this.elementosProducto5.Location = new System.Drawing.Point(307, 339);
+            this.elementosProducto5.Location = new System.Drawing.Point(391, 398);
             this.elementosProducto5.Name = "elementosProducto5";
             this.elementosProducto5.Nombreproducto = "";
             this.elementosProducto5.Size = new System.Drawing.Size(202, 234);
-            this.elementosProducto5.TabIndex = 36;
+            this.elementosProducto5.TabIndex = 43;
             this.elementosProducto5.MouseLeave += new System.EventHandler(this.ElementosProducto5MouseLeave);
             this.elementosProducto5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ElementosProducto5MouseMove);
             // 
@@ -209,11 +223,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.elementosProducto4.Codigoproducto = "000000";
             this.elementosProducto4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.elementosProducto4.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto4.Imagenproducto")));
-            this.elementosProducto4.Location = new System.Drawing.Point(54, 339);
+            this.elementosProducto4.Location = new System.Drawing.Point(105, 398);
             this.elementosProducto4.Name = "elementosProducto4";
             this.elementosProducto4.Nombreproducto = "";
             this.elementosProducto4.Size = new System.Drawing.Size(202, 234);
-            this.elementosProducto4.TabIndex = 35;
+            this.elementosProducto4.TabIndex = 42;
             this.elementosProducto4.MouseLeave += new System.EventHandler(this.ElementosProducto4MouseLeave);
             this.elementosProducto4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ElementosProducto4MouseMove);
             // 
@@ -224,11 +238,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.elementosProducto3.Codigoproducto = "000000";
             this.elementosProducto3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.elementosProducto3.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto3.Imagenproducto")));
-            this.elementosProducto3.Location = new System.Drawing.Point(564, 87);
+            this.elementosProducto3.Location = new System.Drawing.Point(673, 108);
             this.elementosProducto3.Name = "elementosProducto3";
             this.elementosProducto3.Nombreproducto = "";
             this.elementosProducto3.Size = new System.Drawing.Size(202, 234);
-            this.elementosProducto3.TabIndex = 34;
+            this.elementosProducto3.TabIndex = 41;
             this.elementosProducto3.MouseLeave += new System.EventHandler(this.ElementosProducto3MouseLeave);
             this.elementosProducto3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ElementosProducto3MouseMove);
             // 
@@ -239,11 +253,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.elementosProducto2.Codigoproducto = "000000";
             this.elementosProducto2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.elementosProducto2.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto2.Imagenproducto")));
-            this.elementosProducto2.Location = new System.Drawing.Point(307, 87);
+            this.elementosProducto2.Location = new System.Drawing.Point(391, 108);
             this.elementosProducto2.Name = "elementosProducto2";
             this.elementosProducto2.Nombreproducto = "";
             this.elementosProducto2.Size = new System.Drawing.Size(202, 234);
-            this.elementosProducto2.TabIndex = 33;
+            this.elementosProducto2.TabIndex = 40;
             this.elementosProducto2.MouseLeave += new System.EventHandler(this.ElementosProducto2MouseLeave);
             this.elementosProducto2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ElementosProducto2MouseMove);
             // 
@@ -254,26 +268,35 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.elementosProducto1.Codigoproducto = "000000";
             this.elementosProducto1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.elementosProducto1.Imagenproducto = ((System.Drawing.Image)(resources.GetObject("elementosProducto1.Imagenproducto")));
-            this.elementosProducto1.Location = new System.Drawing.Point(54, 87);
+            this.elementosProducto1.Location = new System.Drawing.Point(105, 108);
             this.elementosProducto1.Name = "elementosProducto1";
             this.elementosProducto1.Nombreproducto = "";
             this.elementosProducto1.Size = new System.Drawing.Size(202, 234);
-            this.elementosProducto1.TabIndex = 32;
+            this.elementosProducto1.TabIndex = 39;
             this.elementosProducto1.MouseLeave += new System.EventHandler(this.ElementosProducto1MouseLeave);
             this.elementosProducto1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ElementosProducto1MouseMove);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(789, 361);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(240, 399);
+            this.pictureBox1.TabIndex = 45;
+            this.pictureBox1.TabStop = false;
             // 
             // DatosDVDs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 667);
-            this.Controls.Add(this.buttonatualizar);
+            this.ClientSize = new System.Drawing.Size(1031, 756);
             this.Controls.Add(this.elementosProducto6);
             this.Controls.Add(this.elementosProducto5);
             this.Controls.Add(this.elementosProducto4);
             this.Controls.Add(this.elementosProducto3);
             this.Controls.Add(this.elementosProducto2);
             this.Controls.Add(this.elementosProducto1);
+            this.Controls.Add(this.buttonatualizar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.labelfiltro);
@@ -283,21 +306,17 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.Controls.Add(this.labelposicion1);
             this.Controls.Add(this.buttonatras);
             this.Controls.Add(this.buttonadelante);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "DatosDVDs";
             this.Text = "DatosDVDs";
             this.Activated += new System.EventHandler(this.DatosDVDs_Activated);
             this.Deactivate += new System.EventHandler(this.DatosDVDs_Deactivate);
             this.Load += new System.EventHandler(this.DatosDVDs_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
-		private ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto elementosProducto6;
-		private ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto elementosProducto5;
-		private ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto elementosProducto4;
-		private ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto elementosProducto3;
-		private ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto elementosProducto2;
-		private ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD.ElementosProducto elementosProducto1;
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.Label labelfiltro;
 		private System.Windows.Forms.ComboBox comboBox2;
@@ -308,5 +327,12 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 		private System.Windows.Forms.Label de;
         private System.Windows.Forms.Label labelposicion2;
         private System.Windows.Forms.Button buttonatualizar;
-	}
+        private ElementosProducto elementosProducto1;
+        private ElementosProducto elementosProducto2;
+        private ElementosProducto elementosProducto3;
+        private ElementosProducto elementosProducto4;
+        private ElementosProducto elementosProducto5;
+        private ElementosProducto elementosProducto6;
+        private System.Windows.Forms.PictureBox pictureBox1;
+    }
 }

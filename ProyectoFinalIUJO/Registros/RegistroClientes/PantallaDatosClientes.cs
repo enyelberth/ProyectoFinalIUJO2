@@ -17,5 +17,10 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		
+		void Base_DCellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			
+		}
 	}
 }
