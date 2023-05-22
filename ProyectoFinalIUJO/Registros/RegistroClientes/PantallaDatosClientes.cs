@@ -25,6 +25,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
+            cargarDatosRegistro();
 //			DataSet midata = new DataSet();
 //			midata.ReadXml("Datos.xml");
 			//Base_D = new midata.Tables[0];
@@ -50,7 +51,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 		public void cargarDatosRegistro()
 		{
 			
-			//clienteRegistrado.AddRange(clientes.clonar());
+			clienteRegistrado.AddRange(clientes.clonar());
 			
 			foreach (Cliente cliente in clienteRegistrado)
             {
@@ -68,6 +69,8 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 		       private void cargarDatosRegistro(object sender, EventArgs e)
         {
             clonar();
+            cargarDatosRegistro();
+
            // cargardatagrids();
             //labelfechahoy.Text = DateTime.Now.Date.ToString();
         }

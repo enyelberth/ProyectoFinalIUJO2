@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
+
 namespace ProyectoFinalIUJO.Registros.RegistroClientes
 {
 /// <summary>
@@ -69,8 +70,8 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 				{
 					string nombre = InputNombre.Text;
 					string apellido = inputApellido.Text;
-					int cedula;
-					cedula = int.Parse(inputCedula.Text);
+					Int64 cedula;
+					cedula = Convert.ToInt64(inputCedula.Text);
 					bool sexo;
 				if(radioButton1.Checked==true)
 				{
@@ -80,15 +81,23 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 				{
 					sexo=false;
 				}
-					DateTime fechaN = new DateTime(2015, 10,31); 
-					int telefonoC = 04245424;
-					int telefonoR = int.Parse(InputTelefonoResidencial.Text);
+                //int.Parse(InputTelefonoCelular.Text);
+                
+					DateTime fechaN = new DateTime();
+                    fechaN = DateTime.Parse(InputFechaNacimiento.Value.ToString());
+                    Int64 telefonoC = Convert.ToInt64(InputTelefonoCelular.Text);
+                    Int64 telefonoR = Convert.ToInt64(InputTelefonoResidencial.Text); ;
 					string correo = inputCorreo.Text;
 					string direccion = InputDireccion.Text;
-                    string sexooo = "Masculino";
-					DateTime fechaR = new DateTime(2022, 10,31);
+                    string Sexo;
+                    Sexo = (sexo == true ? "Masculino" : "Femenino");
+                
+                // string sexooo = "Masculino";
+                    DateTime fechaR = new DateTime();
+                    fechaR = DateTime.Today;
 
-                    Cliente index1 = new Cliente(nombre, apellido, cedula, sexooo, fechaN, telefonoC, telefonoR, correo, direccion, fechaR);
+
+                    Cliente index1 = new Cliente(nombre, apellido, cedula, Sexo, fechaN, telefonoC, telefonoR, correo, direccion, fechaR);
 
 					coleccion.agregar(index1);
 
@@ -209,5 +218,15 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 		{
 			
 		}
+
+        private void InputDireccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InputFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,11 +11,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 				//Datos del clientes
 		private string _nombreCliente;
 		private string _apellidoCliente;
-		private int _cedulaCliente;
+		private Int64 _cedulaCliente;
 		private string _sexoCliente;
 		private DateTime _fechaNacimiento_cliente;
-		private int _telefonoCelular;
-		private int _telefonoResidencial;
+		private Int64 _telefonoCelular;
+		private Int64 _telefonoResidencial;
 		private string _correoElectronico;
 		private string _direccionHabitación;
 		private DateTime _fechaRegistro_cliente;
@@ -26,16 +26,16 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 		
 		public string Nombre_Cliente {get {return _nombreCliente;} set {_nombreCliente = value;}}
 		public string Apellido_Cliente {get {return _apellidoCliente;} set {_apellidoCliente = value;}}
-		public int Cedula{get {return _cedulaCliente;} set {_cedulaCliente = value;}}
+		public Int64 Cedula{get {return _cedulaCliente;} set {_cedulaCliente = value;}}
 		public string Sexo{get {return _sexoCliente;} set {_sexoCliente = value;}}
 		public DateTime FechaNacimientoCliente {get {return _fechaNacimiento_cliente;} set {_fechaNacimiento_cliente= value;}}
-		public int TelefonoCelular {get {return _telefonoCelular;} set {_telefonoCelular = value;}}
-		public int TelefonoResidencial {get {return _telefonoResidencial;} set {_telefonoResidencial = value;}}
+		public Int64 TelefonoCelular {get {return _telefonoCelular;} set {_telefonoCelular = value;}}
+		public Int64 TelefonoResidencial {get {return _telefonoResidencial;} set {_telefonoResidencial = value;}}
 		public string CorreoElectronico {get {return _correoElectronico;} set {_correoElectronico = value;}}
 		public string Direccion {get {return _direccionHabitación;} set {_direccionHabitación = value;}}
 		public DateTime FechaRegistroCliente {get {return _fechaRegistro_cliente;} set {_fechaRegistro_cliente = value;}}
 		
-		public Cliente(string nombre,string apellido,int cedula,string sexo, DateTime fechaN, int telefonoC,int telefonoR,string correo,string direccion,DateTime fechaR)
+		public Cliente(string nombre,string apellido,Int64 cedula,string sexo, DateTime fechaN, Int64 telefonoC,Int64 telefonoR,string correo,string direccion,DateTime fechaR)
 		{
 			this._nombreCliente = nombre;
 			this._apellidoCliente = apellido;

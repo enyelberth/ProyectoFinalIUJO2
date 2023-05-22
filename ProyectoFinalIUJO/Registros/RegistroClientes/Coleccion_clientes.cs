@@ -112,15 +112,15 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 
                 string apellido = cliente.Attributes["apellido"].Value;
 
-                int cedula = Convert.ToInt32(cliente.Attributes["Cedula"].Value);
+                Int64 cedula = Convert.ToInt64(cliente.Attributes["Cedula"].Value);
 
                 string sexo = cliente.Attributes["Sexo"].Value;
 
                 DateTime fechanacimiento = DateTime.Parse(cliente.Attributes["FechaNacimiento"].Value);
 
-                int telefonoC = Convert.ToInt32(cliente.Attributes["TelefonoCelular"].Value);
+                Int64 telefonoC = Convert.ToInt64(cliente.Attributes["TelefonoCelular"].Value);
 
-                int telefonoR= Convert.ToInt32(cliente.Attributes["TelefonoResidencial"].Value);
+                Int64 telefonoR= Convert.ToInt64(cliente.Attributes["TelefonoResidencial"].Value);
 
                 string correo = cliente.Attributes["CorreoElectronico"].Value;
 
