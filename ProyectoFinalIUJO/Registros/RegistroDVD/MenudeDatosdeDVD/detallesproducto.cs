@@ -81,16 +81,16 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
                 buttonDemo.Visible = true;
 
             }
-            if (dvd.producto == "Mario")
+            if (dvd.producto == "Plantas vs zombies")
             {
                 buttonDemo.Visible = true;
 
             }
-            if (dvd.producto == "Half life")
-            {
-                buttonDemo.Visible= true;
+            //if (dvd.producto == "Half life")
+            //{
+            //    buttonDemo.Visible = true;
 
-            }
+            //}
             if (dvd.tipo_DVD == "Mp3")
             {
                 buttonReproducir.Visible = true;
@@ -158,29 +158,37 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             {
 
 
+                string caminocarpeta = Path.GetFullPath(Assembly.GetEntryAssembly().Location);
+                string caminoarchivo;
+
                 if (labelnombre.Text == "Doom")
                 {
-                    buttonDemo.Visible = true;
+                    caminoarchivo = "Demos\\doom\\Launch The Ultimate DOOM";
+                    Process.Start(caminoarchivo);
+
                 }
                 if (labelnombre.Text == "Age of empires")
                 {
-                    buttonDemo.Visible = true;
+                    caminoarchivo = "Demos\\age\\empires";
+                    Process.Start(caminoarchivo);
 
                 }
-                if (labelnombre.Text == "Mario")
+                if (labelnombre.Text == "Plantas vs zombies")
                 {
-                    buttonDemo.Visible = true;
+                    caminoarchivo = "Demos\\pvz\\Plants";
+                    Process.Start(caminoarchivo);
 
                 }
-                if (labelnombre.Text == "Half life")
-                {
-                    buttonDemo.Visible = true;
+                //if (labelnombre.Text == "Half life")
+                //{
+                //    caminoarchivo = "Demos\\halflife\\halflife";
+                //    Process.Start(caminoarchivo);
 
-                }
+                //}
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se pudo correr la prueba, es probable que no exista el archivo o que no se ha actualizado la lista de articulos");
+                MessageBox.Show("No se pudo correr la prueba, es probable que no exista el archivo o que no se ha actualizado la lista de articulos, detalles: " + ex.Message);
             }
         }
     }

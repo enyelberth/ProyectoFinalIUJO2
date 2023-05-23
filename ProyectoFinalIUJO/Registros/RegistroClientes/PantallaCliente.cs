@@ -141,6 +141,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
    		   e.Handled = true;
     	  return;
 		}
+		if(inputCedula.Text.Length >= 8)
+			{
+				e.Handled = true;
+
+			}
 		
 			
 		}
@@ -174,6 +179,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
    		  		 e.Handled = true;
     	  		return;
 			}
+			if(InputTelefonoCelular.Text.Length >= 11)
+			{
+				e.Handled = true;	
+
+			}
 			
 		}
 		
@@ -186,6 +196,12 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
     	  		MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
    		  		 e.Handled = true;
     	  		return;
+			}
+			if (InputTelefonoResidencial.Text.Length >= 11)
+			{
+
+
+				e.Handled = true;
 			}
 		}
 
@@ -225,6 +241,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
         }
 
         private void InputFechaNacimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InputTelefonoCelular_TextChanged(object sender, EventArgs e)
         {
 
         }

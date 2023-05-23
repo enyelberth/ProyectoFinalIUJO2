@@ -19,8 +19,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
         List<DVD> listaDVDS = new List<DVD>();
         List<DVD> listaarticulos = new List<DVD>();
 
-        static int filtraropcion = 1;
-        static int ordenaropcion = 3;
 
 
         int serie = 0;
@@ -181,7 +179,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
                     }
                     labelposicion2.Text = Convert.ToString(posicionfinal);
 
-                    filtraropcion = 1; 
                     break;
 
 
@@ -207,7 +204,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
                     }
                     labelposicion2.Text = Convert.ToString(posicionfinal);
 
-                    filtraropcion = 2;
                     break;
 
 
@@ -233,7 +229,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
                     }
                     labelposicion2.Text = Convert.ToString(posicionfinal);
 
-                    filtraropcion = 3;
                     break;
 
 
@@ -257,7 +252,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
                     }
                     labelposicion2.Text = Convert.ToString(posicionfinal);
 
-                    filtraropcion = 4;
                     break;
 
             }
@@ -506,73 +500,98 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 			MessageBox.Show("limpiado");
 			limpiarimagenes();
 		}
-		
-		
-		
-		void ElementosProducto2MouseMove(object sender, MouseEventArgs e)
-		{
-			elementosProducto2.Imagenproducto = null;
-		}
-		
-		void ElementosProducto1MouseMove(object sender, MouseEventArgs e)
-		{
-		   elementosProducto1.Imagenproducto = null;
-		}
-		
-		void ElementosProducto1MouseLeave(object sender, EventArgs e)
-		{
-			actualizar();
-		}
-		
-		void ElementosProducto2MouseLeave(object sender, EventArgs e)
-		{
-			actualizar();
-		}
-		
-		void ElementosProducto3MouseLeave(object sender, EventArgs e)
-		{
-			actualizar();
-		}
-		
-		void ElementosProducto3MouseMove(object sender, MouseEventArgs e)
-		{
-			elementosProducto3.Imagenproducto = null;
-		}
-		
-		void ElementosProducto4MouseMove(object sender, MouseEventArgs e)
-		{
-			elementosProducto4.Imagenproducto = null;
-			
-		}
-		
-		void ElementosProducto5MouseMove(object sender, MouseEventArgs e)
-		{
-			elementosProducto5.Imagenproducto = null;
-		}
-		
-		void ElementosProducto6MouseMove(object sender, MouseEventArgs e)
-		{
-			elementosProducto6.Imagenproducto = null;
-		}
-		
-		void ElementosProducto4MouseLeave(object sender, EventArgs e)
-		{
+
+
+        void ElementosProducto2MouseMove(object sender, MouseEventArgs e)
+        {
+            if (elementosProducto2.Imagenproducto != null)
+            {
+                elementosProducto2.Imagenproducto.Dispose();
+                elementosProducto2.Imagenproducto = null;
+            }
+        }
+
+        void ElementosProducto1MouseMove(object sender, MouseEventArgs e)
+        {
+            if (elementosProducto1.Imagenproducto != null)
+            {
+                elementosProducto1.Imagenproducto.Dispose();
+                elementosProducto1.Imagenproducto = null;
+            }
+        }
+
+        void ElementosProducto1MouseLeave(object sender, EventArgs e)
+        {
             actualizar();
-		}
-		
-		void ElementosProducto5MouseLeave(object sender, EventArgs e)
-		{
+        }
+
+        void ElementosProducto2MouseLeave(object sender, EventArgs e)
+        {
             actualizar();
-		}
-		
-		void ElementosProducto6MouseLeave(object sender, EventArgs e)
-		{   
+        }
+
+        void ElementosProducto3MouseLeave(object sender, EventArgs e)
+        {
             actualizar();
-		}
-		
-		void DatosDVDsMouseMove(object sender, MouseEventArgs e)
-		{
-			actualizar();
-		}
+        }
+
+        void ElementosProducto3MouseMove(object sender, MouseEventArgs e)
+        {
+            if (elementosProducto3.Imagenproducto != null)
+            {
+                elementosProducto3.Imagenproducto.Dispose();
+                elementosProducto3.Imagenproducto = null;
+            }
+        }
+
+        void ElementosProducto4MouseMove(object sender, MouseEventArgs e)
+        {
+            if (elementosProducto4.Imagenproducto != null)
+            {
+                elementosProducto4.Imagenproducto.Dispose();
+                elementosProducto4.Imagenproducto = null;
+            }
+
+        }
+
+        void ElementosProducto5MouseMove(object sender, MouseEventArgs e)
+        {
+            if (elementosProducto5.Imagenproducto != null)
+            {
+                elementosProducto5.Imagenproducto.Dispose();
+                elementosProducto5.Imagenproducto = null;
+            }
+        }
+
+        void ElementosProducto6MouseMove(object sender, MouseEventArgs e)
+        {
+            if (elementosProducto6.Imagenproducto != null)
+            {
+                elementosProducto6.Imagenproducto.Dispose();
+                elementosProducto6.Imagenproducto = null;
+            }
+
+        }
+
+        void ElementosProducto4MouseLeave(object sender, EventArgs e)
+        {
+            actualizar();
+        }
+
+        void ElementosProducto5MouseLeave(object sender, EventArgs e)
+        {
+            actualizar();
+        }
+
+        void ElementosProducto6MouseLeave(object sender, EventArgs e)
+        {
+            actualizar();
+        }
+
+        void DatosDVDsMouseMove(object sender, MouseEventArgs e)
+        {
+            actualizar();
+        }
+
     }
 }

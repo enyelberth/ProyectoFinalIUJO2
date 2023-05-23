@@ -99,26 +99,41 @@ namespace ProyectoFinalIUJO.Registros.RegistroPrestamo
 
         private void buttonmenos_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(textBoxcantidad.Text) == 1)
+            try
             {
-            }
-            else
-            {
-                textBoxcantidad.Text = Convert.ToString(Convert.ToInt32(textBoxcantidad.Text) - 1);
 
+
+                if (Convert.ToInt32(textBoxcantidad.Text) == 1)
+                {
+                }
+                else
+                {
+                    textBoxcantidad.Text = Convert.ToString(Convert.ToInt32(textBoxcantidad.Text) - 1);
+
+                }
+            }
+            catch (Exception)
+            {
             }
             
         }
 
         private void buttonmas_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(textBoxcantidad.Text) == Convert.ToInt32(textBoxcantidadtotal.Text))
+            try
             {
-            }
-            else
-            {
-                textBoxcantidad.Text = Convert.ToString(Convert.ToInt32(textBoxcantidad.Text) + 1);
 
+                if (Convert.ToInt32(textBoxcantidad.Text) == Convert.ToInt32(textBoxcantidadtotal.Text))
+                {
+                }
+                else
+                {
+                    textBoxcantidad.Text = Convert.ToString(Convert.ToInt32(textBoxcantidad.Text) + 1);
+
+                }
+
+            }catch (Exception) 
+            { 
             }
         }
 

@@ -179,6 +179,11 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 e.Handled = true;
 
             }
+            if (textBoxAñoemision.Text.Length >= 4)
+            {
+                e.Handled= true;
+
+            }
         }
 
         private void textBoxDiaingreso_KeyPress(object sender, KeyPressEventArgs e)
@@ -212,6 +217,12 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
         {
             if (char.IsLetter(e.KeyChar))
             {
+                e.Handled = true;
+
+            }
+            if (textBoxCantidad.Text.Length >= 8)
+            {
+
                 e.Handled = true;
 
             }
@@ -256,7 +267,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 catch (Exception ex)
                 {
 
-                    MessageBox.Show("Se ha producido un error al seleccionar la imagen, seleccione una imagen valida porfavor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Se ha producido un error al seleccionar la imagen, seleccione una imagen valida porfavor, detalles" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 }
 
@@ -343,7 +354,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 catch (ArgumentException ex)
                 {
 
-                    MessageBox.Show("Se ha producido un error al seleccionar el Mp3, seleccione un Mp3 valido porfavor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Se ha producido un error al seleccionar el Mp3, seleccione un Mp3 valido porfavor, detalles: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
                 }
 
@@ -388,7 +399,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 
             }
 
-            catch (IOException e)
+            catch (IOException )
             {
                 return textBoximagen.Text;
             }
@@ -436,7 +447,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD
                 
             }
 
-            catch (IOException e)
+            catch (IOException )
             {
                 return textBoxarchivo.Text;
             }

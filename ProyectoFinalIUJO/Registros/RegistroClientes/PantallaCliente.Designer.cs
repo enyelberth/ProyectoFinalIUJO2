@@ -239,6 +239,7 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
             this.InputTelefonoCelular.Name = "InputTelefonoCelular";
             this.InputTelefonoCelular.Size = new System.Drawing.Size(180, 20);
             this.InputTelefonoCelular.TabIndex = 45;
+            this.InputTelefonoCelular.TextChanged += new System.EventHandler(this.InputTelefonoCelular_TextChanged);
             this.InputTelefonoCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.InputTelefonoCelularKeyPress);
             // 
             // inputCedula

@@ -92,9 +92,9 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.buttonatras.BackColor = System.Drawing.Color.Indigo;
             this.buttonatras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonatras.ForeColor = System.Drawing.Color.White;
-            this.buttonatras.Location = new System.Drawing.Point(356, 704);
+            this.buttonatras.Location = new System.Drawing.Point(363, 698);
             this.buttonatras.Name = "buttonatras";
-            this.buttonatras.Size = new System.Drawing.Size(75, 23);
+            this.buttonatras.Size = new System.Drawing.Size(82, 31);
             this.buttonatras.TabIndex = 23;
             this.buttonatras.Text = "Atras";
             this.buttonatras.UseVisualStyleBackColor = false;
@@ -105,9 +105,9 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             this.buttonadelante.BackColor = System.Drawing.Color.Indigo;
             this.buttonadelante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonadelante.ForeColor = System.Drawing.Color.White;
-            this.buttonadelante.Location = new System.Drawing.Point(586, 705);
+            this.buttonadelante.Location = new System.Drawing.Point(566, 699);
             this.buttonadelante.Name = "buttonadelante";
-            this.buttonadelante.Size = new System.Drawing.Size(75, 23);
+            this.buttonadelante.Size = new System.Drawing.Size(82, 31);
             this.buttonadelante.TabIndex = 24;
             this.buttonadelante.Text = "adelante";
             this.buttonadelante.UseVisualStyleBackColor = false;
@@ -279,9 +279,9 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(789, 361);
+            this.pictureBox1.Location = new System.Drawing.Point(828, 372);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 399);
+            this.pictureBox1.Size = new System.Drawing.Size(293, 399);
             this.pictureBox1.TabIndex = 45;
             this.pictureBox1.TabStop = false;
             // 

@@ -55,7 +55,6 @@ namespace ProyectoFinalIUJO.Registros.RegistroClientes
 			
 			foreach (Cliente cliente in clienteRegistrado)
             {
-				MessageBox.Show("sadasdasdaas");
 				//			int n = 10;
 
                 Base_D.Rows.Add(cliente.Nombre_Cliente, cliente.Apellido_Cliente, cliente.Cedula,cliente.Sexo,cliente.FechaNacimientoCliente,cliente.TelefonoCelular,cliente.TelefonoResidencial,cliente.CorreoElectronico,cliente.Direccion,cliente.FechaRegistroCliente);

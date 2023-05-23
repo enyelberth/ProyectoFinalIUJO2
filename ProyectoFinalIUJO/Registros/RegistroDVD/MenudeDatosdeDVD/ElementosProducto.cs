@@ -98,14 +98,17 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
 
             }
         }
-		
-		void PictureBoxproductoMouseMove(object sender, MouseEventArgs e)
-		{
-			
-			Imagenproducto = null;
-		}
-		
-		void LabelproductoClick(object sender, EventArgs e)
+
+        void PictureBoxproductoMouseMove(object sender, MouseEventArgs e)
+        {
+            if (Imagenproducto != null)
+            {
+                Imagenproducto.Dispose();
+                Imagenproducto = null;
+            }
+        }
+
+        void LabelproductoClick(object sender, EventArgs e)
 		{
 			detallesproducto indexobjeto = new detallesproducto();
 
@@ -142,20 +145,32 @@ namespace ProyectoFinalIUJO.Registros.RegistroDVD.MenudeDatosdeDVD
                 indexobjeto.llenardatos(index);
             }
 		}
-		
-		void LabelcodigoMouseMove(object sender, MouseEventArgs e)
-		{
-			Imagenproducto = null;
-		}
-		
-		void LabelcantidadMouseMove(object sender, MouseEventArgs e)
-		{
-			Imagenproducto = null;
-		}
-		
-		void LabelproductoMouseMove(object sender, MouseEventArgs e)
-		{
-			Imagenproducto = null;
-		}
+
+        void LabelcodigoMouseMove(object sender, MouseEventArgs e)
+        {
+            if (Imagenproducto != null)
+            {
+                Imagenproducto.Dispose();
+                Imagenproducto = null;
+            }
+        }
+
+        void LabelcantidadMouseMove(object sender, MouseEventArgs e)
+        {
+            if (Imagenproducto != null)
+            {
+                Imagenproducto.Dispose();
+                Imagenproducto = null;
+            }
+        }
+
+        void LabelproductoMouseMove(object sender, MouseEventArgs e)
+        {
+            if (Imagenproducto != null)
+            {
+                Imagenproducto.Dispose();
+                Imagenproducto = null;
+            }
+        }
     }
 }

@@ -60,19 +60,7 @@ namespace ProyectoFinalIUJO
             Application.Exit();
         }
 
-        private void BTNMaximizarTamaño_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-            BTNMaximizarTamaño.Visible = false;
-            BTNRestaurarTamaño.Visible = true;
-        }
 
-        private void BTNRestaurarTamaño_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Normal;
-            BTNRestaurarTamaño.Visible = false;
-            BTNMaximizarTamaño.Visible = true;
-        }
 
         private void BTNMinimizar_Click(object sender, EventArgs e)
         {
